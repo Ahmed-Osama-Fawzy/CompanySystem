@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6F80D54-EF0A-40DB-AFD0-1AFC9CB76814}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Workshop_System</RootNamespace>
+    <AssemblyName>Workshop System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App Class\AccessoriesClass.cs" />
+    <Compile Include="App Class\AluminumClass.cs" />
+    <Compile Include="App Class\CustomerClass.cs" />
+    <Compile Include="App Class\DataBase.cs" />
+    <Compile Include="App Class\GlassesClass.cs" />
+    <Compile Include="App Class\loginClass.cs" />
+    <Compile Include="Customers Forms\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers Forms\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers Forms\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers Forms\ShowCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\ShowCustomers.Designer.cs">
+      <DependentUpon>ShowCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers Forms\ShowCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\ShowCustomer.Designer.cs">
+      <DependentUpon>ShowCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers Forms\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers Forms\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Accessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Accessories.Designer.cs">
+      <DependentUpon>Accessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Show Accessorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\Show Accessorie.Designer.cs">
+      <DependentUpon>Show Accessorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\ShowAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Accessories\ShowAccessories.Designer.cs">
+      <DependentUpon>ShowAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Addtions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Addtions.Designer.cs">
+      <DependentUpon>Addtions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\ShowAddtion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\ShowAddtion.Designer.cs">
+      <DependentUpon>ShowAddtion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\ShowAddtions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Addtions\ShowAddtions.Designer.cs">
+      <DependentUpon>ShowAddtions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Aluminums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Aluminums.Designer.cs">
+      <DependentUpon>Aluminums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\ShowShapes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\ShowShapes.Designer.cs">
+      <DependentUpon>ShowShapes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\ShowShape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Aluminums\ShowShape.Designer.cs">
+      <DependentUpon>ShowShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Glasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Glasses.Designer.cs">
+      <DependentUpon>Glasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\ShowGlasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\ShowGlasses.Designer.cs">
+      <DependentUpon>ShowGlasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\ShowGlass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Glasses\ShowGlass.Designer.cs">
+      <DependentUpon>ShowGlass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials Forms\Materials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Materials.Designer.cs">
+      <DependentUpon>Materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offer Price Forms\Get Offer Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offer Price Forms\Get Offer Price.Designer.cs">
+      <DependentUpon>Get Offer Price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offer Price Forms\Windows\Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offer Price Forms\Windows\Create.Designer.cs">
+      <DependentUpon>Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customers Forms\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers Forms\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers Forms\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers Forms\ShowCustomers.resx">
+      <DependentUpon>ShowCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers Forms\ShowCustomer.resx">
+      <DependentUpon>ShowCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers Forms\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\Accessories.resx">
+      <DependentUpon>Accessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\Show Accessorie.resx">
+      <DependentUpon>Show Accessorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Accessories\ShowAccessories.resx">
+      <DependentUpon>ShowAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Addtions\Addtions.resx">
+      <DependentUpon>Addtions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\Aluminums.resx">
+      <DependentUpon>Aluminums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\ShowShapes.resx">
+      <DependentUpon>ShowShapes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Aluminums\ShowShape.resx">
+      <DependentUpon>ShowShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\Glasses.resx">
+      <DependentUpon>Glasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\ShowGlass.resx">
+      <DependentUpon>ShowGlass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Glasses\ShowGlasses.resx">
+      <DependentUpon>ShowGlasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Materials.resx">
+      <DependentUpon>Materials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offer Price Forms\Get Offer Price.resx">
+      <DependentUpon>Get Offer Price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offer Price Forms\Windows\Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
