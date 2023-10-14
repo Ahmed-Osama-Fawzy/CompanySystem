@@ -17,6 +17,11 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             InitializeComponent();
         }
+        public Remove(string i)
+        {
+            InitializeComponent();
+            ID.Text = i;
+        }
 
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -52,6 +57,11 @@ namespace Workshop_System.Materials_Forms.Accessories
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

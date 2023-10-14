@@ -128,15 +128,15 @@ namespace Workshop_System.App_Class
         }
         public DataTable ShowAll()
         {
-            if (ID > 0)
-            {
-                DataTable dt = DB.Select("All");
-                if (dt.Rows.Count > 0)
-                    return dt;
-                else
-                    MessageBox.Show("عفوا حدث خطا");
-            }
+            DataTable dt = DB.Select("All");
+            if (dt.Rows.Count > 0)
+                return dt;
             return null;
+        }
+        public DataTable Search(string S)
+        {
+            DataTable dt = DB.SelectLike(S,"Name");
+            return dt;
         }
     }
 }

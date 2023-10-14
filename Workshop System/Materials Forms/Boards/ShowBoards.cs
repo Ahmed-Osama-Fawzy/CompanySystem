@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Workshop_System.Prices_Options.Addtions
 {
-    public partial class Modify : Form
+    public partial class ShowBoards : Form
     {
-        public Modify()
+        public ShowBoards()
         {
             InitializeComponent();
         }

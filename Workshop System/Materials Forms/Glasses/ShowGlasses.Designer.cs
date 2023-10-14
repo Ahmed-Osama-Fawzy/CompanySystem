@@ -68,6 +68,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = " عرض جميع انواع الزجاج";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.AllGlasses)).EndInit();
             this.ResumeLayout(false);
 

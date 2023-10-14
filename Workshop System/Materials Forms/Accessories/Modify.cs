@@ -18,6 +18,12 @@ namespace Workshop_System.Materials_Forms.Accessories
             InitializeComponent();
         }
 
+        public Modify(string i)
+        {
+            InitializeComponent();
+            ID.Text = i;
+        }
+
         private void Edit_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -66,6 +72,11 @@ namespace Workshop_System.Materials_Forms.Accessories
             {
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي اولا");
             }
+        }
+
+        private void Modify_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

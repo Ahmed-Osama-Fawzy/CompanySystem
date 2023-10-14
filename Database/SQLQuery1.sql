@@ -118,3 +118,16 @@ add Type nvarchar(20) null
 alter table Materials.Accessories
 add Status nvarchar(20) null
 
+create table Materials.Boards(
+	ID int identity(1,1),
+	Name nvarchar(20) not null,
+	Type nvarchar(20) not null,
+	Color nvarchar(20) not null, 
+	Height float not null,
+	Width float not null,
+	Deep float not null,
+	FPrice float not null,
+	MPrice float null,
+	LastEditDate Date default GETDATE(),
+	primary key(ID)
+)

@@ -27,7 +27,7 @@ namespace Workshop_System
         }
         private void Addtions_Click(object sender, EventArgs e)
         {
-            Addtions NewForm = new Addtions();
+            Boards NewForm = new Boards();
             NewForm.ShowDialog();
         }
 

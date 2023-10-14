@@ -36,5 +36,10 @@ namespace Workshop_System.Materials_Forms.Aluminum
         {
 
         }
+
+        private void Show_Shapes_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

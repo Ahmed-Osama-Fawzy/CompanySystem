@@ -17,15 +17,17 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             InitializeComponent();
             AccessoriesClass accessoriesClass = new AccessoriesClass();
-            DataTable dt = accessoriesClass.ShowAll();
+            DataTable dt = new DataTable();
+            dt = accessoriesClass.ShowAll();
+            dt.Columns["ID"].ColumnName = "الرقم التعريفي";
             dt.Columns["Name"].ColumnName = "الاسم";
             dt.Columns["Size"].ColumnName = "المقاس";
-            dt.Columns["Status"].ColumnName = "الحالة";
-            dt.Columns["Type"].ColumnName = "النوع";
+            dt.Columns["Category"].ColumnName = "القسم";
             dt.Columns["Price"].ColumnName = "السعر";
             dt.Columns["Color"].ColumnName = "اللون";
-            dt.Columns["Category"].ColumnName = "القسم";
-            dt.Columns["ID"].ColumnName = "الرقم التعريفي";
+            dt.Columns["LastEditDate"].ColumnName = "تاريخ اخر تعديل";
+            dt.Columns["Type"].ColumnName = "النوع";
+            dt.Columns["Status"].ColumnName = "الحالة";
             AllAccessories.DataSource = dt;
         }
 

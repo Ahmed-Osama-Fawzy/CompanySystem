@@ -1,6 +1,6 @@
 ﻿namespace Workshop_System.Prices_Options.Addtions
 {
-    partial class Addtions
+    partial class Boards
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addtions));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Boards));
             this.SelectedID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.AddAddtion = new System.Windows.Forms.Button();
-            this.ModifyAddtion = new System.Windows.Forms.Button();
-            this.RemoveAddtion = new System.Windows.Forms.Button();
-            this.ShowAddtions = new System.Windows.Forms.Button();
-            this.ShowAddtion = new System.Windows.Forms.Button();
+            this.AddBoard = new System.Windows.Forms.Button();
+            this.ModifyBoard = new System.Windows.Forms.Button();
+            this.RemoveBoard = new System.Windows.Forms.Button();
+            this.ShowBoards = new System.Windows.Forms.Button();
+            this.ShowBoard = new System.Windows.Forms.Button();
             this.SearchInput = new System.Windows.Forms.TextBox();
             this.CustomShow = new System.Windows.Forms.Button();
             this.CustomEdit = new System.Windows.Forms.Button();
             this.CustomRemove = new System.Windows.Forms.Button();
-            this.SelectedCustomers = new System.Windows.Forms.DataGridView();
+            this.SelectedBoards = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedBoards)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,80 +62,85 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(36, 419);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 33);
+            this.label5.Size = new System.Drawing.Size(152, 33);
             this.label5.TabIndex = 39;
-            this.label5.Text = "ابحث عن مرفق";
+            this.label5.Text = "ابحث عن لوح";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // AddAddtion
+            // AddBoard
             // 
-            this.AddAddtion.AutoSize = true;
-            this.AddAddtion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddAddtion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddAddtion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddAddtion.Location = new System.Drawing.Point(42, 64);
-            this.AddAddtion.Name = "AddAddtion";
-            this.AddAddtion.Padding = new System.Windows.Forms.Padding(7);
-            this.AddAddtion.Size = new System.Drawing.Size(251, 61);
-            this.AddAddtion.TabIndex = 38;
-            this.AddAddtion.Text = " اضافة مرفق جديد";
-            this.AddAddtion.UseVisualStyleBackColor = false;
+            this.AddBoard.AutoSize = true;
+            this.AddBoard.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AddBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AddBoard.Location = new System.Drawing.Point(42, 64);
+            this.AddBoard.Name = "AddBoard";
+            this.AddBoard.Padding = new System.Windows.Forms.Padding(7);
+            this.AddBoard.Size = new System.Drawing.Size(251, 61);
+            this.AddBoard.TabIndex = 38;
+            this.AddBoard.Text = " اضافة لوح جديد";
+            this.AddBoard.UseVisualStyleBackColor = false;
+            this.AddBoard.Click += new System.EventHandler(this.AddBoard_Click);
             // 
-            // ModifyAddtion
+            // ModifyBoard
             // 
-            this.ModifyAddtion.AutoSize = true;
-            this.ModifyAddtion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ModifyAddtion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifyAddtion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ModifyAddtion.Location = new System.Drawing.Point(580, 64);
-            this.ModifyAddtion.Name = "ModifyAddtion";
-            this.ModifyAddtion.Padding = new System.Windows.Forms.Padding(7);
-            this.ModifyAddtion.Size = new System.Drawing.Size(250, 61);
-            this.ModifyAddtion.TabIndex = 37;
-            this.ModifyAddtion.Text = "تعديل بيانات مرفق";
-            this.ModifyAddtion.UseVisualStyleBackColor = false;
+            this.ModifyBoard.AutoSize = true;
+            this.ModifyBoard.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ModifyBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ModifyBoard.Location = new System.Drawing.Point(580, 64);
+            this.ModifyBoard.Name = "ModifyBoard";
+            this.ModifyBoard.Padding = new System.Windows.Forms.Padding(7);
+            this.ModifyBoard.Size = new System.Drawing.Size(250, 61);
+            this.ModifyBoard.TabIndex = 37;
+            this.ModifyBoard.Text = "تعديل بيانات لوح";
+            this.ModifyBoard.UseVisualStyleBackColor = false;
+            this.ModifyBoard.Click += new System.EventHandler(this.ModifyBoard_Click);
             // 
-            // RemoveAddtion
+            // RemoveBoard
             // 
-            this.RemoveAddtion.AutoSize = true;
-            this.RemoveAddtion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RemoveAddtion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveAddtion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveAddtion.Location = new System.Drawing.Point(1156, 218);
-            this.RemoveAddtion.Name = "RemoveAddtion";
-            this.RemoveAddtion.Padding = new System.Windows.Forms.Padding(7);
-            this.RemoveAddtion.Size = new System.Drawing.Size(168, 61);
-            this.RemoveAddtion.TabIndex = 36;
-            this.RemoveAddtion.Text = "حذف مرفق";
-            this.RemoveAddtion.UseVisualStyleBackColor = false;
+            this.RemoveBoard.AutoSize = true;
+            this.RemoveBoard.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RemoveBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RemoveBoard.Location = new System.Drawing.Point(1156, 218);
+            this.RemoveBoard.Name = "RemoveBoard";
+            this.RemoveBoard.Padding = new System.Windows.Forms.Padding(7);
+            this.RemoveBoard.Size = new System.Drawing.Size(168, 61);
+            this.RemoveBoard.TabIndex = 36;
+            this.RemoveBoard.Text = "حذف لوح";
+            this.RemoveBoard.UseVisualStyleBackColor = false;
+            this.RemoveBoard.Click += new System.EventHandler(this.RemoveBoard_Click);
             // 
-            // ShowAddtions
+            // ShowBoards
             // 
-            this.ShowAddtions.AutoSize = true;
-            this.ShowAddtions.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ShowAddtions.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowAddtions.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ShowAddtions.Location = new System.Drawing.Point(42, 218);
-            this.ShowAddtions.Name = "ShowAddtions";
-            this.ShowAddtions.Padding = new System.Windows.Forms.Padding(7);
-            this.ShowAddtions.Size = new System.Drawing.Size(231, 61);
-            this.ShowAddtions.TabIndex = 35;
-            this.ShowAddtions.Text = " عرض المرفقات";
-            this.ShowAddtions.UseVisualStyleBackColor = false;
+            this.ShowBoards.AutoSize = true;
+            this.ShowBoards.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ShowBoards.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowBoards.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ShowBoards.Location = new System.Drawing.Point(42, 218);
+            this.ShowBoards.Name = "ShowBoards";
+            this.ShowBoards.Padding = new System.Windows.Forms.Padding(7);
+            this.ShowBoards.Size = new System.Drawing.Size(231, 61);
+            this.ShowBoards.TabIndex = 35;
+            this.ShowBoards.Text = "عرض الالواح";
+            this.ShowBoards.UseVisualStyleBackColor = false;
+            this.ShowBoards.Click += new System.EventHandler(this.ShowBoards_Click);
             // 
-            // ShowAddtion
+            // ShowBoard
             // 
-            this.ShowAddtion.AutoSize = true;
-            this.ShowAddtion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ShowAddtion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowAddtion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ShowAddtion.Location = new System.Drawing.Point(1064, 64);
-            this.ShowAddtion.Name = "ShowAddtion";
-            this.ShowAddtion.Padding = new System.Windows.Forms.Padding(7);
-            this.ShowAddtion.Size = new System.Drawing.Size(263, 61);
-            this.ShowAddtion.TabIndex = 34;
-            this.ShowAddtion.Text = "عرض بيانات مرفق";
-            this.ShowAddtion.UseVisualStyleBackColor = false;
+            this.ShowBoard.AutoSize = true;
+            this.ShowBoard.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ShowBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ShowBoard.Location = new System.Drawing.Point(1064, 64);
+            this.ShowBoard.Name = "ShowBoard";
+            this.ShowBoard.Padding = new System.Windows.Forms.Padding(7);
+            this.ShowBoard.Size = new System.Drawing.Size(263, 61);
+            this.ShowBoard.TabIndex = 34;
+            this.ShowBoard.Text = "عرض بيانات لوح";
+            this.ShowBoard.UseVisualStyleBackColor = false;
+            this.ShowBoard.Click += new System.EventHandler(this.ShowBoard_Click);
             // 
             // SearchInput
             // 
@@ -187,13 +192,13 @@
             this.CustomRemove.Text = "حذف";
             this.CustomRemove.UseVisualStyleBackColor = false;
             // 
-            // SelectedCustomers
+            // SelectedBoards
             // 
-            this.SelectedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SelectedCustomers.Location = new System.Drawing.Point(12, 481);
-            this.SelectedCustomers.Name = "SelectedCustomers";
-            this.SelectedCustomers.Size = new System.Drawing.Size(1166, 237);
-            this.SelectedCustomers.TabIndex = 29;
+            this.SelectedBoards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SelectedBoards.Location = new System.Drawing.Point(12, 481);
+            this.SelectedBoards.Name = "SelectedBoards";
+            this.SelectedBoards.Size = new System.Drawing.Size(1166, 237);
+            this.SelectedBoards.TabIndex = 29;
             // 
             // pictureBox1
             // 
@@ -204,30 +209,31 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // Addtions
+            // Boards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
             this.Controls.Add(this.SelectedID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.AddAddtion);
-            this.Controls.Add(this.ModifyAddtion);
-            this.Controls.Add(this.RemoveAddtion);
-            this.Controls.Add(this.ShowAddtions);
-            this.Controls.Add(this.ShowAddtion);
+            this.Controls.Add(this.AddBoard);
+            this.Controls.Add(this.ModifyBoard);
+            this.Controls.Add(this.RemoveBoard);
+            this.Controls.Add(this.ShowBoards);
+            this.Controls.Add(this.ShowBoard);
             this.Controls.Add(this.SearchInput);
             this.Controls.Add(this.CustomShow);
             this.Controls.Add(this.CustomEdit);
             this.Controls.Add(this.CustomRemove);
-            this.Controls.Add(this.SelectedCustomers);
+            this.Controls.Add(this.SelectedBoards);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Addtions";
+            this.Name = "Boards";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الاضافات";
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedBoards)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,16 +244,16 @@
 
         private System.Windows.Forms.TextBox SelectedID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button AddAddtion;
-        private System.Windows.Forms.Button ModifyAddtion;
-        private System.Windows.Forms.Button RemoveAddtion;
-        private System.Windows.Forms.Button ShowAddtions;
-        private System.Windows.Forms.Button ShowAddtion;
+        private System.Windows.Forms.Button AddBoard;
+        private System.Windows.Forms.Button ModifyBoard;
+        private System.Windows.Forms.Button RemoveBoard;
+        private System.Windows.Forms.Button ShowBoards;
+        private System.Windows.Forms.Button ShowBoard;
         private System.Windows.Forms.TextBox SearchInput;
         private System.Windows.Forms.Button CustomShow;
         private System.Windows.Forms.Button CustomEdit;
         private System.Windows.Forms.Button CustomRemove;
-        private System.Windows.Forms.DataGridView SelectedCustomers;
+        private System.Windows.Forms.DataGridView SelectedBoards;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

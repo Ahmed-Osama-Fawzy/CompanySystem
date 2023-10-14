@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="App Class\AccessoriesClass.cs" />
     <Compile Include="App Class\AluminumClass.cs" />
+    <Compile Include="App Class\BoardClass.cs" />
     <Compile Include="App Class\CustomerClass.cs" />
     <Compile Include="App Class\DataBase.cs" />
     <Compile Include="App Class\GlassesClass.cs" />
@@ -143,41 +144,41 @@
     <Compile Include="Materials Forms\Accessories\ShowAccessories.Designer.cs">
       <DependentUpon>ShowAccessories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Add.cs">
+    <Compile Include="Materials Forms\Boards\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Add.Designer.cs">
+    <Compile Include="Materials Forms\Boards\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Addtions.cs">
+    <Compile Include="Materials Forms\Boards\Boards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Addtions.Designer.cs">
-      <DependentUpon>Addtions.cs</DependentUpon>
+    <Compile Include="Materials Forms\Boards\Boards.Designer.cs">
+      <DependentUpon>Boards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Modify.cs">
+    <Compile Include="Materials Forms\Boards\Modify.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Modify.Designer.cs">
+    <Compile Include="Materials Forms\Boards\Modify.Designer.cs">
       <DependentUpon>Modify.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Remove.cs">
+    <Compile Include="Materials Forms\Boards\Remove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\Remove.Designer.cs">
+    <Compile Include="Materials Forms\Boards\Remove.Designer.cs">
       <DependentUpon>Remove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\ShowAddtion.cs">
+    <Compile Include="Materials Forms\Boards\ShowBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\ShowAddtion.Designer.cs">
-      <DependentUpon>ShowAddtion.cs</DependentUpon>
+    <Compile Include="Materials Forms\Boards\ShowBoard.Designer.cs">
+      <DependentUpon>ShowBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\ShowAddtions.cs">
+    <Compile Include="Materials Forms\Boards\ShowBoards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Addtions\ShowAddtions.Designer.cs">
-      <DependentUpon>ShowAddtions.cs</DependentUpon>
+    <Compile Include="Materials Forms\Boards\ShowBoards.Designer.cs">
+      <DependentUpon>ShowBoards.cs</DependentUpon>
     </Compile>
     <Compile Include="Materials Forms\Aluminums\Add.cs">
       <SubType>Form</SubType>
@@ -316,8 +317,11 @@
     <EmbeddedResource Include="Materials Forms\Accessories\ShowAccessories.resx">
       <DependentUpon>ShowAccessories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materials Forms\Addtions\Addtions.resx">
-      <DependentUpon>Addtions.cs</DependentUpon>
+    <EmbeddedResource Include="Materials Forms\Boards\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Boards\Boards.resx">
+      <DependentUpon>Boards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materials Forms\Aluminums\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
@@ -336,6 +340,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Materials Forms\Aluminums\ShowShape.resx">
       <DependentUpon>ShowShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Boards\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Boards\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Boards\ShowBoard.resx">
+      <DependentUpon>ShowBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Boards\ShowBoards.resx">
+      <DependentUpon>ShowBoards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materials Forms\Glasses\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>

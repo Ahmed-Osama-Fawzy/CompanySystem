@@ -18,6 +18,11 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             InitializeComponent();
         }
+        public ShowAccessiore(string i)
+        {
+            InitializeComponent();
+            ID.Text = i;
+        }
 
         private void Show_Click(object sender, EventArgs e)
         {
@@ -63,6 +68,11 @@ namespace Workshop_System.Materials_Forms.Accessories
             Color.Text = string.Empty;
             Type.Text = string.Empty;
             Status.Text = string.Empty;
+
+        }
+
+        private void ShowAccessiore_Load(object sender, EventArgs e)
+        {
 
         }
     }

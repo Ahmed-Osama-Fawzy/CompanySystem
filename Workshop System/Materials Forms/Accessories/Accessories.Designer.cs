@@ -42,9 +42,9 @@
             this.CustomShow = new System.Windows.Forms.Button();
             this.CustomEdit = new System.Windows.Forms.Button();
             this.CustomRemove = new System.Windows.Forms.Button();
-            this.SelectedShapes = new System.Windows.Forms.DataGridView();
+            this.SelectedAccessories = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedShapes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedAccessories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +151,7 @@
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.Size = new System.Drawing.Size(395, 31);
             this.SearchInput.TabIndex = 33;
+            this.SearchInput.TextChanged += new System.EventHandler(this.SearchInput_TextChanged);
             // 
             // CustomShow
             // 
@@ -165,6 +166,7 @@
             this.CustomShow.TabIndex = 32;
             this.CustomShow.Text = "عرض";
             this.CustomShow.UseVisualStyleBackColor = false;
+            this.CustomShow.Click += new System.EventHandler(this.CustomShow_Click);
             // 
             // CustomEdit
             // 
@@ -179,6 +181,7 @@
             this.CustomEdit.TabIndex = 31;
             this.CustomEdit.Text = "تعديل";
             this.CustomEdit.UseVisualStyleBackColor = false;
+            this.CustomEdit.Click += new System.EventHandler(this.CustomEdit_Click);
             // 
             // CustomRemove
             // 
@@ -193,14 +196,15 @@
             this.CustomRemove.TabIndex = 30;
             this.CustomRemove.Text = "حذف";
             this.CustomRemove.UseVisualStyleBackColor = false;
+            this.CustomRemove.Click += new System.EventHandler(this.CustomRemove_Click);
             // 
-            // SelectedShapes
+            // SelectedAccessories
             // 
-            this.SelectedShapes.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.SelectedShapes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SelectedShapes.GridColor = System.Drawing.SystemColors.Window;
-            this.SelectedShapes.Location = new System.Drawing.Point(12, 481);
-            this.SelectedShapes.Name = "SelectedShapes";
+            this.SelectedAccessories.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.SelectedAccessories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SelectedAccessories.GridColor = System.Drawing.SystemColors.Window;
+            this.SelectedAccessories.Location = new System.Drawing.Point(12, 481);
+            this.SelectedAccessories.Name = "SelectedAccessories";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,15 +212,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedShapes.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.SelectedAccessories.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedShapes.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.SelectedShapes.Size = new System.Drawing.Size(1150, 237);
-            this.SelectedShapes.TabIndex = 29;
+            this.SelectedAccessories.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.SelectedAccessories.Size = new System.Drawing.Size(1150, 237);
+            this.SelectedAccessories.TabIndex = 29;
+            this.SelectedAccessories.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectedAccessories_RowHeaderMouseClick);
             // 
             // pictureBox1
             // 
@@ -243,14 +248,15 @@
             this.Controls.Add(this.CustomShow);
             this.Controls.Add(this.CustomEdit);
             this.Controls.Add(this.CustomRemove);
-            this.Controls.Add(this.SelectedShapes);
+            this.Controls.Add(this.SelectedAccessories);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accessories";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "الاكسسوارات";
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedShapes)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedAccessories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,7 +276,7 @@
         private System.Windows.Forms.Button CustomShow;
         private System.Windows.Forms.Button CustomEdit;
         private System.Windows.Forms.Button CustomRemove;
-        private System.Windows.Forms.DataGridView SelectedShapes;
+        private System.Windows.Forms.DataGridView SelectedAccessories;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

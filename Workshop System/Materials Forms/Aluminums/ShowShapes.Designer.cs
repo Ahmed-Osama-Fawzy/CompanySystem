@@ -54,6 +54,8 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "عرض جميع بيانات القطاعات";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Show_Shapes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AllShapes)).EndInit();
             this.ResumeLayout(false);
 

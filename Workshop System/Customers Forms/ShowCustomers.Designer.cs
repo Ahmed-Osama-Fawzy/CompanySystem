@@ -42,17 +42,18 @@
             this.AllCustomers.TabIndex = 2;
             this.AllCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCustomers_CellContentClick);
             // 
-            // ShowCutomers
+            // ShowCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
             this.Controls.Add(this.AllCustomers);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ShowCutomers";
+            this.Name = "ShowCustomers";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "عرض بيانات العملاء";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.AllCustomers)).EndInit();
             this.ResumeLayout(false);
 

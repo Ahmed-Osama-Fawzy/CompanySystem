@@ -1,4 +1,4 @@
-﻿namespace Workshop_System.Customers_Options
+﻿namespace Workshop_System.Prices_Options.Addtions
 {
     partial class Remove
     {
@@ -47,9 +47,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(557, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 39);
-            this.label8.TabIndex = 62;
-            this.label8.Text = "حذف بيانات عميل ";
+            this.label8.Size = new System.Drawing.Size(218, 39);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "حذف بيانات لوح";
             // 
             // Clear
             // 
@@ -61,10 +61,9 @@
             this.Clear.Name = "Clear";
             this.Clear.Padding = new System.Windows.Forms.Padding(7);
             this.Clear.Size = new System.Drawing.Size(198, 61);
-            this.Clear.TabIndex = 61;
+            this.Clear.TabIndex = 75;
             this.Clear.Text = "افراغ البيانات";
             this.Clear.UseVisualStyleBackColor = false;
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // ID
             // 
@@ -72,7 +71,7 @@
             this.ID.Location = new System.Drawing.Point(636, 184);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(395, 31);
-            this.ID.TabIndex = 48;
+            this.ID.TabIndex = 74;
             // 
             // Delete
             // 
@@ -84,7 +83,7 @@
             this.Delete.Name = "Delete";
             this.Delete.Padding = new System.Windows.Forms.Padding(7);
             this.Delete.Size = new System.Drawing.Size(207, 61);
-            this.Delete.TabIndex = 47;
+            this.Delete.TabIndex = 73;
             this.Delete.Text = "حذف البيانات";
             this.Delete.UseVisualStyleBackColor = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -97,7 +96,7 @@
             this.label1.Location = new System.Drawing.Point(473, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
-            this.label1.TabIndex = 46;
+            this.label1.TabIndex = 72;
             this.label1.Text = "الرقم الكودي";
             // 
             // pictureBox2
@@ -106,7 +105,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(-13, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1380, 731);
-            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabIndex = 71;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -115,7 +114,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1354, 730);
-            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
             // Remove
@@ -134,7 +133,7 @@
             this.Name = "Remove";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "حذف بيانات عميل";
+            this.Text = " حذف بيانات لوح";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
