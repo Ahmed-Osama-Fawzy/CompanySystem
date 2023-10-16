@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Workshop_System.App_Class;
+using Workshop_System.Materials_Forms;
 
 namespace Workshop_System.Prices_Options.Addtions
 {
@@ -82,6 +83,12 @@ namespace Workshop_System.Prices_Options.Addtions
         private void Add_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            Details NewForm = new Details();
+            NewForm.ShowDialog();
         }
     }
 }

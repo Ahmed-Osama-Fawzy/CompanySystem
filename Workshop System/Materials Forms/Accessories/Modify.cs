@@ -78,5 +78,11 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
 
         }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            Details NewForm = new Details();
+            NewForm.ShowDialog();
+        }
     }
 }

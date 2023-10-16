@@ -149,6 +149,7 @@
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.Size = new System.Drawing.Size(395, 31);
             this.SearchInput.TabIndex = 33;
+            this.SearchInput.TextChanged += new System.EventHandler(this.SearchInput_TextChanged);
             // 
             // CustomShow
             // 
@@ -199,6 +200,7 @@
             this.SelectedBoards.Name = "SelectedBoards";
             this.SelectedBoards.Size = new System.Drawing.Size(1166, 237);
             this.SelectedBoards.TabIndex = 29;
+            this.SelectedBoards.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectedBoards_RowHeaderMouseClick);
             // 
             // pictureBox1
             // 

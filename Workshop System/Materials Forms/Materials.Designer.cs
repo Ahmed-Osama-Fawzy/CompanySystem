@@ -53,7 +53,7 @@
             this.Boards.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Boards.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Boards.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Boards.Location = new System.Drawing.Point(948, 140);
+            this.Boards.Location = new System.Drawing.Point(920, 140);
             this.Boards.Name = "Boards";
             this.Boards.Padding = new System.Windows.Forms.Padding(7);
             this.Boards.Size = new System.Drawing.Size(156, 61);
@@ -68,7 +68,7 @@
             this.Glasses.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Glasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Glasses.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Glasses.Location = new System.Drawing.Point(790, 140);
+            this.Glasses.Location = new System.Drawing.Point(762, 140);
             this.Glasses.Name = "Glasses";
             this.Glasses.Padding = new System.Windows.Forms.Padding(7);
             this.Glasses.Size = new System.Drawing.Size(120, 61);
@@ -83,7 +83,7 @@
             this.Aluminums.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Aluminums.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aluminums.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Aluminums.Location = new System.Drawing.Point(363, 140);
+            this.Aluminums.Location = new System.Drawing.Point(335, 140);
             this.Aluminums.Name = "Aluminums";
             this.Aluminums.Padding = new System.Windows.Forms.Padding(7);
             this.Aluminums.Size = new System.Drawing.Size(148, 61);
@@ -98,7 +98,7 @@
             this.Accessories.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Accessories.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Accessories.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Accessories.Location = new System.Drawing.Point(548, 140);
+            this.Accessories.Location = new System.Drawing.Point(520, 140);
             this.Accessories.Name = "Accessories";
             this.Accessories.Padding = new System.Windows.Forms.Padding(7);
             this.Accessories.Size = new System.Drawing.Size(202, 61);

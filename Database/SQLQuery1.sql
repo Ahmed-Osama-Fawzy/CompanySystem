@@ -47,9 +47,9 @@ update Persons.Customers set Address = N'سسسس' where ID = 1
 
 insert into Validation.Users values('Ahmed Osama','203040',1),('Osama Fawzy','102030',2)
 
-create schema Prices
+create schema Materials
 
-create table Prices.Glasses(
+create table Materials.Glasses(
 	ID int identity (1,1),
 	Color varchar(20) not null,
 	Price decimal not null,
@@ -59,20 +59,20 @@ create table Prices.Glasses(
 	primary key(ID) 
 )
 
-EXEC sp_rename  'Prices.Glasses.defaultColor' , 'DefaultColor','COLUMN'
+EXEC sp_rename  'Materials.Glasses.defaultColor' , 'DefaultColor','COLUMN'
 
-alter table Prices.Glasses
+alter table Materials.Glasses
 alter column Color nvarchar(20) not null
 
-alter table Prices.Glasses
+alter table Materials.Glasses
 alter column Kind nvarchar(20) null
 
-insert into Prices.Glasses values(N'عاكس بني',300,100,N'مصري',NULL),(N'شفاف',200,0,N'مصري',1)
+insert into Materials.Glasses values(N'عاكس بني',300,100,N'مصري',NULL),(N'شفاف',200,0,N'مصري',1)
 
-UPDATE Prices.Glasses 
-SET NetPrice = Price - (SELECT Price FROM Prices.Glasses WHERE DefaultColor = 1)
+UPDATE Materials.Glasses 
+SET NetPrice = Price - (SELECT Price FROM Materials.Glasses WHERE DefaultColor = 1)
 
-create schema Materials
+
 create table Materials.Aluminum
 (
 	ID int identity (1,1),
@@ -131,3 +131,13 @@ create table Materials.Boards(
 	LastEditDate Date default GETDATE(),
 	primary key(ID)
 )
+
+select * from Materials.Boards
+
+create table Materials.Types(
+	Category nvarchar(30) not null,
+	Value nvarchar(30) not null
+)
+select Value from Materials.Types WHERE Category = 'قسم اكسسوارات' 
+
+delete from Materials.Types

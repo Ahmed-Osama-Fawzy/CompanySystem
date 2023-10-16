@@ -54,6 +54,16 @@
     <Compile Include="App Class\DataBase.cs" />
     <Compile Include="App Class\GlassesClass.cs" />
     <Compile Include="App Class\loginClass.cs" />
+    <Compile Include="CompanypSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanypSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanypSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanypSystemDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Customers Forms\Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +226,12 @@
     <Compile Include="Materials Forms\Aluminums\ShowShape.Designer.cs">
       <DependentUpon>ShowShape.cs</DependentUpon>
     </Compile>
+    <Compile Include="Materials Forms\Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials Forms\Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Materials Forms\Glasses\Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +369,9 @@
     <EmbeddedResource Include="Materials Forms\Boards\ShowBoards.resx">
       <DependentUpon>ShowBoards.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Materials Forms\Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Materials Forms\Glasses\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +408,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CompanypSystemDataSet.xsc">
+      <DependentUpon>CompanypSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanypSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanypSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanypSystemDataSet.xss">
+      <DependentUpon>CompanypSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanypSystemDataSet1.xsc">
+      <DependentUpon>CompanypSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CompanypSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanypSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanypSystemDataSet1.xss">
+      <DependentUpon>CompanypSystemDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

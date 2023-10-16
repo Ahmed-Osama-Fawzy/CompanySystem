@@ -55,6 +55,7 @@
             this.Type = new System.Windows.Forms.ListBox();
             this.Category = new System.Windows.Forms.ListBox();
             this.Section = new System.Windows.Forms.ListBox();
+            this.Details = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -310,7 +311,7 @@
             "منزلق",
             "مفصلي",
             "لا شئ"});
-            this.Status.Location = new System.Drawing.Point(239, 551);
+            this.Status.Location = new System.Drawing.Point(239, 550);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(395, 29);
             this.Status.TabIndex = 54;
@@ -400,11 +401,27 @@
             this.Section.Size = new System.Drawing.Size(395, 29);
             this.Section.TabIndex = 53;
             // 
+            // Details
+            // 
+            this.Details.AutoSize = true;
+            this.Details.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Details.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Details.Location = new System.Drawing.Point(603, 629);
+            this.Details.Name = "Details";
+            this.Details.Padding = new System.Windows.Forms.Padding(7);
+            this.Details.Size = new System.Drawing.Size(163, 61);
+            this.Details.TabIndex = 57;
+            this.Details.Text = "الاختيارات";
+            this.Details.UseVisualStyleBackColor = false;
+            this.Details.Click += new System.EventHandler(this.Details_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.Details);
             this.Controls.Add(this.Notes);
             this.Controls.Add(this.Length);
             this.Controls.Add(this.Status);
@@ -472,5 +489,6 @@
         private System.Windows.Forms.ListBox Type;
         private System.Windows.Forms.ListBox Category;
         private System.Windows.Forms.ListBox Section;
+        private System.Windows.Forms.Button Details;
     }
 }

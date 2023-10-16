@@ -16,6 +16,22 @@ namespace Workshop_System.Materials_Forms.Accessories
         public Add()
         {
             InitializeComponent();
+            DataBase DB = new DataBase("","");
+            Category.DisplayMember = "Value";
+            Category.ValueMember = "Value";
+            Color.DisplayMember = "Value";
+            Color.ValueMember = "Value";
+            if (DB.GetData("قسم اكسسوارات") != null && DB.GetData("لون") != null)
+            {
+                Category.DataSource = DB.GetData("قسم اكسسوارات");
+                Color.DataSource = DB.GetData("لون");
+                Type.DataSource = DB.GetData("نوع الاكسسوارات");
+                Status.DataSource = DB.GetData("حالة الاكسسوارات");
+            }
+            else
+            {
+                Color.Enabled = false;
+            }
         }
 
         private void Insert_Click(object sender, EventArgs e)
@@ -25,6 +41,10 @@ namespace Workshop_System.Materials_Forms.Accessories
 
         private void add_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'companypSystemDataSet1.Types' table. You can move, or remove it, as needed.
+            this.typesTableAdapter.Fill(this.companypSystemDataSet1.Types);
+            // TODO: This line of code loads data into the 'companypSystemDataSet1.Accessories' table. You can move, or remove it, as needed.
+            this.accessoriesTableAdapter.Fill(this.companypSystemDataSet1.Accessories);
             AName.Text = string.Empty;
             Size.Text = string.Empty;
             Category.Text = string.Empty;
@@ -81,6 +101,17 @@ namespace Workshop_System.Materials_Forms.Accessories
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            Details NewForm = new Details();
+            NewForm.ShowDialog();
+        }
+
+        private void Category_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

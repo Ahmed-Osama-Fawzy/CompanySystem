@@ -100,5 +100,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
         {
 
         }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            Details NewForm = new Details();
+            NewForm.ShowDialog();
+        }
     }
 }

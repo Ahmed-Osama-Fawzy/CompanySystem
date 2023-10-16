@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.Clear = new System.Windows.Forms.Button();
             this.Insert = new System.Windows.Forms.Button();
@@ -49,7 +50,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.Details = new System.Windows.Forms.Button();
+            this.companypSystemDataSet1 = new Workshop_System.CompanypSystemDataSet1();
+            this.accessoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accessoriesTableAdapter = new Workshop_System.CompanypSystemDataSet1TableAdapters.AccessoriesTableAdapter();
+            this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typesTableAdapter = new Workshop_System.CompanypSystemDataSet1TableAdapters.TypesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companypSystemDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accessoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Clear
@@ -90,7 +100,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(312, 39);
             this.label8.TabIndex = 43;
-            this.label8.Text = "اضافة بيانات قطاع جديد";
+            this.label8.Text = "اضافة بيانات قطعة جديد";
             // 
             // pictureBox1
             // 
@@ -147,15 +157,15 @@
             this.Category.FormattingEnabled = true;
             this.Category.ItemHeight = 25;
             this.Category.Items.AddRange(new object[] {
-            "شبابيك",
-            "ابواب",
-            "مطابخ",
-            "شيش",
-            "تند"});
+            "f",
+            "s",
+            "d",
+            "s"});
             this.Category.Location = new System.Drawing.Point(239, 379);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(395, 29);
             this.Category.TabIndex = 44;
+            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -243,17 +253,9 @@
             this.Type.FormattingEnabled = true;
             this.Type.ItemHeight = 25;
             this.Type.Items.AddRange(new object[] {
-            "السعد",
-            "العربية",
-            "بي اس صغير",
-            "تانجو",
-            "بي اس كبير",
-            "جامبو",
-            "الوميل",
-            "مطابخ",
-            "مطابخ 2.5",
-            "مطابخ 4",
-            "تند"});
+            "d",
+            "d",
+            "d"});
             this.Type.Location = new System.Drawing.Point(868, 226);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(395, 29);
@@ -293,11 +295,50 @@
             this.label9.TabIndex = 59;
             this.label9.Text = "اللون";
             // 
+            // Details
+            // 
+            this.Details.AutoSize = true;
+            this.Details.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Details.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Details.Location = new System.Drawing.Point(608, 629);
+            this.Details.Name = "Details";
+            this.Details.Padding = new System.Windows.Forms.Padding(7);
+            this.Details.Size = new System.Drawing.Size(163, 61);
+            this.Details.TabIndex = 60;
+            this.Details.Text = "الاختيارات";
+            this.Details.UseVisualStyleBackColor = false;
+            this.Details.Click += new System.EventHandler(this.Details_Click);
+            // 
+            // companypSystemDataSet1
+            // 
+            this.companypSystemDataSet1.DataSetName = "CompanypSystemDataSet1";
+            this.companypSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accessoriesBindingSource
+            // 
+            this.accessoriesBindingSource.DataMember = "Accessories";
+            this.accessoriesBindingSource.DataSource = this.companypSystemDataSet1;
+            // 
+            // accessoriesTableAdapter
+            // 
+            this.accessoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // typesBindingSource
+            // 
+            this.typesBindingSource.DataMember = "Types";
+            this.typesBindingSource.DataSource = this.companypSystemDataSet1;
+            // 
+            // typesTableAdapter
+            // 
+            this.typesTableAdapter.ClearBeforeFill = true;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.Details);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.Type);
@@ -326,6 +367,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companypSystemDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accessoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +396,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button Details;
+        private CompanypSystemDataSet1 companypSystemDataSet1;
+        private System.Windows.Forms.BindingSource accessoriesBindingSource;
+        private CompanypSystemDataSet1TableAdapters.AccessoriesTableAdapter accessoriesTableAdapter;
+        private System.Windows.Forms.BindingSource typesBindingSource;
+        private CompanypSystemDataSet1TableAdapters.TypesTableAdapter typesTableAdapter;
     }
 }

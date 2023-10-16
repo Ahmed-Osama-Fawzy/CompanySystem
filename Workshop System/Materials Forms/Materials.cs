@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Workshop_System.Materials_Forms;
 using Workshop_System.Materials_Forms.Accessories;
 using Workshop_System.Materials_Forms.Aluminum;
 using Workshop_System.Prices_Options.Addtions;
@@ -40,6 +41,12 @@ namespace Workshop_System
         private void Accessories_Click(object sender, EventArgs e)
         {
             Accessories NewForm = new Accessories();
+            NewForm.ShowDialog();
+        }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            Details NewForm = new Details();
             NewForm.ShowDialog();
         }
     }

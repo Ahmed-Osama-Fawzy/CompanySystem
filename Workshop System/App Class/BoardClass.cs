@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -85,6 +86,23 @@ namespace Workshop_System.App_Class
         {
             bool Removed = DB.Delete("ID", $"{ID}", "true", "all");
             return Removed;
+        }
+        public DataTable Search(string S)
+        {
+            DataTable dt = DB.SelectLike(S,"Name");
+            return dt;
+        }
+        public DataTable ShowOne()
+        {
+            DataTable dt = DB.SelectOne("ID",$"{ID}","true");
+            if(dt.Rows.Count > 0)
+                return dt;
+            return null;
+        }
+        public DataTable ShowAll()
+        {
+            DataTable dt = DB.Select("all");
+            return dt;
         }
     }
 }

@@ -49,9 +49,9 @@ namespace Workshop_System.App_Class
                         Values += $"N'{Inputs[i+1]}' ,";
                     }
                 }
-                MessageBox.Show($"{Keys} {Values}");
                 Keys = Keys.Remove(Keys.Length - 1);
                 Values = Values.Remove(Values.Length - 1);
+                MessageBox.Show($"{Keys} {Values}");
                 string Query = $"INSERT INTO {this.Table}({Keys}) VALUES ({Values})";
                 SqlCommand cmd = new SqlCommand(Query, conn);
                 conn.Open();
@@ -338,7 +338,7 @@ namespace Workshop_System.App_Class
                     }
                     else
                     {
-                        string Query = $"SELECT {Selected} FROM {this.Table} WHERE {Inputs[0]} = '{Inputs[1]}'";
+                        string Query = $"SELECT {Selected} FROM {this.Table} WHERE {Inputs[0]} = N'{Inputs[1]}'";
                         SqlCommand cmd = new SqlCommand(Query, conn);
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         conn.Open();
@@ -358,6 +358,7 @@ namespace Workshop_System.App_Class
                     else
                     {
                         string Query = $"SELECT * FROM {this.Table} WHERE {Inputs[0]} = '{Inputs[1]}'";
+                        MessageBox.Show(Query);
                         SqlCommand cmd = new SqlCommand(Query, conn);
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         conn.Open();
@@ -437,6 +438,18 @@ namespace Workshop_System.App_Class
                 conn.Close();
             }
             return dt;
+        }
+        public DataTable GetData(string Key) 
+        {
+            Schema = "Materials";
+            Name  = "Types";
+            Table = Schema + "." + Name;
+            DataTable dt = SelectOne("Category" , $"{Key}" ,"false" , "Value");
+            if(dt.Rows.Count > 0)
+            {
+                return dt;
+            }
+            return null;
         }
     }
 }

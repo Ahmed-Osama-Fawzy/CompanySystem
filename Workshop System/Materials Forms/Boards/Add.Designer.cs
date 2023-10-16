@@ -51,6 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.BName = new System.Windows.Forms.ComboBox();
             this.Type = new System.Windows.Forms.ComboBox();
+            this.Details = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,11 +293,27 @@
             this.Type.Size = new System.Drawing.Size(395, 33);
             this.Type.TabIndex = 75;
             // 
+            // Details
+            // 
+            this.Details.AutoSize = true;
+            this.Details.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Details.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Details.Location = new System.Drawing.Point(617, 629);
+            this.Details.Name = "Details";
+            this.Details.Padding = new System.Windows.Forms.Padding(7);
+            this.Details.Size = new System.Drawing.Size(163, 61);
+            this.Details.TabIndex = 76;
+            this.Details.Text = "الاختيارات";
+            this.Details.UseVisualStyleBackColor = false;
+            this.Details.Click += new System.EventHandler(this.Details_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.Details);
             this.Controls.Add(this.Type);
             this.Controls.Add(this.BName);
             this.Controls.Add(this.MPrice);
@@ -356,5 +373,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox BName;
         private System.Windows.Forms.ComboBox Type;
+        private System.Windows.Forms.Button Details;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Workshop_System.App_Class;
 
 namespace Workshop_System.Prices_Options.Addtions
 {
@@ -50,6 +51,20 @@ namespace Workshop_System.Prices_Options.Addtions
         {
             Remove remove  = new Remove();
             remove.ShowDialog();
+        }
+
+        private void SearchInput_TextChanged(object sender, EventArgs e)
+        {
+            string S = SearchInput.Text;
+            BoardClass boardClass = new BoardClass();
+            SelectedBoards.DataSource =  boardClass.Search(S);
+        }
+
+        private void SelectedBoards_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int index = e.RowIndex;
+            string S = SelectedBoards.Rows[index].Cells[0].Value.ToString();
+            SelectedID.Text = S;
         }
     }
 }
