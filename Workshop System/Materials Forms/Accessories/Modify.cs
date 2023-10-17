@@ -16,6 +16,46 @@ namespace Workshop_System.Materials_Forms.Accessories
         public Modify()
         {
             InitializeComponent();
+            Update();
+        }
+        public void Update()
+        {
+            DataBase DB = new DataBase("", "");
+            Category.DisplayMember = "Value";
+            Category.ValueMember = "Value";
+            if (DB.GetData("قسم اكسسوارات") != null)
+            {
+                Category.DataSource = DB.GetData("قسم اكسسوارات"); Type.Enabled = true;
+            }
+            else
+                Category.Enabled = false;
+
+            Color.DisplayMember = "Value";
+            Color.ValueMember = "Value";
+            if (DB.GetData("لون") != null)
+            {
+                Color.DataSource = DB.GetData("لون"); Type.Enabled = true;
+            }
+            else
+                Color.Enabled = false;
+
+            Type.DisplayMember = "Value";
+            Type.ValueMember = "Value";
+            if (DB.GetData("نوع الاكسسوارات") != null)
+            {
+                Type.DataSource = DB.GetData("نوع الاكسسوارات"); Type.Enabled = true;
+            }
+            else
+                Type.Enabled = false;
+
+            Status.DisplayMember = "Value";
+            Status.ValueMember = "Value";
+            if (DB.GetData("حالة الاكسسوارات") != null)
+            {
+                Status.DataSource = DB.GetData("حالة الاكسسوارات"); Status.Enabled = true;
+            }
+            else
+                Status.Enabled = false;
         }
 
         public Modify(string i)
@@ -83,6 +123,12 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
+            Update();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

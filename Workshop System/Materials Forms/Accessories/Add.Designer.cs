@@ -157,10 +157,7 @@
             this.Category.FormattingEnabled = true;
             this.Category.ItemHeight = 25;
             this.Category.Items.AddRange(new object[] {
-            "f",
-            "s",
-            "d",
-            "s"});
+            "لا يوجد عناصر يجب اضافة عنصر"});
             this.Category.Location = new System.Drawing.Point(239, 379);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(395, 29);
@@ -203,12 +200,7 @@
             this.Color.FormattingEnabled = true;
             this.Color.ItemHeight = 25;
             this.Color.Items.AddRange(new object[] {
-            "ابيض",
-            "اسود",
-            "بني",
-            "فضي",
-            "بيج",
-            "بلا"});
+            "لا يوجد عناصر يجب اضافة عنصر"});
             this.Color.Location = new System.Drawing.Point(868, 148);
             this.Color.Name = "Color";
             this.Color.Size = new System.Drawing.Size(395, 29);
@@ -239,9 +231,7 @@
             this.Status.FormattingEnabled = true;
             this.Status.ItemHeight = 25;
             this.Status.Items.AddRange(new object[] {
-            "منزلق",
-            "مفصلي",
-            "لا شئ"});
+            "لا يوجد عناصر يجب اضافة عنصر"});
             this.Status.Location = new System.Drawing.Point(868, 298);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(395, 29);
@@ -253,9 +243,7 @@
             this.Type.FormattingEnabled = true;
             this.Type.ItemHeight = 25;
             this.Type.Items.AddRange(new object[] {
-            "d",
-            "d",
-            "d"});
+            "لا يوجد عناصر يجب اضافة عنصر"});
             this.Type.Location = new System.Drawing.Point(868, 226);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(395, 29);

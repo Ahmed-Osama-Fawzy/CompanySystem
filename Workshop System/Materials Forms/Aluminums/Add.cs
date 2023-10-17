@@ -16,13 +16,71 @@ namespace Workshop_System.Materials_Forms.Aluminum
         public Add()
         {
             InitializeComponent();
+            Update();
         }
         public Add(int i)
         {
             InitializeComponent();
             ID.Text = i.ToString();
+            Update();
         }
+        public void Update()
+        {
+            DataBase DB = new DataBase("", "");
+            Section.DisplayMember = "Value";
+            Section.ValueMember = "Value";
+            if (DB.GetData("فرع الوميتال") != null)
+            {
+                Section.DataSource = DB.GetData("فرع الوميتال"); Section.Enabled = true;
+            }
+            else
+                Section.Enabled = false;
 
+            Category.DisplayMember = "Value";
+            Category.ValueMember = "Value";
+            if (DB.GetData("قسم الالوميتال") != null)
+            {
+                Category.DataSource = DB.GetData("قسم الالوميتال"); Category.Enabled = true;
+            }
+            else
+                Category.Enabled = false;
+
+            Type.DisplayMember = "Value";
+            Type.ValueMember = "Value";
+            if (DB.GetData("نوع الالوميتال ") != null)
+            {
+                Type.DataSource = DB.GetData("نوع الالوميتال "); Type.Enabled = true;
+            }
+            else
+                Type.Enabled = false;
+
+            Status.DisplayMember = "Value";
+            Status.ValueMember = "Value";
+            if (DB.GetData("حالة الالوميتال ") != null)
+            {
+                Status.DataSource = DB.GetData("حالة الالوميتال "); Status.Enabled = true;
+            }
+            else
+                Status.Enabled = false;
+
+            Notes.DisplayMember = "Value";
+            Notes.ValueMember = "Value";
+            if (DB.GetData("ملاحظات الوميتال") != null)
+            {
+                Notes.DataSource = DB.GetData("ملاحظات الوميتال"); Notes.Enabled = true;
+            }
+            else
+                Notes.Enabled = false;
+
+            Length.DisplayMember = "Value";
+            Length.ValueMember = "Value";
+            if (DB.GetData("طول") != null)
+            {
+                Length.DataSource = DB.GetData("طول"); Length.Enabled = true;
+            }
+            else
+                Length.Enabled = false;
+        }
         private void Insert_Click(object sender, EventArgs e)
         {
             AluminumClass a = new AluminumClass();
@@ -75,7 +133,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 MessageBox.Show("عفوا يجب ادخال جميع البيانات");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
@@ -90,21 +147,19 @@ namespace Workshop_System.Materials_Forms.Aluminum
             HighWeight.Text = string.Empty;
             Length.Text = string.Empty;
         }
-
         private void Add_Load(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
+            Update();
         }
     }
 }

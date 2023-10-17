@@ -65,11 +65,7 @@
             this.Notes.FormattingEnabled = true;
             this.Notes.ItemHeight = 25;
             this.Notes.Items.AddRange(new object[] {
-            "سنجل",
-            "دبل",
-            "3مم",
-            "6مم",
-            "لا شئ"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Notes.Location = new System.Drawing.Point(910, 150);
             this.Notes.Name = "Notes";
             this.Notes.Size = new System.Drawing.Size(395, 29);
@@ -81,9 +77,7 @@
             this.Length.FormattingEnabled = true;
             this.Length.ItemHeight = 25;
             this.Length.Items.AddRange(new object[] {
-            "3",
-            "6",
-            "6.5"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Length.Location = new System.Drawing.Point(910, 472);
             this.Length.Name = "Length";
             this.Length.Size = new System.Drawing.Size(395, 29);
@@ -95,9 +89,7 @@
             this.Status.FormattingEnabled = true;
             this.Status.ItemHeight = 25;
             this.Status.Items.AddRange(new object[] {
-            "منزلق",
-            "مفصلي",
-            "لا شئ"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Status.Location = new System.Drawing.Point(238, 551);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(395, 29);
@@ -109,9 +101,7 @@
             this.Section.FormattingEnabled = true;
             this.Section.ItemHeight = 25;
             this.Section.Items.AddRange(new object[] {
-            "شبابيك + ابواب",
-            "مطبخ + وحدات منفصلة + شيش حصيرة",
-            "تند"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Section.Location = new System.Drawing.Point(238, 297);
             this.Section.Name = "Section";
             this.Section.Size = new System.Drawing.Size(395, 29);
@@ -123,17 +113,7 @@
             this.Category.FormattingEnabled = true;
             this.Category.ItemHeight = 25;
             this.Category.Items.AddRange(new object[] {
-            "السعد",
-            "العربية",
-            "بي اس صغير",
-            "تانجو",
-            "بي اس كبير",
-            "جامبو",
-            "الوميل",
-            "مطابخ",
-            "مطابخ 2.5",
-            "مطابخ 4",
-            "تند"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Category.Location = new System.Drawing.Point(238, 381);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(395, 29);
@@ -145,44 +125,7 @@
             this.Type.FormattingEnabled = true;
             this.Type.ItemHeight = 25;
             this.Type.Items.AddRange(new object[] {
-            "حلق",
-            "درفة",
-            "درفة زد كبير",
-            "درفة زد صغير",
-            "باكتة",
-            "درفة زد بعلبة",
-            "سكينة",
-            "تي كبيرة",
-            "تي صداد",
-            "تي صغيرة",
-            "سوقاس",
-            "تقابل",
-            "مشترك",
-            "فيكس",
-            "بار 5سم",
-            "درفة22",
-            "درفة16",
-            "درفة21",
-            "مفرد",
-            "متباعد",
-            "متقارب",
-            "ناصية",
-            "علبة2*8",
-            "علبة2*4",
-            "علبة2*10",
-            "علبة4*8",
-            "علبة10*10",
-            "مقبض",
-            "درفة دبل",
-            "درفة مقبض",
-            "علبة4*4 عدل",
-            "علبة4*4 دوران",
-            "علبة4*4 عدل بشفة",
-            "علبة 4*4 دوران بشفة",
-            "زاوية2*2",
-            "زاوية3*3",
-            "زاوية5*5",
-            "اف 8مم"});
+            "لا يوجد عناصريجب اضافة عناصر"});
             this.Type.Location = new System.Drawing.Point(238, 472);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(395, 29);
@@ -398,6 +341,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(1359, 731);
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Details
             // 

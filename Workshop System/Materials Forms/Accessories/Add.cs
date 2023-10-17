@@ -16,22 +16,47 @@ namespace Workshop_System.Materials_Forms.Accessories
         public Add()
         {
             InitializeComponent();
-            DataBase DB = new DataBase("","");
+            Update();
+        }
+
+        public void Update()
+        {
+            DataBase DB = new DataBase("", "");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
-            Color.DisplayMember = "Value";
-            Color.ValueMember = "Value";
-            if (DB.GetData("قسم اكسسوارات") != null && DB.GetData("لون") != null)
+            if (DB.GetData("قسم اكسسوارات") != null)
             {
-                Category.DataSource = DB.GetData("قسم اكسسوارات");
-                Color.DataSource = DB.GetData("لون");
-                Type.DataSource = DB.GetData("نوع الاكسسوارات");
-                Status.DataSource = DB.GetData("حالة الاكسسوارات");
+                Category.DataSource = DB.GetData("قسم اكسسوارات"); Category.Enabled = true;
             }
             else
+                Category.Enabled = false;
+
+            Color.DisplayMember = "Value";
+            Color.ValueMember = "Value";
+            if (DB.GetData("لون") != null)
             {
-                Color.Enabled = false;
+                Color.DataSource = DB.GetData("لون"); Color.Enabled = true;
             }
+            else
+                Color.Enabled = false;
+
+            Type.DisplayMember = "Value";
+            Type.ValueMember = "Value";
+            if (DB.GetData("نوع الاكسسوارات") != null)
+            {
+                Type.DataSource = DB.GetData("نوع الاكسسوارات"); Type.Enabled = true;
+            }
+            else
+                Type.Enabled = false;
+
+            Status.DisplayMember = "Value";
+            Status.ValueMember = "Value";
+            if (DB.GetData("حالة الاكسسوارات") != null)
+            {
+                Status.DataSource = DB.GetData("حالة الاكسسوارات"); Status.Enabled = true;
+            }
+            else
+                Status.Enabled = false;
         }
 
         private void Insert_Click(object sender, EventArgs e)
@@ -109,6 +134,8 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
+            Update();
+
         }
 
         private void Category_SelectedIndexChanged(object sender, EventArgs e)
