@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modify));
-            this.Type = new System.Windows.Forms.ComboBox();
-            this.BName = new System.Windows.Forms.ComboBox();
             this.MPrice = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.FPrice = new System.Windows.Forms.TextBox();
@@ -50,41 +48,12 @@
             this.ID = new System.Windows.Forms.TextBox();
             this.Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Details = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Type = new System.Windows.Forms.ListBox();
+            this.BName = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Type
-            // 
-            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.FormattingEnabled = true;
-            this.Type.Items.AddRange(new object[] {
-            "مصري",
-            "سعودي",
-            "صيني",
-            "كيتشتين لاين",
-            "مصري سالموميل",
-            "مستورد"});
-            this.Type.Location = new System.Drawing.Point(239, 298);
-            this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(395, 33);
-            this.Type.TabIndex = 97;
-            // 
-            // BName
-            // 
-            this.BName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BName.FormattingEnabled = true;
-            this.BName.Items.AddRange(new object[] {
-            "فيبر",
-            "كلادنج",
-            "يو في",
-            "جلد",
-            "اكريليك"});
-            this.BName.Location = new System.Drawing.Point(239, 222);
-            this.BName.Name = "BName";
-            this.BName.Size = new System.Drawing.Size(395, 33);
-            this.BName.TabIndex = 96;
             // 
             // MPrice
             // 
@@ -282,15 +251,6 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "الرقم الكودي";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-13, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1380, 731);
-            this.pictureBox1.TabIndex = 76;
-            this.pictureBox1.TabStop = false;
-            // 
             // Details
             // 
             this.Details.AutoSize = true;
@@ -306,14 +266,48 @@
             this.Details.UseVisualStyleBackColor = false;
             this.Details.Click += new System.EventHandler(this.Details_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(-13, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1380, 731);
+            this.pictureBox1.TabIndex = 76;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Type
+            // 
+            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Type.FormattingEnabled = true;
+            this.Type.ItemHeight = 25;
+            this.Type.Items.AddRange(new object[] {
+            "عفوا لا يوجد عناصر يجب ادخال عناصر"});
+            this.Type.Location = new System.Drawing.Point(239, 303);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(395, 29);
+            this.Type.TabIndex = 100;
+            // 
+            // BName
+            // 
+            this.BName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BName.FormattingEnabled = true;
+            this.BName.ItemHeight = 25;
+            this.BName.Items.AddRange(new object[] {
+            "عفوا لا يوجد عناصر يجب ادخال عناصر"});
+            this.BName.Location = new System.Drawing.Point(239, 224);
+            this.BName.Name = "BName";
+            this.BName.Size = new System.Drawing.Size(395, 29);
+            this.BName.TabIndex = 99;
+            // 
             // Modify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
-            this.Controls.Add(this.Details);
             this.Controls.Add(this.Type);
             this.Controls.Add(this.BName);
+            this.Controls.Add(this.Details);
             this.Controls.Add(this.MPrice);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.FPrice);
@@ -348,9 +342,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox Type;
-        private System.Windows.Forms.ComboBox BName;
         private System.Windows.Forms.TextBox MPrice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox FPrice;
@@ -370,7 +361,9 @@
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Details;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox Type;
+        private System.Windows.Forms.ListBox BName;
     }
 }

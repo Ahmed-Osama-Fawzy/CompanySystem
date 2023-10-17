@@ -17,6 +17,28 @@ namespace Workshop_System.Prices_Options.Addtions
         public Modify()
         {
             InitializeComponent();
+            Update();
+        }
+        public void Update()
+        {
+            DataBase DB = new DataBase("", "");
+            BName.DisplayMember = "Value";
+            BName.ValueMember = "Value";
+            if (DB.GetData("اسم اللوح") != null)
+            {
+                BName.DataSource = DB.GetData("اسم اللوح"); BName.Enabled = true;
+            }
+            else
+                BName.Enabled = false;
+
+            Type.DisplayMember = "Value";
+            Type.ValueMember = "Value";
+            if (DB.GetData("نوع اللوح") != null)
+            {
+                Type.DataSource = DB.GetData("نوع اللوح"); Type.Enabled = true;
+            }
+            else
+                Type.Enabled = false;
         }
 
         public Modify(string S)
@@ -110,6 +132,12 @@ namespace Workshop_System.Prices_Options.Addtions
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
+            Update();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

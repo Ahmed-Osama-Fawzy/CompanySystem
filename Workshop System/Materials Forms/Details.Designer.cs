@@ -95,9 +95,10 @@
             "حالة الاكسسوارات",
             "ملاحظات الوميتال",
             "طول الالوميتال ",
-            "اسم لوح",
-            "نوع الفيبر ",
-            "لون"});
+            "اسم اللوح",
+            "نوع اللوح",
+            "لون",
+            "طول"});
             this.Category.Location = new System.Drawing.Point(23, 93);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(216, 33);

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Workshop_System.App_Class;
 using Workshop_System.Materials_Forms;
+using static System.Collections.Specialized.BitVector32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Workshop_System.Prices_Options.Addtions
 {
@@ -17,8 +19,30 @@ namespace Workshop_System.Prices_Options.Addtions
         public Add()
         {
             InitializeComponent();
+            Update();
         }
 
+        public void Update()
+        {
+            DataBase DB = new DataBase("", "");
+            BName.DisplayMember = "Value";
+            BName.ValueMember = "Value";
+            if (DB.GetData("اسم اللوح") != null)
+            {
+                BName.DataSource = DB.GetData("اسم اللوح"); BName.Enabled = true;
+            }
+            else
+                BName.Enabled = false;
+
+            Type.DisplayMember = "Value";
+            Type.ValueMember = "Value";
+            if (DB.GetData("نوع اللوح") != null)
+            {
+                Type.DataSource = DB.GetData("نوع اللوح"); Type.Enabled = true;
+            }
+            else
+                Type.Enabled = false;
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -89,6 +113,12 @@ namespace Workshop_System.Prices_Options.Addtions
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
+            Update();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

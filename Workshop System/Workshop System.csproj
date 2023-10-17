@@ -443,6 +443,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Discounts Forms\Covers\" />
+    <Folder Include="Discounts Forms\Doors\Joint Doors\" />
+    <Folder Include="Discounts Forms\Doors\Sliding Doors\" />
+    <Folder Include="Discounts Forms\Kitchens\Lower Slices\" />
+    <Folder Include="Discounts Forms\Kitchens\Upper Slices\" />
+    <Folder Include="Discounts Forms\Windows\Joint Windows\" />
+    <Folder Include="Discounts Forms\Windows\Sliding Windows\" />
+    <Folder Include="Discounts Forms\Windows\Tipper Windows\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
