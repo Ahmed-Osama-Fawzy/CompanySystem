@@ -27,56 +27,47 @@ namespace Workshop_System.Materials_Forms.Aluminum
         public void Update()
         {
             DataBase DB = new DataBase("", "");
-            Section.DisplayMember = "Value";
-            Section.ValueMember = "Value";
-            if (DB.GetData("فرع الوميتال") != null)
-            {
-                Section.DataSource = DB.GetData("فرع الوميتال"); Section.Enabled = true;
-            }
-            else
-                Section.Enabled = false;
-
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
-            if (DB.GetData("قسم الالوميتال") != null)
+            if (DB.GetData("قسم العمل") != null)
             {
-                Category.DataSource = DB.GetData("قسم الالوميتال"); Category.Enabled = true;
+                Category.DataSource = DB.GetData("قسم العمل"); Category.Enabled = true;
             }
             else
                 Category.Enabled = false;
 
+            Section.DisplayMember = "Value";
+            Section.ValueMember = "Value";
+            if (DB.GetData("فرع العمل") != null)
+            {
+                Section.DataSource = DB.GetData("فرع العمل"); Section.Enabled = true;
+            }
+            else
+                Section.Enabled = false;
+
             Type.DisplayMember = "Value";
             Type.ValueMember = "Value";
-            if (DB.GetData("نوع الالوميتال ") != null)
+            if (DB.GetData("نوع العمل") != null)
             {
-                Type.DataSource = DB.GetData("نوع الالوميتال "); Type.Enabled = true;
+                Type.DataSource = DB.GetData("نوع العمل"); Type.Enabled = true;
             }
             else
                 Type.Enabled = false;
 
-            Status.DisplayMember = "Value";
-            Status.ValueMember = "Value";
-            if (DB.GetData("حالة الالوميتال ") != null)
+            Description.DisplayMember = "Value";
+            Description.ValueMember = "Value";
+            if (DB.GetData("وصف العمل") != null)
             {
-                Status.DataSource = DB.GetData("حالة الالوميتال "); Status.Enabled = true;
+                Description.DataSource = DB.GetData("وصف العمل"); Description.Enabled = true;
             }
             else
-                Status.Enabled = false;
-
-            Notes.DisplayMember = "Value";
-            Notes.ValueMember = "Value";
-            if (DB.GetData("ملاحظات الوميتال") != null)
-            {
-                Notes.DataSource = DB.GetData("ملاحظات الوميتال"); Notes.Enabled = true;
-            }
-            else
-                Notes.Enabled = false;
+                Description.Enabled = false;
 
             Length.DisplayMember = "Value";
             Length.ValueMember = "Value";
-            if (DB.GetData("طول") != null)
+            if (DB.GetData("الطول") != null)
             {
-                Length.DataSource = DB.GetData("طول"); Length.Enabled = true;
+                Length.DataSource = DB.GetData("الطول"); Length.Enabled = true;
             }
             else
                 Length.Enabled = false;
@@ -85,11 +76,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
         {
             AluminumClass a = new AluminumClass();
             a.Number = Number.Text;
-            a.Section = Section.Text;
             a.Category = Category.Text;
-            a.Status = Status.Text;
+            a.Section = Section.Text;
             a.Type = Type.Text;
-            a.Notes = Notes.Text;
+            a.Title = AName.Text;
+            a.Description = Description.Text;
             if (!string.IsNullOrEmpty(LowWeight.Text))
                a.Low = Convert.ToDouble(LowWeight.Text);
             else
@@ -106,18 +97,18 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 a.Length = Convert.ToDouble(Length.Text);
             else
                 a.Length = 0.0;
-            if(!string.IsNullOrEmpty(a.Number)&&!string.IsNullOrEmpty(a.Section)&&!string.IsNullOrEmpty(a.Category)&&!string.IsNullOrEmpty(a.Status)&&!string.IsNullOrEmpty(a.Type)&&!string.IsNullOrEmpty(a.Notes)&& a.Low > 0.0 && a.Avg > 0.0 && a.High > 0.0 && a.Length > 0.0 ) 
+            if(!string.IsNullOrEmpty(a.Number)&&!string.IsNullOrEmpty(a.Category)&&!string.IsNullOrEmpty(a.Section)&&!string.IsNullOrEmpty(a.Type)&&!string.IsNullOrEmpty(a.Title)&&!string.IsNullOrEmpty(a.Description)&& a.Low > 0.0 && a.Avg > 0.0 && a.High > 0.0 && a.Length > 0.0 ) 
             {
                 bool S = a.Insert();
                 if (S)
                 {
                     MessageBox.Show("تمت الاضافة بنجاح");
                     Number.Text = string.Empty;
-                    Section.Text = string.Empty;
                     Category.Text = string.Empty;
+                    Section.Text = string.Empty;
                     Type.Text = string.Empty;
-                    Status.Text = string.Empty;
-                    Notes.Text = string.Empty;
+                    AName.Text = string.Empty;
+                    Description.Text = string.Empty;
                     LowWeight.Text = string.Empty;
                     AvgWeight.Text = string.Empty;
                     HighWeight.Text = string.Empty;
@@ -137,11 +128,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
         {
             ID.Text = string.Empty;
             Number.Text = string.Empty;
-            Section.Text = string.Empty;
             Category.Text = string.Empty;
+            Section.Text = string.Empty;
             Type.Text = string.Empty;
-            Status.Text = string.Empty;
-            Notes.Text = string.Empty;
+            AName.Text = string.Empty;
+            Description.Text = string.Empty;
             LowWeight.Text = string.Empty;
             AvgWeight.Text = string.Empty;
             HighWeight.Text = string.Empty;
@@ -160,6 +151,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
             Details NewForm = new Details();
             NewForm.ShowDialog();
             Update();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

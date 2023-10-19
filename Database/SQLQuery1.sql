@@ -112,6 +112,9 @@ alter column AvgWeight float not null
 alter table Materials.Aluminum
 alter column HighWeight float not null
 
+alter table Materials.Aluminum
+alter column Length float not null
+
 alter table Materials.Accessories
 add Type nvarchar(20) null
 
@@ -141,3 +144,113 @@ create table Materials.Types(
 select Value from Materials.Types WHERE Category = 'قسم اكسسوارات' 
 
 delete from Materials.Types
+
+
+
+
+EXEC sp_rename  'Materials.Aluminum.NCategory' , 'Category','COLUMN'
+
+EXEC sp_rename  'Materials.Aluminum.Category' , 'Section','COLUMN'
+
+EXEC sp_rename  'Materials.Aluminum.Status' , 'Type','COLUMN'
+
+EXEC sp_rename  'Materials.Aluminum.NType' , 'Type','COLUMN'
+
+EXEC sp_rename  'Materials.Aluminum.Notes' , 'Description','COLUMN'
+
+
+EXEC sp_rename  'Materials.Accessories.Type' , 'Section','COLUMN'
+
+
+EXEC sp_rename  'Materials.Accessories.Status' , 'Description','COLUMN'
+
+alter table Materials.Accessories
+add Type nvarchar(35) null
+
+delete from Materials.Types where  Value = N'بي اس صغير'
+
+CREATE TABLE my_table (
+    col1 INT,
+    col2 INT,
+    col3 INT default 1,
+);
+
+drop table my_table
+
+create schema Discounts
+
+create table Discounts.MainTable(
+	ID int identity(1,1),
+	Caterogy nvarchar(25) not null,
+	Section nvarchar(25) not null,
+	Type nvarchar(25) null,
+	Description nvarchar(25) null,
+	Title nvarchar(25) not null,
+	primary key(ID)
+)
+alter table Discounts.MainTable
+drop column TNumber
+
+alter table Discounts.Aluminum
+add Title varchar(10)
+
+
+alter table Discounts.Aluminum
+add TNumber varchar(10) foreign key references Materials.Aluminum (Number) 
+
+create table Discounts.Aluminum(
+	DiscountID int,
+	Height float not null,
+	HNumber int not null,
+	TotalHeight float not null,
+	Width float not null,
+	WNumber int not null,
+	TotalWidth float not null,
+	TotalLength float not null,
+	LowWeight float not null,
+	AvgWeight float not null,
+	HighWeight float not null,
+	foreign key (DiscountID) references Discounts.MainTable (ID)
+)
+
+create table Discounts.Accessorie(
+	DiscountID int,
+	Name nvarchar(25) not null,
+	Amount float not null,
+	Color float not null,
+	AccessorieID int,
+	foreign key (DiscountID) references Discounts.MainTable (ID),
+	foreign key (AccessorieID) references Materials.Accessories (ID)
+)
+
+
+
+create table Discounts.Glasses(
+	DiscountID int,
+	Name nvarchar(25) not null,
+	Height float not null,
+	Width float not null,
+	Area float not null,
+	Number int not null,
+	BackID int null,
+	BackColor nvarchar(25) null,
+	BackNumber int null,
+	GlassID int,
+	foreign key (DiscountID) references Discounts.MainTable (ID),
+	foreign key (GlassID) references Materials.Glasses (ID),
+	foreign key (BackID) references Materials.Glasses (ID)
+)
+
+
+alter table Discounts.Aluminum
+add TotalPrice float not null
+
+alter table Discounts.Accessorie
+add TotalPrice float not null
+
+alter table Discounts.Aluminum
+add RollsNumber int not null
+
+
+alter table Discounts.Glasses
+add TotalPrice float not null

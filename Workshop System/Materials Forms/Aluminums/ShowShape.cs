@@ -46,11 +46,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 {
                     DataRow dr = dt.Rows[0];
                     Number.Text = Convert.ToString(dr["Number"]);
-                    Section.Text = Convert.ToString(dr["Section"]);
+                    AName.Text = Convert.ToString(dr["Title"]);
                     Category.Text = Convert.ToString(dr["Category"]);
+                    Section.Text = Convert.ToString(dr["Section"]);
                     Type.Text = Convert.ToString(dr["Type"]);
-                    Status.Text = Convert.ToString(dr["Status"]);
-                    Notes.Text = Convert.ToString(dr["Notes"]);
+                    Description.Text = Convert.ToString(dr["Description"]);
                     LowW.Text = Convert.ToString(dr["LowWeight"]);
                     AvgW.Text = Convert.ToString(dr["AvgWeight"]);
                     HighW.Text = Convert.ToString(dr["HighWeight"]);
@@ -71,11 +71,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
         {
             ID.Text = string.Empty; 
             Number.Text = string.Empty;
-            Section.Text = string.Empty;
+            AName.Text = string.Empty;
             Category.Text = string.Empty;
+            Section.Text = string.Empty;
             Type.Text = string.Empty;
-            Status.Text = string.Empty;
-            Notes.Text = string.Empty;
+            Description.Text = string.Empty;
             LowW.Text = string.Empty;
             AvgW.Text = string.Empty;
             HighW.Text = string.Empty;

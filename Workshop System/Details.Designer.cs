@@ -86,19 +86,15 @@
             this.Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category.FormattingEnabled = true;
             this.Category.Items.AddRange(new object[] {
-            "فرع الوميتال",
-            "قسم اكسسوارات",
-            "قسم الالوميتال",
-            "نوع الاكسسوارات",
-            "نوع الالوميتال ",
-            "حالة الوميتال",
-            "حالة الاكسسوارات",
-            "ملاحظات الوميتال",
-            "طول الالوميتال ",
+            "قسم العمل",
+            "فرع العمل",
+            "نوع العمل",
+            "وصف العمل",
             "اسم اللوح",
             "نوع اللوح",
-            "لون",
-            "طول"});
+            "الطول",
+            "اللون",
+            "عدد الدرفات"});
             this.Category.Location = new System.Drawing.Point(23, 93);
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(216, 33);
@@ -108,6 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(252, 385);
             this.Controls.Add(this.Category);
             this.Controls.Add(this.Insert);

@@ -27,78 +27,94 @@ namespace Workshop_System.Materials_Forms.Aluminum
         public void Update()
         {
             DataBase DB = new DataBase("", "");
-            Section.DisplayMember = "Value";
-            Section.ValueMember = "Value";
-            if (DB.GetData("فرع الوميتال") != null)
-            {
-                Section.DataSource = DB.GetData("فرع الوميتال"); Section.Enabled = true;
-            }
-            else
-                Section.Enabled = false;
-
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
-            if (DB.GetData("قسم الالوميتال") != null)
+            if (DB.GetData("قسم العمل") != null)
             {
-                Category.DataSource = DB.GetData("قسم الالوميتال"); Category.Enabled = true;
+                Category.DataSource = DB.GetData("قسم العمل"); Category.Enabled = true;
             }
             else
                 Category.Enabled = false;
 
+            Section.DisplayMember = "Value";
+            Section.ValueMember = "Value";
+            if (DB.GetData("فرع العمل") != null)
+            {
+                Section.DataSource = DB.GetData("فرع العمل"); Section.Enabled = true;
+            }
+            else
+                Section.Enabled = false;
+
             Type.DisplayMember = "Value";
             Type.ValueMember = "Value";
-            if (DB.GetData("نوع الالوميتال ") != null)
+            if (DB.GetData("نوع العمل") != null)
             {
-                Type.DataSource = DB.GetData("نوع الالوميتال "); Type.Enabled = true;
+                Type.DataSource = DB.GetData("نوع العمل"); Type.Enabled = true;
             }
             else
                 Type.Enabled = false;
 
-            Status.DisplayMember = "Value";
-            Status.ValueMember = "Value";
-            if (DB.GetData("حالة الالوميتال ") != null)
+            Description.DisplayMember = "Value";
+            Description.ValueMember = "Value";
+            if (DB.GetData("وصف العمل") != null)
             {
-                Status.DataSource = DB.GetData("حالة الالوميتال "); Status.Enabled = true;
+                Description.DataSource = DB.GetData("وصف العمل"); Description.Enabled = true;
             }
             else
-                Status.Enabled = false;
-
-            Notes.DisplayMember = "Value";
-            Notes.ValueMember = "Value";
-            if (DB.GetData("ملاحظات الوميتال") != null)
-            {
-                Notes.DataSource = DB.GetData("ملاحظات الوميتال"); Notes.Enabled = true;
-            }
-            else
-                Notes.Enabled = false;
+                Description.Enabled = false;
 
             Length.DisplayMember = "Value";
             Length.ValueMember = "Value";
-            if (DB.GetData("طول") != null)
+            if (DB.GetData("الطول") != null)
             {
-                Length.DataSource = DB.GetData("طول"); Length.Enabled = true;
+                Length.DataSource = DB.GetData("الطول"); Length.Enabled = true;
             }
             else
                 Length.Enabled = false;
         }
         private void Edit_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Modify_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Edit_Click_1(object sender, EventArgs e)
+        {
             string id = ID.Text;
-            if(!string.IsNullOrEmpty(id))
+            if (!string.IsNullOrEmpty(id))
             {
                 AluminumClass aluminmu = new AluminumClass();
                 aluminmu.ID = Convert.ToInt32(id);
                 string XNumber = Number.Text;
                 string XSection = Section.Text;
                 string XCategory = Category.Text;
-                string XStatus = Status.Text;
+                string XDescription = Description.Text;
                 string XType = Type.Text;
-                string XNotes = Notes.Text;
+                string XName = AName.Text;
                 string Low = LowWeight.Text;
                 string Avg = AvgWeight.Text;
                 string High = HighWeight.Text;
                 string Len = Length.Text;
-                if (string.IsNullOrEmpty(XNumber)&&string.IsNullOrEmpty(XSection)&&string.IsNullOrEmpty(XCategory)&&string.IsNullOrEmpty(XStatus)&&string.IsNullOrEmpty(XType)&&string.IsNullOrEmpty(XNotes)&&string.IsNullOrEmpty(Low)&&string.IsNullOrEmpty(Avg)&&string.IsNullOrEmpty(High)&&string.IsNullOrEmpty(Len)) 
+                if (string.IsNullOrEmpty(XNumber) && string.IsNullOrEmpty(XSection) && string.IsNullOrEmpty(XCategory) && string.IsNullOrEmpty(XDescription) && string.IsNullOrEmpty(XType) && string.IsNullOrEmpty(XName) && string.IsNullOrEmpty(Low) && string.IsNullOrEmpty(Avg) && string.IsNullOrEmpty(High) && string.IsNullOrEmpty(Len))
                 {
                     MessageBox.Show("عفوا يجب ادخال بيانات للتحديث");
                 }
@@ -110,12 +126,12 @@ namespace Workshop_System.Materials_Forms.Aluminum
                         aluminmu.Section = XSection;
                     if (!string.IsNullOrEmpty(XCategory))
                         aluminmu.Category = XCategory;
+                    if (!string.IsNullOrEmpty(XName))
+                        aluminmu.Title = XName;
                     if (!string.IsNullOrEmpty(XType))
                         aluminmu.Type = XType;
-                    if (!string.IsNullOrEmpty(XNotes))
-                        aluminmu.Notes = XNotes;
-                    if (!string.IsNullOrEmpty(XStatus))
-                        aluminmu.Status = XStatus;
+                    if (!string.IsNullOrEmpty(XDescription))
+                        aluminmu.Description = XDescription;
                     if (!string.IsNullOrEmpty(Low))
                         aluminmu.Low = Convert.ToDouble(Low);
                     if (!string.IsNullOrEmpty(Avg))
@@ -123,18 +139,29 @@ namespace Workshop_System.Materials_Forms.Aluminum
                     if (!string.IsNullOrEmpty(High))
                         aluminmu.High = Convert.ToDouble(High);
                     if (!string.IsNullOrEmpty(Len))
-                        aluminmu.Length = Convert.ToDouble(Length);
+                        aluminmu.Length = Convert.ToDouble(Len);
                     bool Updated = aluminmu.Update();
                     if (Updated)
                     {
                         MessageBox.Show("تم تحديث البايانات بنجاح");
+                        ID.Text = string.Empty;
+                        Number.Text = string.Empty;
+                        Section.Text = string.Empty;
+                        Category.Text = string.Empty;
+                        AName.Text = string.Empty;
+                        Type.Text = string.Empty;
+                        Description.Text = string.Empty;
+                        LowWeight.Text = string.Empty;
+                        AvgWeight.Text = string.Empty;
+                        HighWeight.Text = string.Empty;
+                        Length.Text = string.Empty;
                     }
                     else
                     {
                         MessageBox.Show("‘عفوا لا يمكن تحديث البيانات");
                     }
                 }
-                
+
             }
             else
             {
@@ -142,36 +169,26 @@ namespace Workshop_System.Materials_Forms.Aluminum
             }
         }
 
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            ID.Text = string.Empty;
-            Number.Text = string.Empty;
-            Section.Text = string.Empty;
-            Category.Text = string.Empty;
-            Status.Text = string.Empty;
-            Type.Text = string.Empty;
-            Notes.Text = string.Empty;
-            LowWeight.Text = string.Empty;
-            AvgWeight.Text = string.Empty;
-            HighWeight.Text = string.Empty;
-            Length.Text = string.Empty;
-        }
-
-        private void Modify_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Details_Click(object sender, EventArgs e)
+        private void Details_Click_1(object sender, EventArgs e)
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
             Update();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Clear_Click_1(object sender, EventArgs e)
         {
-
+            ID.Text = string.Empty;
+            Number.Text = string.Empty;
+            Section.Text = string.Empty;
+            Category.Text = string.Empty;
+            AName.Text = string.Empty;
+            Type.Text = string.Empty;
+            Description.Text = string.Empty;
+            LowWeight.Text = string.Empty;
+            AvgWeight.Text = string.Empty;
+            HighWeight.Text = string.Empty;
+            Length.Text = string.Empty;
         }
     }
 }

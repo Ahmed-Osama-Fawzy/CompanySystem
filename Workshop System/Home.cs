@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Workshop_System.Discounts_Forms;
+using Workshop_System.Discounts_Forms.Windows.Sliding_Windows;
 using Workshop_System.Offer_Price_Forms;
 
 namespace Workshop_System
@@ -68,6 +70,12 @@ namespace Workshop_System
         {
             Get_Offer_Price NewForm = new Get_Offer_Price();
             NewForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Discounts NewFrom = new Discounts();
+            NewFrom.ShowDialog();
         }
     }
 }

@@ -47,12 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App Class\AccessoriesClass.cs" />
-    <Compile Include="App Class\AluminumClass.cs" />
-    <Compile Include="App Class\BoardClass.cs" />
+    <Compile Include="App Class\Discounts Classes\Windows\Sliding\Sliding.cs" />
+    <Compile Include="App Class\Materials Classes\AccessoriesClass.cs" />
+    <Compile Include="App Class\Materials Classes\AluminumClass.cs" />
+    <Compile Include="App Class\Materials Classes\BoardClass.cs" />
     <Compile Include="App Class\CustomerClass.cs" />
     <Compile Include="App Class\DataBase.cs" />
-    <Compile Include="App Class\GlassesClass.cs" />
+    <Compile Include="App Class\Materials Classes\GlassesClass.cs" />
     <Compile Include="App Class\loginClass.cs" />
     <Compile Include="CompanypSystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,6 +100,24 @@
     </Compile>
     <Compile Include="Customers Forms\Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Discounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Discounts.Designer.cs">
+      <DependentUpon>Discounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Sliding Windows\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Sliding Windows\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.Designer.cs">
+      <DependentUpon>SildingWindows.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
@@ -226,10 +245,10 @@
     <Compile Include="Materials Forms\Aluminums\ShowShape.Designer.cs">
       <DependentUpon>ShowShape.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materials Forms\Details.cs">
+    <Compile Include="Details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materials Forms\Details.Designer.cs">
+    <Compile Include="Details.Designer.cs">
       <DependentUpon>Details.cs</DependentUpon>
     </Compile>
     <Compile Include="Materials Forms\Glasses\Add.cs">
@@ -306,6 +325,15 @@
     <EmbeddedResource Include="Customers Forms\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Discounts.resx">
+      <DependentUpon>Discounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\Sliding Windows\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.resx">
+      <DependentUpon>SildingWindows.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,7 +397,7 @@
     <EmbeddedResource Include="Materials Forms\Boards\ShowBoards.resx">
       <DependentUpon>ShowBoards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materials Forms\Details.resx">
+    <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materials Forms\Glasses\Add.resx">
@@ -450,7 +478,6 @@
     <Folder Include="Discounts Forms\Kitchens\Lower Slices\" />
     <Folder Include="Discounts Forms\Kitchens\Upper Slices\" />
     <Folder Include="Discounts Forms\Windows\Joint Windows\" />
-    <Folder Include="Discounts Forms\Windows\Sliding Windows\" />
     <Folder Include="Discounts Forms\Windows\Tipper Windows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

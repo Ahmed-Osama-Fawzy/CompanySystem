@@ -45,8 +45,8 @@
             this.Color = new System.Windows.Forms.ListBox();
             this.AName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Status = new System.Windows.Forms.ListBox();
-            this.Type = new System.Windows.Forms.ListBox();
+            this.Description = new System.Windows.Forms.ListBox();
+            this.Section = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,6 +56,8 @@
             this.accessoriesTableAdapter = new Workshop_System.CompanypSystemDataSet1TableAdapters.AccessoriesTableAdapter();
             this.typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typesTableAdapter = new Workshop_System.CompanypSystemDataSet1TableAdapters.TypesTableAdapter();
+            this.Type = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companypSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accessoriesBindingSource)).BeginInit();
@@ -75,6 +77,7 @@
             this.Clear.TabIndex = 42;
             this.Clear.Text = "افراغ البيانات";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Insert
             // 
@@ -178,7 +181,7 @@
             // Price
             // 
             this.Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price.Location = new System.Drawing.Point(239, 473);
+            this.Price.Location = new System.Drawing.Point(868, 223);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(395, 31);
             this.Price.TabIndex = 37;
@@ -188,7 +191,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(76, 476);
+            this.label5.Location = new System.Drawing.Point(705, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 25);
             this.label5.TabIndex = 36;
@@ -221,33 +224,33 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 25);
+            this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 46;
-            this.label2.Text = "الاسم";
+            this.label2.Text = "الكنية";
             // 
-            // Status
+            // Description
             // 
-            this.Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.FormattingEnabled = true;
-            this.Status.ItemHeight = 25;
-            this.Status.Items.AddRange(new object[] {
+            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Description.FormattingEnabled = true;
+            this.Description.ItemHeight = 25;
+            this.Description.Items.AddRange(new object[] {
             "لا يوجد عناصر يجب اضافة عنصر"});
-            this.Status.Location = new System.Drawing.Point(868, 298);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(395, 29);
-            this.Status.TabIndex = 58;
+            this.Description.Location = new System.Drawing.Point(868, 298);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(395, 29);
+            this.Description.TabIndex = 58;
             // 
-            // Type
+            // Section
             // 
-            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.FormattingEnabled = true;
-            this.Type.ItemHeight = 25;
-            this.Type.Items.AddRange(new object[] {
+            this.Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Section.FormattingEnabled = true;
+            this.Section.ItemHeight = 25;
+            this.Section.Items.AddRange(new object[] {
             "لا يوجد عناصر يجب اضافة عنصر"});
-            this.Type.Location = new System.Drawing.Point(868, 226);
-            this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(395, 29);
-            this.Type.TabIndex = 57;
+            this.Section.Location = new System.Drawing.Point(239, 470);
+            this.Section.Name = "Section";
+            this.Section.Size = new System.Drawing.Size(395, 29);
+            this.Section.TabIndex = 57;
             // 
             // label7
             // 
@@ -256,9 +259,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(701, 301);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 25);
+            this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 56;
-            this.label7.Text = "الحالة";
+            this.label7.Text = "الوصف";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
@@ -266,11 +269,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(705, 229);
+            this.label6.Location = new System.Drawing.Point(76, 473);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 25);
+            this.label6.Size = new System.Drawing.Size(54, 25);
             this.label6.TabIndex = 55;
-            this.label6.Text = "النوع";
+            this.label6.Text = "الفرع";
             // 
             // label9
             // 
@@ -321,15 +324,40 @@
             // 
             this.typesTableAdapter.ClearBeforeFill = true;
             // 
+            // Type
+            // 
+            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Type.FormattingEnabled = true;
+            this.Type.ItemHeight = 25;
+            this.Type.Items.AddRange(new object[] {
+            "لا يوجد عناصر يجب اضافة عنصر"});
+            this.Type.Location = new System.Drawing.Point(868, 379);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(395, 29);
+            this.Type.TabIndex = 62;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(701, 382);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 25);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "النوع";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.Type);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.Details);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.Status);
-            this.Controls.Add(this.Type);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Section);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AName);
@@ -379,8 +407,8 @@
         private System.Windows.Forms.ListBox Color;
         private System.Windows.Forms.TextBox AName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox Status;
-        private System.Windows.Forms.ListBox Type;
+        private System.Windows.Forms.ListBox Description;
+        private System.Windows.Forms.ListBox Section;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
@@ -390,5 +418,7 @@
         private CompanypSystemDataSet1TableAdapters.AccessoriesTableAdapter accessoriesTableAdapter;
         private System.Windows.Forms.BindingSource typesBindingSource;
         private CompanypSystemDataSet1TableAdapters.TypesTableAdapter typesTableAdapter;
+        private System.Windows.Forms.ListBox Type;
+        private System.Windows.Forms.Label label10;
     }
 }

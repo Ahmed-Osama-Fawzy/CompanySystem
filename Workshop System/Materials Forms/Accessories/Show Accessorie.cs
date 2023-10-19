@@ -35,14 +35,15 @@ namespace Workshop_System.Materials_Forms.Accessories
                 if(dt != null)
                 {
                     DataRow dr = dt.Rows[0];
-                    ID.Text = Convert.ToString(dr["ID"]);
+                    Number.Text = Convert.ToString(dr["ID"]);
                     Title.Text = Convert.ToString(dr["Name"]);
                     Size.Text = Convert.ToString(dr["Size"]);
                     Category.Text = Convert.ToString(dr["Category"]);
+                    Section.Text = Convert.ToString(dr["Section"]);
                     Price.Text = Convert.ToString(dr["Price"]);
                     Color.Text = Convert.ToString(dr["Color"]);
                     Type.Text = Convert.ToString(dr["Type"]);
-                    Status.Text = Convert.ToString(dr["Status"]);
+                    Description.Text = Convert.ToString(dr["Description"]);
                 }
 
 
@@ -67,7 +68,8 @@ namespace Workshop_System.Materials_Forms.Accessories
             Price.Text = string.Empty;
             Color.Text = string.Empty;
             Type.Text = string.Empty;
-            Status.Text = string.Empty;
+            Description.Text = string.Empty;
+            Section.Text = string.Empty;
 
         }
 

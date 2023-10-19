@@ -11,9 +11,9 @@ using Workshop_System.App_Class;
 
 namespace Workshop_System.Materials_Forms.Accessories
 {
-    public partial class Modify : Form
+    public partial class Name : Form
     {
-        public Modify()
+        public Name()
         {
             InitializeComponent();
             Update();
@@ -23,48 +23,58 @@ namespace Workshop_System.Materials_Forms.Accessories
             DataBase DB = new DataBase("", "");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
-            if (DB.GetData("قسم اكسسوارات") != null)
+            if (DB.GetData("قسم العمل") != null)
             {
-                Category.DataSource = DB.GetData("قسم اكسسوارات"); Type.Enabled = true;
+                Category.DataSource = DB.GetData("قسم العمل"); Category.Enabled = true;
             }
             else
                 Category.Enabled = false;
 
             Color.DisplayMember = "Value";
             Color.ValueMember = "Value";
-            if (DB.GetData("لون") != null)
+            if (DB.GetData("اللون") != null)
             {
-                Color.DataSource = DB.GetData("لون"); Type.Enabled = true;
+                Color.DataSource = DB.GetData("اللون"); Color.Enabled = true;
             }
             else
                 Color.Enabled = false;
 
+            Section.DisplayMember = "Value";
+            Section.ValueMember = "Value";
+            if (DB.GetData("فرع العمل") != null)
+            {
+                Section.DataSource = DB.GetData("فرع العمل"); Section.Enabled = true;
+            }
+            else
+                Section.Enabled = false;
+
+            Description.DisplayMember = "Value";
+            Description.ValueMember = "Value";
+            if (DB.GetData("وصف العمل") != null)
+            {
+                Description.DataSource = DB.GetData("وصف العمل"); Description.Enabled = true;
+            }
+            else
+                Description.Enabled = false;
+
             Type.DisplayMember = "Value";
             Type.ValueMember = "Value";
-            if (DB.GetData("نوع الاكسسوارات") != null)
+            if (DB.GetData("نوع العمل") != null)
             {
-                Type.DataSource = DB.GetData("نوع الاكسسوارات"); Type.Enabled = true;
+                Type.DataSource = DB.GetData("نوع العمل"); Type.Enabled = true;
             }
             else
                 Type.Enabled = false;
-
-            Status.DisplayMember = "Value";
-            Status.ValueMember = "Value";
-            if (DB.GetData("حالة الاكسسوارات") != null)
-            {
-                Status.DataSource = DB.GetData("حالة الاكسسوارات"); Status.Enabled = true;
-            }
-            else
-                Status.Enabled = false;
         }
 
-        public Modify(string i)
+        public Name(string i)
         {
             InitializeComponent();
             ID.Text = i;
+            Update();
         }
 
-        private void Edit_Click(object sender, EventArgs e)
+        private void Edit_Click_1(object sender, EventArgs e)
         {
             string id = ID.Text;
             if(!string.IsNullOrEmpty(id)) 
@@ -75,8 +85,9 @@ namespace Workshop_System.Materials_Forms.Accessories
                 string SPrice = Price.Text;
                 string SColor = Color.Text;
                 string SType = Type.Text;
-                string SStatus = Status.Text;
-                if (!string.IsNullOrEmpty(SName) || !string.IsNullOrEmpty(SCategory) || !string.IsNullOrEmpty(SSize) || !string.IsNullOrEmpty(SPrice) || !string.IsNullOrEmpty(SColor) || !string.IsNullOrEmpty(SType) || !string.IsNullOrEmpty(SStatus))
+                string SDescription = Description.Text;
+                string SSection = Section.Text;
+                if (!string.IsNullOrEmpty(SName) || !string.IsNullOrEmpty(SCategory) || !string.IsNullOrEmpty(SSize) || !string.IsNullOrEmpty(SPrice) || !string.IsNullOrEmpty(SColor) || !string.IsNullOrEmpty(SType) || !string.IsNullOrEmpty(SDescription))
                 {
                     AccessoriesClass accessoriesClass  = new AccessoriesClass();
                     accessoriesClass.ID = Convert.ToInt32(id);
@@ -92,8 +103,10 @@ namespace Workshop_System.Materials_Forms.Accessories
                         accessoriesClass.Color = SColor;
                     if(!string.IsNullOrEmpty(SType))
                         accessoriesClass.Type = SType;
-                    if(!string.IsNullOrEmpty(SStatus))
-                        accessoriesClass.Status = SStatus;
+                    if(!string.IsNullOrEmpty(SDescription))
+                        accessoriesClass.Description = SDescription;
+                    if (!string.IsNullOrEmpty(accessoriesClass.Section = SSection))
+                        accessoriesClass.Section = SSection;
                     if (accessoriesClass.Modify())
                     {
                         MessageBox.Show("تم تعديل البيانات بنجاح");
@@ -127,6 +140,134 @@ namespace Workshop_System.Materials_Forms.Accessories
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Insert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            ID.Text = string.Empty;
+            AName.Text = string.Empty;
+            Size.Text = string.Empty;
+            Category.Text = string.Empty;
+            Price.Text = string.Empty;
+            Color.Text = string.Empty;
+            Section.Text = string.Empty;
+            Description.Text = string.Empty;
+            Type.Text = string.Empty;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Description_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Section_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Details_Click_1(object sender, EventArgs e)
         {
 
         }

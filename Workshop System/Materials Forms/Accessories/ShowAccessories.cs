@@ -26,8 +26,8 @@ namespace Workshop_System.Materials_Forms.Accessories
             dt.Columns["Price"].ColumnName = "السعر";
             dt.Columns["Color"].ColumnName = "اللون";
             dt.Columns["LastEditDate"].ColumnName = "تاريخ اخر تعديل";
-            dt.Columns["Type"].ColumnName = "النوع";
-            dt.Columns["Status"].ColumnName = "الحالة";
+            dt.Columns["Section"].ColumnName = "الفرع";
+            dt.Columns["Description"].ColumnName = "الوصف";
             AllAccessories.DataSource = dt;
         }
 

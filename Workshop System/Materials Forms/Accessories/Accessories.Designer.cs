@@ -256,6 +256,7 @@
             this.RightToLeftLayout = true;
             this.Text = "الاكسسوارات";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Accessories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectedAccessories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -27,18 +27,18 @@ namespace Workshop_System.Prices_Options.Addtions
             DataBase DB = new DataBase("", "");
             BName.DisplayMember = "Value";
             BName.ValueMember = "Value";
-            if (DB.GetData("اسم اللوح") != null)
+            if (DB.GetData("") != null)
             {
-                BName.DataSource = DB.GetData("اسم اللوح"); BName.Enabled = true;
+                BName.DataSource = DB.GetData(""); BName.Enabled = true;
             }
             else
                 BName.Enabled = false;
 
             Type.DisplayMember = "Value";
             Type.ValueMember = "Value";
-            if (DB.GetData("نوع اللوح") != null)
+            if (DB.GetData("") != null)
             {
-                Type.DataSource = DB.GetData("نوع اللوح"); Type.Enabled = true;
+                Type.DataSource = DB.GetData(""); Type.Enabled = true;
             }
             else
                 Type.Enabled = false;

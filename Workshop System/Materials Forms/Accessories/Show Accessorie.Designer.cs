@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowAccessiore));
-            this.Status = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Type = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,19 +52,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Section = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Status
+            // Description
             // 
-            this.Status.Enabled = false;
-            this.Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.Location = new System.Drawing.Point(881, 499);
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Size = new System.Drawing.Size(395, 31);
-            this.Status.TabIndex = 139;
+            this.Description.Enabled = false;
+            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Description.Location = new System.Drawing.Point(881, 499);
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Size = new System.Drawing.Size(395, 31);
+            this.Description.TabIndex = 139;
             // 
             // label10
             // 
@@ -73,9 +75,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(718, 502);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 25);
+            this.label10.Size = new System.Drawing.Size(71, 25);
             this.label10.TabIndex = 138;
-            this.label10.Text = "الحالة";
+            this.label10.Text = "الوصف";
             // 
             // Type
             // 
@@ -303,12 +305,35 @@
             this.pictureBox1.TabIndex = 117;
             this.pictureBox1.TabStop = false;
             // 
+            // Section
+            // 
+            this.Section.Enabled = false;
+            this.Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Section.Location = new System.Drawing.Point(881, 574);
+            this.Section.Name = "Section";
+            this.Section.ReadOnly = true;
+            this.Section.Size = new System.Drawing.Size(395, 31);
+            this.Section.TabIndex = 141;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(718, 580);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 25);
+            this.label11.TabIndex = 140;
+            this.label11.Text = "الفرع";
+            // 
             // ShowAccessiore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
-            this.Controls.Add(this.Status);
+            this.Controls.Add(this.Section);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Description);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Type);
             this.Controls.Add(this.label9);
@@ -346,7 +371,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Status;
+        private System.Windows.Forms.TextBox Description;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Type;
         private System.Windows.Forms.Label label9;
@@ -369,5 +394,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Section;
+        private System.Windows.Forms.Label label11;
     }
 }

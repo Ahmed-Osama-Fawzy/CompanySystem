@@ -256,6 +256,7 @@
             this.RightToLeftLayout = true;
             this.Text = "قطاعات الالوميتال";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Aluminum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedShapes)).EndInit();
             this.ResumeLayout(false);

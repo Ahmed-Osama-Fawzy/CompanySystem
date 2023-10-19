@@ -17,12 +17,13 @@ namespace Workshop_System.App_Class
         public string Category { get; set; }
         public float Price { get; set; }
         public string Color { get; set; }
+        public string Section { get; set; }
+        public string Description { get; set; }
         public string Type { get; set; }
-        public string Status { get; set; }
         public DataBase DB = new DataBase("Materials","Accessories");
         public bool Insert()
         {
-            if (DB.Insert("Name", Name, "False", "Size", $"{Size}", "Ture", "Category", Category, "False", "Price", $"{Price}", "True", "Color", Color, "False","Type",Type,"false","Status",Status,"false"))
+            if (DB.Insert("Name", Name, "False", "Size", $"{Size}", "Ture", "Category", Category, "False", "Price", $"{Price}", "True", "Color", Color, "False","Section",Section,"false","Description",Description,"false" , "Type",Type,"false"))
             {
                 return true;
             }
@@ -73,17 +74,25 @@ namespace Workshop_System.App_Class
                     else
                         A += "F";
                 }
-                if (!string.IsNullOrEmpty(Type))
+                if (!string.IsNullOrEmpty(Section))
                 {
-                    bool Update = DB.Update("ID", $"{ID}", "True", "Type", Type, "false");
+                    bool Update = DB.Update("ID", $"{ID}", "True", "Section", Section, "false");
                     if (Update)
                         A += "T";
                     else
                         A += "F";
                 }
-                if (!string.IsNullOrEmpty(Status))
+                if (!string.IsNullOrEmpty(Description))
                 {
-                    bool Update =  DB.Update("ID", $"{ID}", "True", "Status", Status, "false");
+                    bool Update =  DB.Update("ID", $"{ID}", "True", "Description", Description, "false");
+                    if (Update)
+                        A += "T";
+                    else
+                        A += "F";
+                }
+                if (!string.IsNullOrEmpty(Type))
+                {
+                    bool Update = DB.Update("ID", $"{ID}", "True", "Type", Type, "false");
                     if (Update)
                         A += "T";
                     else

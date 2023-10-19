@@ -19,12 +19,12 @@ namespace Workshop_System.Materials_Forms.Aluminum
             AluminumClass aluminmuClass = new AluminumClass();
             DataTable dt = aluminmuClass.SelectAll();
             dt.Columns["Number"].ColumnName = "الرقم";
-            dt.Columns["Section"].ColumnName = "الكنية";
-            dt.Columns["Status"].ColumnName = "الحالة";
+            dt.Columns["Title"].ColumnName = "الكنية";
+            dt.Columns["Description"].ColumnName = "الوصف";
             dt.Columns["Type"].ColumnName = "النوع";
             dt.Columns["Category"].ColumnName = "القسم";
             dt.Columns["ID"].ColumnName = "الرقم التعريفي";
-            dt.Columns["Notes"].ColumnName = "ملاحظات";
+            dt.Columns["Section"].ColumnName = "الفرع";
             dt.Columns["LowWeight"].ColumnName = "الوزن الخفيف";
             dt.Columns["AvgWeight"].ColumnName = "الوزن المتوسط";
             dt.Columns["HighWeight"].ColumnName = "الوزن الثقيل";

@@ -37,15 +37,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.LowW = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.Notes = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Status = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Type = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Section = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Category = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Section = new System.Windows.Forms.TextBox();
+            this.AName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Number = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -145,16 +145,16 @@
             this.label9.TabIndex = 109;
             this.label9.Text = "الوزن الخفيف";
             // 
-            // Notes
+            // Description
             // 
-            this.Notes.Enabled = false;
-            this.Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notes.Location = new System.Drawing.Point(881, 328);
-            this.Notes.Name = "Notes";
-            this.Notes.ReadOnly = true;
-            this.Notes.Size = new System.Drawing.Size(395, 31);
-            this.Notes.TabIndex = 108;
-            this.Notes.TextChanged += new System.EventHandler(this.Notes_TextChanged);
+            this.Description.Enabled = false;
+            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Description.Location = new System.Drawing.Point(881, 328);
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Size = new System.Drawing.Size(395, 31);
+            this.Description.TabIndex = 108;
+            this.Description.TextChanged += new System.EventHandler(this.Notes_TextChanged);
             // 
             // label7
             // 
@@ -163,19 +163,19 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(718, 331);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 25);
+            this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 107;
-            this.label7.Text = "ملاحظات";
+            this.label7.Text = "الوصف";
             // 
-            // Status
+            // Type
             // 
-            this.Status.Enabled = false;
-            this.Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.Location = new System.Drawing.Point(201, 658);
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Size = new System.Drawing.Size(395, 31);
-            this.Status.TabIndex = 106;
+            this.Type.Enabled = false;
+            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Type.Location = new System.Drawing.Point(201, 658);
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Size = new System.Drawing.Size(395, 31);
+            this.Type.TabIndex = 106;
             // 
             // label6
             // 
@@ -184,19 +184,19 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(38, 661);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 25);
+            this.label6.Size = new System.Drawing.Size(52, 25);
             this.label6.TabIndex = 105;
-            this.label6.Text = "الحالة";
+            this.label6.Text = "النوع";
             // 
-            // Type
+            // Section
             // 
-            this.Type.Enabled = false;
-            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.Location = new System.Drawing.Point(201, 577);
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Size = new System.Drawing.Size(395, 31);
-            this.Type.TabIndex = 104;
+            this.Section.Enabled = false;
+            this.Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Section.Location = new System.Drawing.Point(201, 577);
+            this.Section.Name = "Section";
+            this.Section.ReadOnly = true;
+            this.Section.Size = new System.Drawing.Size(395, 31);
+            this.Section.TabIndex = 104;
             // 
             // label5
             // 
@@ -205,9 +205,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(38, 580);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 25);
+            this.label5.Size = new System.Drawing.Size(54, 25);
             this.label5.TabIndex = 103;
-            this.label5.Text = "النوع";
+            this.label5.Text = "الفرع";
             // 
             // Category
             // 
@@ -230,15 +230,15 @@
             this.label4.TabIndex = 101;
             this.label4.Text = "القسم";
             // 
-            // Section
+            // AName
             // 
-            this.Section.Enabled = false;
-            this.Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Section.Location = new System.Drawing.Point(201, 412);
-            this.Section.Name = "Section";
-            this.Section.ReadOnly = true;
-            this.Section.Size = new System.Drawing.Size(395, 31);
-            this.Section.TabIndex = 100;
+            this.AName.Enabled = false;
+            this.AName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AName.Location = new System.Drawing.Point(201, 412);
+            this.AName.Name = "AName";
+            this.AName.ReadOnly = true;
+            this.AName.Size = new System.Drawing.Size(395, 31);
+            this.AName.TabIndex = 100;
             // 
             // label3
             // 
@@ -247,9 +247,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(38, 415);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
+            this.label3.Size = new System.Drawing.Size(52, 25);
             this.label3.TabIndex = 99;
-            this.label3.Text = "الفرع";
+            this.label3.Text = "الاسم";
             // 
             // Number
             // 
@@ -364,15 +364,15 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.LowW);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.Notes);
+            this.Controls.Add(this.Description);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Status);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.Type);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Section);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Category);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Section);
+            this.Controls.Add(this.AName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Number);
             this.Controls.Add(this.label2);
@@ -405,15 +405,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox LowW;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Notes;
+        private System.Windows.Forms.TextBox Description;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Status;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox Type;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Section;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Category;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Section;
+        private System.Windows.Forms.TextBox AName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Number;
         private System.Windows.Forms.Label label2;

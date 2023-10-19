@@ -27,7 +27,7 @@ namespace Workshop_System.Materials_Forms.Accessories
 
         private void ModifyAccessorie_Click(object sender, EventArgs e)
         {
-            Modify NewForm = new Modify();
+            Name NewForm = new Name();
             NewForm.ShowDialog();
         }
 
@@ -53,7 +53,17 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
             string Key = SearchInput.Text;
             AccessoriesClass accessoriesClass = new AccessoriesClass();
-            SelectedAccessories.DataSource = accessoriesClass.Search(Key);
+            DataTable dt = accessoriesClass.Search(Key);
+            dt.Columns["ID"].ColumnName = "الرقم التعريفي";
+            dt.Columns["Name"].ColumnName = "الاسم";
+            dt.Columns["Size"].ColumnName = "المقاس";
+            dt.Columns["Category"].ColumnName = "القسم";
+            dt.Columns["Price"].ColumnName = "السعر";
+            dt.Columns["Color"].ColumnName = "اللون";
+            dt.Columns["LastEditDate"].ColumnName = "تاريخ اخر تعديل";
+            dt.Columns["Section"].ColumnName = "الفرع";
+            dt.Columns["Description"].ColumnName = "الوصف";
+            SelectedAccessories.DataSource = dt;
         }
 
         private void SelectedAccessories_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -76,8 +86,13 @@ namespace Workshop_System.Materials_Forms.Accessories
 
         private void CustomEdit_Click(object sender, EventArgs e)
         {
-            Modify modify  =  new Modify(Convert.ToString(SelectedID.Text));
+            Name modify  =  new Name(Convert.ToString(SelectedID.Text));
             modify.ShowDialog();
+        }
+
+        private void Accessories_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

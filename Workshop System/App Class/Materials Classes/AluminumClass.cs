@@ -13,11 +13,11 @@ namespace Workshop_System.App_Class
     {
         public int ID { get; set; }
         public string Number { get; set; }
-        public string Section { get; set; }
         public string Category { get; set; }
-        public string Status { get; set; }
-        public string Type { get; set; } 
-        public string Notes { get; set; }
+        public string Section { get; set; }
+        public string Type { get; set; }
+        public string Title { get; set; } 
+        public string Description { get; set; }
         public double Low { get; set; }
         public double Avg { get; set; }
         public double High { get; set; }
@@ -26,7 +26,7 @@ namespace Workshop_System.App_Class
         public bool Insert()
         {
             bool Inserted = 
-                DB.Insert("Number",Number,"False","Section",Section,"False","Type",Type,"False","Category" , Category , "False" , "Notes",Notes,"False","Status",Status,"False","LowWeight",$"{Low}","True","AvgWeight",$"{Avg}","True","HighWeight",$"{High}", "True", "Length",$"{Length}","True");
+                DB.Insert("Number",Number,"False", "Category", Category,"False", "Title", Title,"False", "Section", Section , "False" , "Description", Description,"False", "Type", Type,"False","LowWeight",$"{Low}","True","AvgWeight",$"{Avg}","True","HighWeight",$"{High}", "True", "Length",$"{Length}","True");
             return Inserted;
         }
         public bool Update()
@@ -40,6 +40,14 @@ namespace Workshop_System.App_Class
                 else
                     S += "F";
             }
+            if (!string.IsNullOrEmpty(Category))
+            {
+                bool Updated = DB.Update("ID", $"{ID}", "True", "Category", Category, "False");
+                if (Updated)
+                    S += "T";
+                else
+                    S += "F";
+            }
             if (!string.IsNullOrEmpty(Section))
             {
                 bool Updated = DB.Update("ID", $"{ID}", "True", "Section", Section, "False");
@@ -48,9 +56,9 @@ namespace Workshop_System.App_Class
                 else
                     S += "F";
             }
-            if (!string.IsNullOrEmpty(Category))
+            if (!string.IsNullOrEmpty(Title))
             {
-                bool Updated = DB.Update("ID", $"{ID}", "True", "Category", Category, "False");
+                bool Updated = DB.Update("ID", $"{ID}", "True", "Title", Title, "False");
                 if (Updated)
                     S += "T";
                 else
@@ -64,17 +72,9 @@ namespace Workshop_System.App_Class
                 else
                     S += "F";
             }
-            if (!string.IsNullOrEmpty(Status))
+            if (!string.IsNullOrEmpty(Description))
             {
-                bool Updated = DB.Update("ID", $"{ID}", "True", "Status", Status, "False");
-                if (Updated)
-                    S += "T";
-                else
-                    S += "F";
-            }
-            if (!string.IsNullOrEmpty(Notes))
-            {
-                bool Updated = DB.Update("ID", $"{ID}", "True", "Notes", Notes, "False");
+                bool Updated = DB.Update("ID", $"{ID}", "True", "Description", Description, "False");
                 if (Updated)
                     S += "T";
                 else
@@ -153,7 +153,7 @@ namespace Workshop_System.App_Class
         }
         public DataTable Search(string S)
         {
-            DataTable dt = DB.SelectLike(S,"Category");
+            DataTable dt = DB.SelectLike(S,"Section");
             return dt;
         }
     }
