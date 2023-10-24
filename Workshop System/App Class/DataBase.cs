@@ -451,5 +451,48 @@ namespace Workshop_System.App_Class
             }
             return null;
         }
+        public DataTable MulitpeSelect(string S , params string[] Inputs)
+        {
+            SqlConnection conn = new SqlConnection(connection);
+            DataTable dt = new DataTable();
+            string Q = "";
+            if(Inputs.Length > 1)
+            {
+                for (int i = 0; i < Inputs.Length; i += 3)
+                {
+                    if (Inputs[i + 2].ToLower() == "false")
+                        Q += $"{Inputs[i]} = N'{Inputs[i + 1]}' AND ";
+                    else
+                        Q += $"{Inputs[i]} = {Inputs[i + 1]} AND ";
+                }
+                Q = Q.Remove(Q.Length - 4);
+            }
+            try
+            {
+                string Query = "";
+                if (Q.Length > 0)
+                {
+                    Query = $"SELECT {S} FROM {this.Table} WHERE {Q}";
+                }
+                else
+                {
+                    Query = $"SELECT {S} FROM {this.Table}";
+                }
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The Error IS: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+
     }
 }

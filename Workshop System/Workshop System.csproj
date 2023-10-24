@@ -47,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App Class\Discounts Classes\Windows\Sliding\Sliding.cs" />
+    <Compile Include="App Class\Discounts Classes\Windows\WAluminumClass.cs" />
+    <Compile Include="App Class\Discounts Classes\Windows\WAccessoriesClass.cs" />
+    <Compile Include="App Class\Discounts Classes\Windows\WGlassClass.cs" />
+    <Compile Include="App Class\Discounts Classes\Windows\WindowsClass.cs" />
     <Compile Include="App Class\Materials Classes\AccessoriesClass.cs" />
     <Compile Include="App Class\Materials Classes\AluminumClass.cs" />
     <Compile Include="App Class\Materials Classes\BoardClass.cs" />
@@ -107,17 +110,35 @@
     <Compile Include="Discounts Forms\Discounts.Designer.cs">
       <DependentUpon>Discounts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\Sliding Windows\Add.cs">
+    <Compile Include="Discounts Forms\Windows\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\Sliding Windows\Add.Designer.cs">
+    <Compile Include="Discounts Forms\Windows\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.cs">
+    <Compile Include="Discounts Forms\Windows\Modify.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.Designer.cs">
-      <DependentUpon>SildingWindows.cs</DependentUpon>
+    <Compile Include="Discounts Forms\Windows\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Remove.Designer.cs">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\ShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\ShowAll.Designer.cs">
+      <DependentUpon>ShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Windows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\Windows.Designer.cs">
+      <DependentUpon>Windows.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
@@ -328,11 +349,20 @@
     <EmbeddedResource Include="Discounts Forms\Discounts.resx">
       <DependentUpon>Discounts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Discounts Forms\Windows\Sliding Windows\Add.resx">
+    <EmbeddedResource Include="Discounts Forms\Windows\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Discounts Forms\Windows\Sliding Windows\SildingWindows.resx">
-      <DependentUpon>SildingWindows.cs</DependentUpon>
+    <EmbeddedResource Include="Discounts Forms\Windows\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\Remove.resx">
+      <DependentUpon>Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\ShowAll.resx">
+      <DependentUpon>ShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\Windows.resx">
+      <DependentUpon>Windows.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
@@ -477,8 +507,6 @@
     <Folder Include="Discounts Forms\Doors\Sliding Doors\" />
     <Folder Include="Discounts Forms\Kitchens\Lower Slices\" />
     <Folder Include="Discounts Forms\Kitchens\Upper Slices\" />
-    <Folder Include="Discounts Forms\Windows\Joint Windows\" />
-    <Folder Include="Discounts Forms\Windows\Tipper Windows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

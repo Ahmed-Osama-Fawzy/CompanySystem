@@ -18,7 +18,7 @@ namespace Workshop_System.Discounts_Forms
             InitializeComponent();
         }
 
-        private void Insert_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             Silding_Windows NewForm = new Silding_Windows();
             NewForm.ShowDialog();

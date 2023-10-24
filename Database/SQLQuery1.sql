@@ -186,6 +186,8 @@ create table Discounts.MainTable(
 	Type nvarchar(25) null,
 	Description nvarchar(25) null,
 	Title nvarchar(25) not null,
+	Height float not null,
+	Width float not null,
 	primary key(ID)
 )
 alter table Discounts.MainTable
@@ -200,25 +202,29 @@ add TNumber varchar(10) foreign key references Materials.Aluminum (Number)
 
 create table Discounts.Aluminum(
 	DiscountID int,
+	Title nvarchar(20) not null,
+	AluminumID int not null,
 	Height float not null,
 	HNumber int not null,
-	TotalHeight float not null,
+	AddingHeight float not null,
 	Width float not null,
 	WNumber int not null,
-	TotalWidth float not null,
-	TotalLength float not null,
+	AddingWidth float not null,
+	Length float not null,
 	LowWeight float not null,
 	AvgWeight float not null,
 	HighWeight float not null,
-	foreign key (DiscountID) references Discounts.MainTable (ID)
+	foreign key (DiscountID) references Discounts.MainTable (ID),
+	foreign key (AluminumID) references Materials.Aluminum (ID)
 )
 
-create table Discounts.Accessorie(
+create table Discounts.Accessories(
 	DiscountID int,
 	Name nvarchar(25) not null,
 	Amount float not null,
 	Color float not null,
 	AccessorieID int,
+	TotalPrice float not null,
 	foreign key (DiscountID) references Discounts.MainTable (ID),
 	foreign key (AccessorieID) references Materials.Accessories (ID)
 )
@@ -232,13 +238,10 @@ create table Discounts.Glasses(
 	Width float not null,
 	Area float not null,
 	Number int not null,
-	BackID int null,
-	BackColor nvarchar(25) null,
-	BackNumber int null,
 	GlassID int,
+	TotalPrice float not null,
 	foreign key (DiscountID) references Discounts.MainTable (ID),
-	foreign key (GlassID) references Materials.Glasses (ID),
-	foreign key (BackID) references Materials.Glasses (ID)
+	foreign key (GlassID) references Materials.Glasses (ID)
 )
 
 
@@ -251,6 +254,37 @@ add TotalPrice float not null
 alter table Discounts.Aluminum
 add RollsNumber int not null
 
-
 alter table Discounts.Glasses
 add TotalPrice float not null
+
+alter table Discounts.Aluminum
+add AddingHeight float not null default null;
+
+alter table Discounts.Aluminum
+add AddingWidth float not null default null;
+
+UPDATE Discounts.Aluminum
+SET AddingHeight = 0;
+
+UPDATE Discounts.Aluminum
+SET AddingWidth = 0;
+
+delete from Discounts.Aluminum
+
+alter table Discounts.Aluminum
+alter column Title nvarchar(15) not null
+
+CREATE TABLE mytable (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    attribute1 INT,
+    attribute2 AS (attribute1 * 2) PERSISTED,
+	attribute3 AS (attribute1* 2) PERSISTED
+);
+
+insert into mytable(attribute1) values(10)
+
+select * from mytable
+
+update mytable set attribute1 = 20 where attribute1 =10
+
+drop table mytable
