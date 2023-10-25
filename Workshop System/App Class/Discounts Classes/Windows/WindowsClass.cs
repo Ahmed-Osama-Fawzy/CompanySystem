@@ -21,7 +21,7 @@ namespace Workshop_System.App_Class.Discounts_Classes
 
         public DataBase DB = new DataBase("Discounts", "MainTable");
         public WindowsClass() { }
-        public int CheckDiscount()
+        public int ReturnID()
         {
             DataTable dt = DB.Select("all");
             if(dt.Rows.Count > 0 )
@@ -33,30 +33,27 @@ namespace Workshop_System.App_Class.Discounts_Classes
                         && Convert.ToString(dr["Section"]) == Section
                         && Convert.ToString(dr["Type"]) == Type 
                         && Convert.ToString(dr["Description"]) == Description
+                        && Convert.ToInt32(dr["RollsNumber"]) == RollsNumber
                         )
                     {
-                        ID = (int)dr["ID"];
-                        MessageBox.Show($"{ID} done.....");
-                        break;
+                        ID = Convert.ToInt32(dr["ID"]);
+                        return ID;
                     }
                 }
-            }
-            if(ID == 0)
-            {
-                Insert();
             }
             return 0;
         }
         public bool Insert()
         {
-            bool Inserted = DB.Insert("Category", Category, "false"
+            bool Inserted = DB.Insert
+                ("Category", Category, "false"
                 , "Section", Section, "false"
                 , "Type", Type, "false"
                 , "Description", Description, "false"
-                , "Height", $"{Height}", "false"
-                , "Width", $"{Width}", "false");
+                , "RollsNumber", $"{RollsNumber}", "true"
+                , "Height", $"{Height}", "true"
+                , "Width", $"{Width}", "true");
             return Inserted;
         }
-
     }
 }

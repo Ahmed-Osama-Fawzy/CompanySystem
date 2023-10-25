@@ -288,3 +288,25 @@ select * from mytable
 update mytable set attribute1 = 20 where attribute1 =10
 
 drop table mytable
+
+alter table Discounts.MainTable
+add RollsNumber int not null default 0
+
+delete from Materials.Types Where Category = N'فرع العمل' AND Value = N'منزلق'
+
+select * from Materials.Glasses
+select * from Discounts.MainTable
+select * from Discounts.Glasses
+
+alter table Discounts.Accessories
+alter column Color nvarchar(20) not null
+
+alter table Materials.Glasses
+alter column Price float not null
+
+alter table Materials.Glasses
+alter column NetPrice float not null
+
+alter table Discounts.Glasses
+add Kind nvarchar(25) not null
+

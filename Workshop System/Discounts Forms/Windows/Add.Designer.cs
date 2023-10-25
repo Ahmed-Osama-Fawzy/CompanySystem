@@ -54,7 +54,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.GlassWidth = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.AddAluminum = new System.Windows.Forms.Button();
             this.AddGlass = new System.Windows.Forms.Button();
@@ -248,6 +248,7 @@
             // AluminumTitle
             // 
             this.AluminumTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AluminumTitle.Enabled = false;
             this.AluminumTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AluminumTitle.FormattingEnabled = true;
             this.AluminumTitle.ItemHeight = 25;
@@ -273,6 +274,7 @@
             // AccessorieTitle
             // 
             this.AccessorieTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AccessorieTitle.Enabled = false;
             this.AccessorieTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccessorieTitle.FormattingEnabled = true;
             this.AccessorieTitle.ItemHeight = 25;
@@ -298,6 +300,7 @@
             // GlassType
             // 
             this.GlassType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GlassType.Enabled = false;
             this.GlassType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GlassType.FormattingEnabled = true;
             this.GlassType.ItemHeight = 25;
@@ -360,19 +363,20 @@
             this.label13.TabIndex = 105;
             this.label13.Text = "عرض الزجاج";
             // 
-            // button1
+            // Clear
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1083, 633);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(7);
-            this.button1.Size = new System.Drawing.Size(208, 61);
-            this.button1.TabIndex = 111;
-            this.button1.Text = "افراغ البيانات ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Clear.AutoSize = true;
+            this.Clear.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Clear.Location = new System.Drawing.Point(1083, 633);
+            this.Clear.Name = "Clear";
+            this.Clear.Padding = new System.Windows.Forms.Padding(7);
+            this.Clear.Size = new System.Drawing.Size(208, 61);
+            this.Clear.TabIndex = 111;
+            this.Clear.Text = "افراغ البيانات ";
+            this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -402,7 +406,7 @@
             this.AddAluminum.TabIndex = 113;
             this.AddAluminum.Text = "اضافة";
             this.AddAluminum.UseVisualStyleBackColor = false;
-            this.AddAluminum.Click += new System.EventHandler(this.button3_Click);
+            this.AddAluminum.Click += new System.EventHandler(this.AddAluminum_Click);
             // 
             // AddGlass
             // 
@@ -417,6 +421,7 @@
             this.AddGlass.TabIndex = 114;
             this.AddGlass.Text = "اضافة";
             this.AddGlass.UseVisualStyleBackColor = false;
+            this.AddGlass.Click += new System.EventHandler(this.AddGlass_Click);
             // 
             // AddAccessorie
             // 
@@ -431,6 +436,7 @@
             this.AddAccessorie.TabIndex = 115;
             this.AddAccessorie.Text = "اضافة";
             this.AddAccessorie.UseVisualStyleBackColor = false;
+            this.AddAccessorie.Click += new System.EventHandler(this.AddAccessorie_Click);
             // 
             // pictureBox1
             // 
@@ -625,7 +631,7 @@
             this.Controls.Add(this.AddGlass);
             this.Controls.Add(this.AddAluminum);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.GlassType);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.GlassHeight);
@@ -658,7 +664,6 @@
             this.RightToLeftLayout = true;
             this.Text = "اضافة تخصيم جديد";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -691,7 +696,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox GlassWidth;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button AddAluminum;
         private System.Windows.Forms.Button AddGlass;
