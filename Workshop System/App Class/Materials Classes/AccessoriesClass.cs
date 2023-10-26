@@ -20,7 +20,7 @@ namespace Workshop_System.App_Class
         public string Section { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
-        public DataBase DB = new DataBase("Materials","Accessories");
+        public DataBase DB = new DataBase("Materials", "Accessories");
         public bool Insert()
         {
             if (DB.Insert("Name", Name, "False", "Size", $"{Size}", "Ture", "Category", Category, "False", "Price", $"{Price}", "True", "Color", Color, "False","Section",Section,"false","Description",Description,"false" , "Type",Type,"false"))

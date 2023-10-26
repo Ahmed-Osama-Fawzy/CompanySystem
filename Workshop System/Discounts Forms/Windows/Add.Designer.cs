@@ -664,6 +664,7 @@
             this.RightToLeftLayout = true;
             this.Text = "اضافة تخصيم جديد";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

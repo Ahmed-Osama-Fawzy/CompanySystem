@@ -15,7 +15,7 @@ namespace Workshop_System.App_Class
         public int Status { get; set; }
         public int BranchID { get; set; }
 
-        public DataBase DB = new DataBase("Validation","Users");
+        public DataBase DB = new DataBase("Validation", "Users");
 
         public bool SearchAccount()
         {

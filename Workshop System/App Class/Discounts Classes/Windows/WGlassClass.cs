@@ -87,5 +87,60 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                ,"Price",$"{Price}","true");
             return Inserted;
         }
+        public DataTable ReturnChooses()
+        {
+            DataTable dt = XDB.MulitpeSelect("Name,Kind", "DiscountID", $"{DiscountID}", "true");
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr = dt.Rows[i];
+                    dr["Color"] += $",{dr["Kind"]}";
+
+                }
+                return dt;
+            }
+            return null;
+        }
+        public bool Update()
+        {
+            string Updated = "";
+            if (Height > 0)
+            {
+                bool Up = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Name", Name, "false"
+                   , "Height", $"{Height}", "true");
+                if (Up)
+                    Updated += "f";
+                else
+                    Updated += "t";
+            }
+            if (Width > 0)
+            {
+                bool Up = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Name", Name, "false"
+                   , "Width", $"{Width}", "true");
+                if (Up)
+                    Updated += "f";
+                else
+                    Updated += "t";
+            }
+            if (Updated.Contains("f"))
+                return false;
+            else
+                return true;
+        }
+        public bool Remove()
+        {
+            bool Deleted = XDB.Delete("DiscountID", $"{DiscountID}", "true"); 
+            return Deleted;
+        }
+        public DataTable Show()
+        {
+            DataTable dt = XDB.SelectOne("DiscountID",$"{DiscountID}","true");
+            return dt;
+        }
     }
 }

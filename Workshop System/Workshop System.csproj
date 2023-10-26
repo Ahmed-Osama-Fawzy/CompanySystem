@@ -128,11 +128,17 @@
     <Compile Include="Discounts Forms\Windows\Remove.Designer.cs">
       <DependentUpon>Remove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\ShowAll.cs">
+    <Compile Include="Discounts Forms\Windows\ShowDiscounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Discounts Forms\Windows\ShowAll.Designer.cs">
-      <DependentUpon>ShowAll.cs</DependentUpon>
+    <Compile Include="Discounts Forms\Windows\ShowDiscounts.Designer.cs">
+      <DependentUpon>ShowDiscounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\ShowDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discounts Forms\Windows\ShowDiscount.Designer.cs">
+      <DependentUpon>ShowDiscount.cs</DependentUpon>
     </Compile>
     <Compile Include="Discounts Forms\Windows\Windows.cs">
       <SubType>Form</SubType>
@@ -358,8 +364,11 @@
     <EmbeddedResource Include="Discounts Forms\Windows\Remove.resx">
       <DependentUpon>Remove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Discounts Forms\Windows\ShowAll.resx">
-      <DependentUpon>ShowAll.cs</DependentUpon>
+    <EmbeddedResource Include="Discounts Forms\Windows\ShowDiscount.resx">
+      <DependentUpon>ShowDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discounts Forms\Windows\ShowDiscounts.resx">
+      <DependentUpon>ShowDiscounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Discounts Forms\Windows\Windows.resx">
       <DependentUpon>Windows.cs</DependentUpon>

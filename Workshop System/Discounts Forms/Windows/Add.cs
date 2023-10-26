@@ -22,17 +22,18 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             InitializeComponent();
             Update();
         }
-        public void Update()
+        public new void Update()
         {
-            DataBase DB = new DataBase("", "");
+            DataBase DB = new DataBase("Materials", "Types");
             Section.DisplayMember = "Value";
             Section.ValueMember = "Value";
-            if (DB.GetData("نوع العمل") != null)
+            if (DB.GetData("فرع العمل") != null)
             {
                 Section.DataSource = DB.GetData("فرع العمل"); Section.Enabled = true;
             }
             else
                 Section.Enabled = false;
+
             Type.DisplayMember = "Value";
             Type.ValueMember = "Value";
             if (DB.GetData("نوع العمل") != null)
@@ -43,7 +44,7 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
                 Type.Enabled = false;
             Description.DisplayMember = "Value";
             Description.ValueMember = "Value";
-            if (DB.GetData("نوع العمل") != null)
+            if (DB.GetData("وصف العمل") != null)
             {
                 Description.DataSource = DB.GetData("وصف العمل"); Description.Enabled = true;
             }
@@ -59,11 +60,11 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             else
                 RollsNumber.Enabled = false;
         }
-        public int DiscountID;
-        WindowsClass Window = new WindowsClass();
-        WAluminumClass AlumWindows = new WAluminumClass();
-        WAccessoriesClass AccessWindows = new WAccessoriesClass();
-        WGlassClass GlassWindows = new WGlassClass();
+        private int DiscountID;
+        private WindowsClass Window = new WindowsClass();
+        private WAluminumClass AlumWindows = new WAluminumClass();
+        private WAccessoriesClass AccessWindows = new WAccessoriesClass();
+        private WGlassClass GlassWindows = new WGlassClass();
         private void MainData_Click(object sender, EventArgs e)
         {
             string SSetion = Section.Text;
@@ -238,9 +239,7 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
                 GlassWindows.Height = float.Parse(SHeight);
                 GlassWindows.Width = float.Parse(SWidth);
                 GlassWindows.Name = SGlassType.Substring(0, SGlassType.IndexOf(','));
-                MessageBox.Show(GlassWindows.Name);
                 GlassWindows.Kind = SGlassType.Substring(SGlassType.IndexOf(',') + 1);
-                MessageBox.Show(GlassWindows.Kind);
                 GlassWindows.GlassID = GlassWindows.ReturnGlassID();
                 if (!GlassWindows.CheckDiscoutID() && GlassWindows.GlassID > 0)
                 {
@@ -250,6 +249,10 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
                         GlassType.SelectedItem = null;
                         GlassHeight.Text = string.Empty;
                         GlassWidth.Text = string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("عفوا لم يتم اضافة تخصيمي الزجاج بنجاح");
                     }
                 }
                 else
@@ -277,6 +280,11 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             GlassType.SelectedItem = null;
             GlassHeight.Text = string.Empty;
             GlassWidth.Text = string.Empty;
+        }
+
+        private void Add_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

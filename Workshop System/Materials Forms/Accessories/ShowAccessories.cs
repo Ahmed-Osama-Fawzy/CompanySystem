@@ -36,5 +36,10 @@ namespace Workshop_System.Materials_Forms.Accessories
         {
 
         }
+
+        private void ShowAccessories_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

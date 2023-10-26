@@ -22,7 +22,7 @@ namespace Workshop_System.App_Class
         public double Avg { get; set; }
         public double High { get; set; }
         public double Length { get; set; }
-        public DataBase DB = new DataBase("Materials","Aluminum"); 
+        public DataBase DB = new DataBase("Materials", "Aluminum"); 
         public bool Insert()
         {
             bool Inserted = 

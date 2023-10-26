@@ -28,7 +28,7 @@ namespace Workshop_System.Offer_Price_Forms.Windows
         }
         public void Update()
         {
-            DataBase DB = new DataBase("", "");
+            DataBase DB = new DataBase("Materials", "Type");
             Section.DisplayMember = "Value";
             Section.ValueMember = "Value";
             if (DB.GetData("") != null)

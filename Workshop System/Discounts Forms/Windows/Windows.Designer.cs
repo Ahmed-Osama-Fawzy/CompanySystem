@@ -28,25 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Silding_Windows));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Add = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.SelectedID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SearchInput = new System.Windows.Forms.TextBox();
             this.CustomShow = new System.Windows.Forms.Button();
             this.CustomEdit = new System.Windows.Forms.Button();
             this.CustomRemove = new System.Windows.Forms.Button();
-            this.SelectedCustomers = new System.Windows.Forms.DataGridView();
+            this.SelectedDiscounts = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Add = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedDiscounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).BeginInit();
             this.SuspendLayout();
+            // 
+            // SelectedID
+            // 
+            this.SelectedID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedID.Location = new System.Drawing.Point(1205, 464);
+            this.SelectedID.Name = "SelectedID";
+            this.SelectedID.ReadOnly = true;
+            this.SelectedID.Size = new System.Drawing.Size(137, 31);
+            this.SelectedID.TabIndex = 125;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(57, 402);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 33);
+            this.label5.TabIndex = 124;
+            this.label5.Text = "ابحث عن تخصيم";
+            // 
+            // SearchInput
+            // 
+            this.SearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchInput.Location = new System.Drawing.Point(259, 405);
+            this.SearchInput.Name = "SearchInput";
+            this.SearchInput.Size = new System.Drawing.Size(395, 31);
+            this.SearchInput.TabIndex = 123;
+            this.SearchInput.TextChanged += new System.EventHandler(this.SearchInput_TextChanged);
+            // 
+            // CustomShow
+            // 
+            this.CustomShow.AutoSize = true;
+            this.CustomShow.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CustomShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomShow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CustomShow.Location = new System.Drawing.Point(1205, 506);
+            this.CustomShow.Name = "CustomShow";
+            this.CustomShow.Padding = new System.Windows.Forms.Padding(7);
+            this.CustomShow.Size = new System.Drawing.Size(137, 61);
+            this.CustomShow.TabIndex = 122;
+            this.CustomShow.Text = "عرض";
+            this.CustomShow.UseVisualStyleBackColor = false;
+            this.CustomShow.Click += new System.EventHandler(this.CustomShow_Click);
+            // 
+            // CustomEdit
+            // 
+            this.CustomEdit.AutoSize = true;
+            this.CustomEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CustomEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CustomEdit.Location = new System.Drawing.Point(1205, 640);
+            this.CustomEdit.Name = "CustomEdit";
+            this.CustomEdit.Padding = new System.Windows.Forms.Padding(7);
+            this.CustomEdit.Size = new System.Drawing.Size(137, 61);
+            this.CustomEdit.TabIndex = 121;
+            this.CustomEdit.Text = "تعديل";
+            this.CustomEdit.UseVisualStyleBackColor = false;
+            this.CustomEdit.Click += new System.EventHandler(this.CustomEdit_Click);
+            // 
+            // CustomRemove
+            // 
+            this.CustomRemove.AutoSize = true;
+            this.CustomRemove.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CustomRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomRemove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CustomRemove.Location = new System.Drawing.Point(1205, 573);
+            this.CustomRemove.Name = "CustomRemove";
+            this.CustomRemove.Padding = new System.Windows.Forms.Padding(7);
+            this.CustomRemove.Size = new System.Drawing.Size(137, 61);
+            this.CustomRemove.TabIndex = 120;
+            this.CustomRemove.Text = "حذف";
+            this.CustomRemove.UseVisualStyleBackColor = false;
+            this.CustomRemove.Click += new System.EventHandler(this.CustomRemove_Click);
+            // 
+            // SelectedDiscounts
+            // 
+            this.SelectedDiscounts.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.SelectedDiscounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SelectedDiscounts.GridColor = System.Drawing.SystemColors.Window;
+            this.SelectedDiscounts.Location = new System.Drawing.Point(33, 464);
+            this.SelectedDiscounts.Name = "SelectedDiscounts";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedDiscounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedDiscounts.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.SelectedDiscounts.Size = new System.Drawing.Size(1150, 237);
+            this.SelectedDiscounts.TabIndex = 119;
+            this.SelectedDiscounts.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectedDiscounts_RowHeaderMouseClick);
             // 
             // pictureBox1
             // 
@@ -63,7 +162,7 @@
             this.Add.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Add.Location = new System.Drawing.Point(63, 65);
+            this.Add.Location = new System.Drawing.Point(73, 65);
             this.Add.Name = "Add";
             this.Add.Padding = new System.Windows.Forms.Padding(7);
             this.Add.Size = new System.Drawing.Size(195, 61);
@@ -131,100 +230,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // SelectedID
-            // 
-            this.SelectedID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectedID.Location = new System.Drawing.Point(1205, 464);
-            this.SelectedID.Name = "SelectedID";
-            this.SelectedID.ReadOnly = true;
-            this.SelectedID.Size = new System.Drawing.Size(137, 31);
-            this.SelectedID.TabIndex = 125;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(57, 402);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 33);
-            this.label5.TabIndex = 124;
-            this.label5.Text = "ابحث عن تخصيم";
-            // 
-            // SearchInput
-            // 
-            this.SearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchInput.Location = new System.Drawing.Point(259, 405);
-            this.SearchInput.Name = "SearchInput";
-            this.SearchInput.Size = new System.Drawing.Size(395, 31);
-            this.SearchInput.TabIndex = 123;
-            // 
-            // CustomShow
-            // 
-            this.CustomShow.AutoSize = true;
-            this.CustomShow.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CustomShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomShow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomShow.Location = new System.Drawing.Point(1205, 506);
-            this.CustomShow.Name = "CustomShow";
-            this.CustomShow.Padding = new System.Windows.Forms.Padding(7);
-            this.CustomShow.Size = new System.Drawing.Size(137, 61);
-            this.CustomShow.TabIndex = 122;
-            this.CustomShow.Text = "عرض";
-            this.CustomShow.UseVisualStyleBackColor = false;
-            // 
-            // CustomEdit
-            // 
-            this.CustomEdit.AutoSize = true;
-            this.CustomEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CustomEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomEdit.Location = new System.Drawing.Point(1205, 640);
-            this.CustomEdit.Name = "CustomEdit";
-            this.CustomEdit.Padding = new System.Windows.Forms.Padding(7);
-            this.CustomEdit.Size = new System.Drawing.Size(137, 61);
-            this.CustomEdit.TabIndex = 121;
-            this.CustomEdit.Text = "تعديل";
-            this.CustomEdit.UseVisualStyleBackColor = false;
-            // 
-            // CustomRemove
-            // 
-            this.CustomRemove.AutoSize = true;
-            this.CustomRemove.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CustomRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomRemove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomRemove.Location = new System.Drawing.Point(1205, 573);
-            this.CustomRemove.Name = "CustomRemove";
-            this.CustomRemove.Padding = new System.Windows.Forms.Padding(7);
-            this.CustomRemove.Size = new System.Drawing.Size(137, 61);
-            this.CustomRemove.TabIndex = 120;
-            this.CustomRemove.Text = "حذف";
-            this.CustomRemove.UseVisualStyleBackColor = false;
-            // 
-            // SelectedCustomers
-            // 
-            this.SelectedCustomers.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.SelectedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SelectedCustomers.GridColor = System.Drawing.SystemColors.Window;
-            this.SelectedCustomers.Location = new System.Drawing.Point(33, 464);
-            this.SelectedCustomers.Name = "SelectedCustomers";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.SelectedCustomers.Size = new System.Drawing.Size(1150, 237);
-            this.SelectedCustomers.TabIndex = 119;
-            // 
             // Silding_Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,7 +241,7 @@
             this.Controls.Add(this.CustomShow);
             this.Controls.Add(this.CustomEdit);
             this.Controls.Add(this.CustomRemove);
-            this.Controls.Add(this.SelectedCustomers);
+            this.Controls.Add(this.SelectedDiscounts);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -249,27 +254,27 @@
             this.RightToLeftLayout = true;
             this.Text = "تخصيمات الشبابيك";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Silding_Windows_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedDiscounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox SelectedID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox SearchInput;
         private System.Windows.Forms.Button CustomShow;
         private System.Windows.Forms.Button CustomEdit;
         private System.Windows.Forms.Button CustomRemove;
-        private System.Windows.Forms.DataGridView SelectedCustomers;
+        private System.Windows.Forms.DataGridView SelectedDiscounts;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

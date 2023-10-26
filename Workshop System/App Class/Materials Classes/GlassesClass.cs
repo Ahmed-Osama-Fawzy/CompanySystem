@@ -19,7 +19,7 @@ namespace Workshop_System.App_Class
         public int NetPrice { get; set; }
         public int Default { get; set; }
         public int Deep { get; set; }
-        public DataBase DB = new DataBase("Prices","Glasses");
+        public DataBase DB = new DataBase("Materials", "Glasses");
 
         public GlassesClass() { }
         public GlassesClass(int ID) 

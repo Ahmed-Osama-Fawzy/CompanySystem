@@ -163,8 +163,9 @@
             this.AddDiscount.Padding = new System.Windows.Forms.Padding(7);
             this.AddDiscount.Size = new System.Drawing.Size(140, 71);
             this.AddDiscount.TabIndex = 172;
-            this.AddDiscount.Text = "تعديل";
+            this.AddDiscount.Text = "بحث";
             this.AddDiscount.UseVisualStyleBackColor = false;
+            this.AddDiscount.Click += new System.EventHandler(this.AddDiscount_Click);
             // 
             // WidthNumber
             // 
@@ -219,6 +220,7 @@
             this.AddAccessorie.TabIndex = 165;
             this.AddAccessorie.Text = "تعديل";
             this.AddAccessorie.UseVisualStyleBackColor = false;
+            this.AddAccessorie.Click += new System.EventHandler(this.AddAccessorie_Click);
             // 
             // AddGlass
             // 
@@ -233,6 +235,7 @@
             this.AddGlass.TabIndex = 164;
             this.AddGlass.Text = "تعديل";
             this.AddGlass.UseVisualStyleBackColor = false;
+            this.AddGlass.Click += new System.EventHandler(this.AddGlass_Click);
             // 
             // AddAluminum
             // 
@@ -247,6 +250,7 @@
             this.AddAluminum.TabIndex = 163;
             this.AddAluminum.Text = "تعديل";
             this.AddAluminum.UseVisualStyleBackColor = false;
+            this.AddAluminum.Click += new System.EventHandler(this.AddAluminum_Click);
             // 
             // button2
             // 
@@ -261,6 +265,7 @@
             this.button2.TabIndex = 162;
             this.button2.Text = "الاختيارات";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -275,6 +280,7 @@
             this.button1.TabIndex = 161;
             this.button1.Text = "افراغ البيانات ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GlassType
             // 
@@ -563,7 +569,6 @@
             this.RightToLeftLayout = true;
             this.Text = "تعديل بيانات تخصيم";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Modify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

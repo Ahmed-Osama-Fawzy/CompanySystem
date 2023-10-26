@@ -31,7 +31,7 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
         public float AvgWeight { get; set; }
         public float HighWeight { get; set; }
         public WindowsClass windowsClass = new WindowsClass();
-        public DataBase DB = new DataBase("Materials","Aluminum");
+        public DataBase DB = new DataBase("Materials", "Aluminum");
         public DataBase XDB = new DataBase("Discounts", "Aluminum");
         public WAluminumClass() { }
         public bool ReturnAluminumID()
@@ -86,6 +86,98 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                ,"HighWeight", $"{HighWeight}", "true"
                ,"Length",$"{Length}","true");
             return Inserted;
+        }
+        public DataTable ReturnChooses()
+        {
+            DataTable dt = XDB.MulitpeSelect("Title", "DiscountID", $"{DiscountID}", "true");
+            if (dt.Rows.Count > 0)
+            {
+                return dt;
+            }
+            return null;
+        }
+        public bool Update()
+        {
+            string Updated = "";
+            if (Height > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID",$"{DiscountID}","true"
+                   ,"Title",Title,"false"
+                   ,"Height",$"{Height}","true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (Width > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Title", Title, "false"
+                   , "Width", $"{Width}", "true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (AddingHeight > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Title", Title, "false"
+                   , "AddingHeight", $"{AddingHeight}", "true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (AddingWidth > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Title", Title, "false"
+                   , "AddingWidth", $"{AddingWidth}", "true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (NHeight > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Title", Title, "false"
+                   , "NHeight", $"{NHeight}", "true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (NWidth > 0)
+            {
+                bool Updateing = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Title", Title, "false"
+                   , "NWidth", $"{NWidth}", "true");
+                if (Updateing)
+                    Updated += "t";
+                else
+                    Updated += "f";
+            }
+            if (Updated.Contains("f"))
+                return false;
+            return true;
+        }
+        public bool Remove()
+        {
+            bool Deleted = XDB.Delete("DiscountID", $"{DiscountID}", "true");
+            return Deleted;
+        }
+        public DataTable Show()
+        {
+            DataTable dt = XDB.SelectOne("DiscountID", $"{DiscountID}", "true");
+            return dt;
         }
     }
 }

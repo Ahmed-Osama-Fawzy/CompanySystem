@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Workshop_System.App_Class.Discounts_Classes.Windows;
+using Workshop_System.Discounts_Forms;
 
 namespace Workshop_System.App_Class.Discounts_Classes
 {
@@ -18,8 +20,10 @@ namespace Workshop_System.App_Class.Discounts_Classes
         public int RollsNumber { get; set; }
         public float Height { get; set; }
         public float Width { get; set; }
-
-        public DataBase DB = new DataBase("Discounts", "MainTable");
+        public DataBase DB = new DataBase("Discounts","MainTable");
+        public WAluminumClass Al = new WAluminumClass();
+        public WAccessoriesClass Ac = new WAccessoriesClass();
+        public WGlassClass Gl = new WGlassClass();
         public WindowsClass() { }
         public int ReturnID()
         {
@@ -54,6 +58,31 @@ namespace Workshop_System.App_Class.Discounts_Classes
                 , "Height", $"{Height}", "true"
                 , "Width", $"{Width}", "true");
             return Inserted;
+        }
+        public bool Remove()
+        {
+            Al.DiscountID = Ac.DiscountID = Gl.DiscountID = ID;
+            if(Gl.Remove() && Ac.Remove() && Al.Remove())
+            {
+                bool Deleted = DB.Delete("ID", $"{ID}", "true");
+                return Deleted;
+            }
+            return false;
+        }
+        public DataTable ShowAll()
+        {
+            DataTable dt = DB.Select("all");
+            return dt;
+        }
+        public DataTable Show()
+        {
+            DataTable dt = DB.SelectOne("ID", $"{ID}", "true");
+            return dt;
+        }
+        public DataTable Search(string s)
+        {
+            DataTable dt = DB.SelectLike(s, "Section");
+            return dt;
         }
     }
 }

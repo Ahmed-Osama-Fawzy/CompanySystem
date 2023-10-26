@@ -17,17 +17,14 @@ namespace Workshop_System.App_Class
         public string Schema { get; set; }
         public string Name { get; set; }
         public string Table { get; set; }
-        
-        public DataBase(string S , string N)
+        public DataBase(string Schema , string Name)
         {
-            this.Schema = S;
-            this.Name = N;
-            this.Table = Schema + "." + Name;
+            this.Schema = Schema;
+            this.Name = Name;
+            Table = $"{this.Schema}.{this.Name}";
         }
 
-        static string connection = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
-
-        
+        static public string connection = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         // Paramters as (TheKey,TheValue,Numriacl or not,.....)
         public bool Insert(params string[] Inputs)
         {
@@ -124,6 +121,80 @@ namespace Workshop_System.App_Class
             }
             return Updated;
         }
+        public bool XUpdate(params string[] Inputs)
+        {
+            SqlConnection conn = new SqlConnection(connection);
+            bool Updated = false;
+            try
+            {
+                string Selected = "";
+                for (int i = 6; i < Inputs.Length; i += 3)
+                {
+                    if (Inputs[i + 2].ToLower() == "true")
+                    {
+                        Selected += $"{Inputs[i]} = {Inputs[i + 1]} ,";
+                    }
+                    else
+                    {
+                        Selected += $"{Inputs[i]} = N'{Inputs[i + 1]}' ,";
+                    }
+                }
+                Selected = Selected.Remove(Selected.Length - 1);
+                if (Inputs[2].ToLower() == "true" && Inputs[5].ToLower() == "true")
+                {
+                    string Query = $"update {this.Table} set {Selected} where {Inputs[0]} = {Inputs[1]} AND {Inputs[3]} = {Inputs[4]}";
+                    SqlCommand cmd = new SqlCommand(Query, conn);
+                    conn.Open();
+                    int Rows = cmd.ExecuteNonQuery();
+                    if (Rows > 0)
+                    {
+                        Updated = true;
+                    }
+                }
+                else if(Inputs[2].ToLower() == "false" && Inputs[5].ToLower() == "false")
+                {
+                    string Query = $"update {this.Table} set {Selected} where {Inputs[0]} = '{Inputs[1]}' AND {Inputs[3]} = '{Inputs[4]}'";
+                    SqlCommand cmd = new SqlCommand(Query, conn);
+                    conn.Open();
+                    int Rows = cmd.ExecuteNonQuery();
+                    if (Rows > 0)
+                    {
+                        Updated = true;
+                    }
+                }
+                else if (Inputs[2].ToLower() == "true" && Inputs[5].ToLower() == "false")
+                {
+                    string Query = $"update {this.Table} set {Selected} where {Inputs[0]} = {Inputs[1]} AND {Inputs[3]} = '{Inputs[4]}'";
+                    SqlCommand cmd = new SqlCommand(Query, conn);
+                    conn.Open();
+                    int Rows = cmd.ExecuteNonQuery();
+                    if (Rows > 0)
+                    {
+                        Updated = true;
+                    }
+                }
+                else
+                {
+                    string Query = $"update {this.Table} set {Selected} where {Inputs[0]} = '{Inputs[1]}' AND {Inputs[3]} = {Inputs[4]}";
+                    SqlCommand cmd = new SqlCommand(Query, conn);
+                    conn.Open();
+                    int Rows = cmd.ExecuteNonQuery();
+                    if (Rows > 0)
+                    {
+                        Updated = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The Error IS: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return Updated;
+        }
 
         public bool UpdateAll(string Key , string Value ,string Numrical )
         {
@@ -164,7 +235,6 @@ namespace Workshop_System.App_Class
             }
             return Updated;
         }
-
         public bool CustomUpdate(string S)
         {
             SqlConnection conn = new SqlConnection(connection);
@@ -191,7 +261,6 @@ namespace Workshop_System.App_Class
             }
             return Updated;
         }
-
         // Paramters as (TheKey,TheValue,Numriacl or not,.....) 
         public bool Delete (params string[] Inputs)
         {
@@ -271,7 +340,6 @@ namespace Workshop_System.App_Class
             }
             return Deleted;
         }
-
         // Paramters as (all or Custom Columns)
         public DataTable Select(params string[] Inputs)
         {
@@ -441,10 +509,7 @@ namespace Workshop_System.App_Class
         }
         public DataTable GetData(string Key) 
         {
-            Schema = "Materials";
-            Name  = "Types";
-            Table = Schema + "." + Name;
-            DataTable dt = SelectOne("Category" , $"{Key}" ,"false" , "Value");
+            DataTable dt = SelectOne("Category" , Key ,"false" , "Value");
             if(dt.Rows.Count > 0)
             {
                 return dt;
@@ -493,6 +558,5 @@ namespace Workshop_System.App_Class
             }
             return dt;
         }
-
     }
 }

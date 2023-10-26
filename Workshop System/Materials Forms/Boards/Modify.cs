@@ -21,7 +21,7 @@ namespace Workshop_System.Prices_Options.Addtions
         }
         public void Update()
         {
-            DataBase DB = new DataBase("", "");
+            DataBase DB = new DataBase("Materials", "Type");
             BName.DisplayMember = "Value";
             BName.ValueMember = "Value";
             if (DB.GetData("") != null)

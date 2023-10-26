@@ -64,6 +64,7 @@
             this.Clear.TabIndex = 68;
             this.Clear.Text = "افراغ البيانات";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // ID
             // 
@@ -86,6 +87,7 @@
             this.Delete.TabIndex = 66;
             this.Delete.Text = "حذف البيانات";
             this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // label1
             // 

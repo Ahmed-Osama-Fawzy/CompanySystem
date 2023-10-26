@@ -16,10 +16,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
         public float Amount { get; set; }
         public string Color { get; set; }
         public float Price { get; set; }
-        public float TotalPrice { get; set; }
         public WindowsClass windowsClass = new WindowsClass();
-        DataBase DB = new DataBase("Materials", "Accessories");
-        DataBase XDB = new DataBase("Discounts", "Accessories");
+        public DataBase DB = new DataBase("Materials", "Accessories");
+        public DataBase XDB = new DataBase("Discounts", "Accessories");
         public bool ReturnAccessorieID()
         {
             DataTable dt = DB.MulitpeSelect("ID,Price"
@@ -60,8 +59,57 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                ,"Name",Name,"false"
                ,"Amount",$"{Amount}","true"
                ,"Color",Color,"false"
-               ,"TotalPrice",$"{Price*Amount}","true");
+               ,"Price",$"{Price}","true");
             return Inserted;
+        }
+        public DataTable ReturnChooses()
+        {
+            DataTable dt = XDB.MulitpeSelect("Name", "DiscountID", $"{DiscountID}", "true");
+            if (dt.Rows.Count > 0)
+            {
+                return dt;
+            }
+            return null;
+        }
+        public bool Update() 
+        {
+            string Updated = "";
+            if(Amount > 0)
+            {
+                bool Up = XDB.XUpdate(
+                    "DiscountID",$"{DiscountID}","true"
+                   ,"Name",Name,"false"
+                   ,"Amount",$"{Amount}","true");
+                if (Up)
+                    Updated += "f";
+                else 
+                    Updated += "t";
+            }
+            if (!string.IsNullOrEmpty(Color))
+            {
+                bool Up = XDB.XUpdate(
+                    "DiscountID", $"{DiscountID}", "true"
+                   , "Name", Name, "false"
+                   , "Color", Color , "false");
+                if (Up)
+                    Updated += "f";
+                else
+                    Updated += "t";
+            }
+            if (Updated.Contains("f"))
+                return false;
+            else
+                return true;
+        }
+        public bool Remove()
+        {
+            bool Deleted = XDB.Delete("DiscountID", $"{DiscountID}", "true");
+            return Deleted;
+        }
+        public DataTable Show()
+        {
+            DataTable dt = XDB.SelectOne("DiscountID", $"{DiscountID}", "true");
+            return dt;
         }
     }
 }

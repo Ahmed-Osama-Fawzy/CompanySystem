@@ -26,7 +26,7 @@ namespace Workshop_System.Materials_Forms.Aluminum
         }
         public void Update()
         {
-            DataBase DB = new DataBase("", "");
+            DataBase DB = new DataBase("Materials", "Type");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
             if (DB.GetData("قسم العمل") != null)

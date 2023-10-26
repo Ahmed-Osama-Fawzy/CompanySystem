@@ -54,6 +54,7 @@
             this.RightToLeftLayout = true;
             this.Text = "عرض جميع بيانات القطع";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ShowAccessories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AllAccessories)).EndInit();
             this.ResumeLayout(false);
 
