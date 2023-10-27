@@ -17,12 +17,18 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
 {
     public partial class Add : Form
     {
+
+        private int DiscountID;
+        private WindowsClass Window;
+        private WAluminumClass AlumWindows;
+        private WAccessoriesClass AccessWindows;
+        private WGlassClass GlassWindows;
         public Add()
         {
             InitializeComponent();
             Update();
         }
-        public new void Update()
+        public void Update()
         {
             DataBase DB = new DataBase("Materials", "Types");
             Section.DisplayMember = "Value";
@@ -60,13 +66,12 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             else
                 RollsNumber.Enabled = false;
         }
-        private int DiscountID;
-        private WindowsClass Window = new WindowsClass();
-        private WAluminumClass AlumWindows = new WAluminumClass();
-        private WAccessoriesClass AccessWindows = new WAccessoriesClass();
-        private WGlassClass GlassWindows = new WGlassClass();
         private void MainData_Click(object sender, EventArgs e)
         {
+            Window = new WindowsClass();
+            AlumWindows = new WAluminumClass();
+            AccessWindows = new WAccessoriesClass();
+            GlassWindows = new WGlassClass();
             string SSetion = Section.Text;
             string SType = Type.Text;
             string SDescription = Description.Text;
@@ -192,7 +197,15 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
                         AluminumWidth.Text = string.Empty;
                         WidthNumber.Text = string.Empty;
                     }
+                    else
+                    {
+                        MessageBox.Show("عفوا حدث خطا ما");
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("عفوا يجب ادخال جميع المدخلات اولا");
             }
         }
         private void AddAccessorie_Click(object sender, EventArgs e)
@@ -232,7 +245,7 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             string SGlassType = GlassType.Text;
             string SHeight = GlassHeight.Text;
             string SWidth = GlassWidth.Text;
-            if(    !string.IsNullOrEmpty(SGlassType)
+            if (!string.IsNullOrEmpty(SGlassType)
                 && !string.IsNullOrEmpty(SHeight)
                 && !string.IsNullOrEmpty(SWidth))
             {
@@ -281,7 +294,6 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
             GlassHeight.Text = string.Empty;
             GlassWidth.Text = string.Empty;
         }
-
         private void Add_Load(object sender, EventArgs e)
         {
 

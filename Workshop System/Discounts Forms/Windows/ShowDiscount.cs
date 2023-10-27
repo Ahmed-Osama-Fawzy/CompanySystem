@@ -34,25 +34,28 @@ namespace Workshop_System.Discounts_Forms.Windows
                 WAluminumClass wAluminumClass = new WAluminumClass();
                 WAccessoriesClass wAccessoriesClass = new WAccessoriesClass();
                 WGlassClass wGlassClass = new WGlassClass();
-                wAccessoriesClass.DiscountID = wAluminumClass.DiscountID = wGlassClass.DiscountID = windowsClass.ID = Convert.ToInt32(id);
+                wAccessoriesClass.DiscountID = Convert.ToInt32(id); 
+                wAluminumClass.DiscountID = Convert.ToInt32(id); 
+                wGlassClass.DiscountID = Convert.ToInt32(id); 
+                windowsClass.ID = Convert.ToInt32(id);
                 DataTable dt;
                 dt = wAluminumClass.Show();
-                dt.Columns["DicountID"].ColumnName = "الرقم التعريفي";
+                dt.Columns["DiscountID"].ColumnName = "الرقم التعريفي";
                 dt.Columns["Title"].ColumnName = "اسم القطاع";
-                dt.Columns["ALuimnumID"].ColumnName = "رقم القطاع التعريفي";
+                dt.Columns["ALuminumID"].ColumnName = "رقم القطاع التعريفي";
                 dt.Columns["Height"].ColumnName = "الارتفاع";
                 dt.Columns["Width"].ColumnName = "العرض";
                 dt.Columns["AddingHeight"].ColumnName = "زيادة الارتفاع";
                 dt.Columns["AddingWidth"].ColumnName = "زيادة العرض";
-                dt.Columns["NHeight"].ColumnName = "عدد الارتفاعات";
-                dt.Columns["NWidth"].ColumnName = "عدد العوارض";
+                dt.Columns["HNumber"].ColumnName = "عدد الارتفاعات";
+                dt.Columns["WNumber"].ColumnName = "عدد العوارض";
                 dt.Columns["Length"].ColumnName = "طول العود";
                 dt.Columns["LowWeight"].ColumnName = "الوزن الخفيف";
                 dt.Columns["AvgWeight"].ColumnName = "الوزن المتوسط";
                 dt.Columns["HighWeight"].ColumnName = "الوزن الثقيل";
                 AluminumDiscounts.DataSource = dt;
                 dt = wAccessoriesClass.Show();
-                dt.Columns["DicountID"].ColumnName = "الرقم التعريفي";
+                dt.Columns["DiscountID"].ColumnName = "الرقم التعريفي";
                 dt.Columns["AccessorieID"].ColumnName = "رقم القطعة التعريفي";
                 dt.Columns["Name"].ColumnName = "اسم القطعة";
                 dt.Columns["Color"].ColumnName = "لون القطعة";
@@ -60,7 +63,7 @@ namespace Workshop_System.Discounts_Forms.Windows
                 dt.Columns["Price"].ColumnName = "سعر القطعة";
                 AccessoriesDiscounts.DataSource = dt;
                 dt = wGlassClass.Show();
-                dt.Columns["DicountID"].ColumnName = "الرقم التعريفي";
+                dt.Columns["DiscountID"].ColumnName = "الرقم التعريفي";
                 dt.Columns["Price"].ColumnName = "سعر القطعة";
                 dt.Columns["Name"].ColumnName = "لون الزجاج";
                 dt.Columns["Height"].ColumnName = "الارتفاع";
@@ -93,6 +96,19 @@ namespace Workshop_System.Discounts_Forms.Windows
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
+            Category.Text = string.Empty;
+            Section.Text = string.Empty;
+            Description.Text = string.Empty;
+            Type.Text = string.Empty;
+            RollsNumber.Text = string.Empty;
+            AluminumDiscounts.DataSource = null;
+            AccessoriesDiscounts.DataSource = null;
+            GlassesDiscounts.DataSource= null;
+        }
+
+        private void ShowDiscount_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

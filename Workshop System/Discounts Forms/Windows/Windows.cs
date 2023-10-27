@@ -44,8 +44,8 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
         private void SearchInput_TextChanged(object sender, EventArgs e)
         {
             WindowsClass windowsClass = new WindowsClass();
-            DataTable dt = new DataTable();
-            dt = windowsClass.Search(e.ToString());
+            string S = SearchInput.Text;
+            DataTable dt = windowsClass.Search(S);
             dt.Columns["ID"].ColumnName = "الرقم التعريفي";
             dt.Columns["Category"].ColumnName = "القسم";
             dt.Columns["Section"].ColumnName = "الفرع";
@@ -59,7 +59,7 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
         private void SelectedDiscounts_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int index = e.RowIndex;
-            SelectedID.Text = SelectedDiscounts.Rows[index].Cells["ID"].ToString();
+            SelectedID.Text = SelectedDiscounts.Rows[index].Cells[0].Value.ToString();
         }
 
         private void CustomShow_Click(object sender, EventArgs e)
@@ -83,6 +83,12 @@ namespace Workshop_System.Discounts_Forms.Windows.Sliding_Windows
         private void Silding_Windows_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ShowDiscount NewForm = new ShowDiscount();
+            NewForm.ShowDialog();
         }
     }
 }

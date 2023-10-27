@@ -30,10 +30,10 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
         public float LowWeight { get; set; }
         public float AvgWeight { get; set; }
         public float HighWeight { get; set; }
-        public WindowsClass windowsClass = new WindowsClass();
+        public WAluminumClass() { }
         public DataBase DB = new DataBase("Materials", "Aluminum");
         public DataBase XDB = new DataBase("Discounts", "Aluminum");
-        public WAluminumClass() { }
+        public WindowsClass windowsClass = new WindowsClass();
         public bool ReturnAluminumID()
         {
             DataTable dt = DB.MulitpeSelect("ID,LowWeight,AvgWeight,HighWeight,Length"
@@ -124,7 +124,7 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
             if (AddingHeight > 0)
             {
                 bool Updateing = XDB.XUpdate(
-                    "DiscountID", $"{DiscountID}", "true"
+                     "DiscountID", $"{DiscountID}", "true"
                    , "Title", Title, "false"
                    , "AddingHeight", $"{AddingHeight}", "true");
                 if (Updateing)
@@ -135,7 +135,7 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
             if (AddingWidth > 0)
             {
                 bool Updateing = XDB.XUpdate(
-                    "DiscountID", $"{DiscountID}", "true"
+                     "DiscountID", $"{DiscountID}", "true"
                    , "Title", Title, "false"
                    , "AddingWidth", $"{AddingWidth}", "true");
                 if (Updateing)
@@ -146,9 +146,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
             if (NHeight > 0)
             {
                 bool Updateing = XDB.XUpdate(
-                    "DiscountID", $"{DiscountID}", "true"
+                     "DiscountID", $"{DiscountID}", "true"
                    , "Title", Title, "false"
-                   , "NHeight", $"{NHeight}", "true");
+                   , "HNumber", $"{NHeight}", "true");
                 if (Updateing)
                     Updated += "t";
                 else
@@ -157,9 +157,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
             if (NWidth > 0)
             {
                 bool Updateing = XDB.XUpdate(
-                    "DiscountID", $"{DiscountID}", "true"
+                     "DiscountID", $"{DiscountID}", "true"
                    , "Title", Title, "false"
-                   , "NWidth", $"{NWidth}", "true");
+                   , "WNumber", $"{NWidth}", "true");
                 if (Updateing)
                     Updated += "t";
                 else

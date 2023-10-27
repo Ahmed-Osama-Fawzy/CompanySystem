@@ -1,6 +1,6 @@
 ﻿namespace Workshop_System.Offer_Price_Forms.Windows
 {
-    partial class Create
+    partial class WindowsOfferPrice
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Create));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WindowsOfferPrice));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Section = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Number = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.RollsNum = new System.Windows.Forms.TextBox();
-            this.Category = new System.Windows.Forms.ListBox();
+            this.Type = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.GlassesStatus = new System.Windows.Forms.ListBox();
+            this.Desciption = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.CustomerID = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
             this.Details = new System.Windows.Forms.Button();
+            this.RollsNumber = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             this.Section.ItemHeight = 25;
             this.Section.Items.AddRange(new object[] {
             "لا يوجد عناصر يجب اضافة عناصر"});
-            this.Section.Location = new System.Drawing.Point(145, 146);
+            this.Section.Location = new System.Drawing.Point(148, 146);
             this.Section.Name = "Section";
             this.Section.Size = new System.Drawing.Size(268, 29);
             this.Section.TabIndex = 24;
@@ -95,9 +95,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(12, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 33);
+            this.label2.Size = new System.Drawing.Size(130, 33);
             this.label2.TabIndex = 23;
-            this.label2.Text = "نوع الشباك";
+            this.label2.Text = "فرع الشباك";
             // 
             // label1
             // 
@@ -171,25 +171,18 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "عدد الدرفات";
             // 
-            // RollsNum
+            // Type
             // 
-            this.RollsNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RollsNum.Location = new System.Drawing.Point(628, 143);
-            this.RollsNum.Name = "RollsNum";
-            this.RollsNum.Size = new System.Drawing.Size(260, 31);
-            this.RollsNum.TabIndex = 35;
-            // 
-            // Category
-            // 
-            this.Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Category.FormattingEnabled = true;
-            this.Category.ItemHeight = 25;
-            this.Category.Items.AddRange(new object[] {
+            this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Type.FormattingEnabled = true;
+            this.Type.ItemHeight = 25;
+            this.Type.Items.AddRange(new object[] {
             "لا يوجد عناصر يجب اضافة عناصر"});
-            this.Category.Location = new System.Drawing.Point(1071, 145);
-            this.Category.Name = "Category";
-            this.Category.Size = new System.Drawing.Size(261, 29);
-            this.Category.TabIndex = 37;
+            this.Type.Location = new System.Drawing.Point(1081, 146);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(261, 29);
+            this.Type.TabIndex = 37;
+            this.Type.SelectedIndexChanged += new System.EventHandler(this.Desciption_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -197,23 +190,23 @@
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(930, 140);
+            this.label6.Location = new System.Drawing.Point(930, 142);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 33);
+            this.label6.Size = new System.Drawing.Size(127, 33);
             this.label6.TabIndex = 36;
-            this.label6.Text = "شكل الشباك";
+            this.label6.Text = "نوع الشباك";
             // 
-            // GlassesStatus
+            // Desciption
             // 
-            this.GlassesStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GlassesStatus.FormattingEnabled = true;
-            this.GlassesStatus.ItemHeight = 25;
-            this.GlassesStatus.Items.AddRange(new object[] {
+            this.Desciption.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desciption.FormattingEnabled = true;
+            this.Desciption.ItemHeight = 25;
+            this.Desciption.Items.AddRange(new object[] {
             "لا يوجد عناصر يجب اضافة عناصر"});
-            this.GlassesStatus.Location = new System.Drawing.Point(146, 205);
-            this.GlassesStatus.Name = "GlassesStatus";
-            this.GlassesStatus.Size = new System.Drawing.Size(268, 29);
-            this.GlassesStatus.TabIndex = 39;
+            this.Desciption.Location = new System.Drawing.Point(155, 205);
+            this.Desciption.Name = "Desciption";
+            this.Desciption.Size = new System.Drawing.Size(268, 29);
+            this.Desciption.TabIndex = 39;
             // 
             // label7
             // 
@@ -261,6 +254,7 @@
             this.AddWindow.TabIndex = 42;
             this.AddWindow.Text = "اضافة";
             this.AddWindow.UseVisualStyleBackColor = false;
+            this.AddWindow.Click += new System.EventHandler(this.AddWindow_Click);
             // 
             // Clear
             // 
@@ -275,6 +269,7 @@
             this.Clear.TabIndex = 43;
             this.Clear.Text = "افراغ البيانات";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // SelectedCustomers
             // 
@@ -283,20 +278,20 @@
             this.SelectedCustomers.GridColor = System.Drawing.SystemColors.Window;
             this.SelectedCustomers.Location = new System.Drawing.Point(19, 351);
             this.SelectedCustomers.Name = "SelectedCustomers";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.SelectedCustomers.Size = new System.Drawing.Size(1313, 296);
             this.SelectedCustomers.TabIndex = 45;
             // 
@@ -420,11 +415,24 @@
             this.Details.UseVisualStyleBackColor = false;
             this.Details.Click += new System.EventHandler(this.Details_Click);
             // 
-            // Create
+            // RollsNumber
+            // 
+            this.RollsNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RollsNumber.FormattingEnabled = true;
+            this.RollsNumber.ItemHeight = 25;
+            this.RollsNumber.Items.AddRange(new object[] {
+            "لا يوجد عناصر يجب اضافة عناصر"});
+            this.RollsNumber.Location = new System.Drawing.Point(643, 146);
+            this.RollsNumber.Name = "RollsNumber";
+            this.RollsNumber.Size = new System.Drawing.Size(268, 29);
+            this.RollsNumber.TabIndex = 59;
+            // 
+            // WindowsOfferPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.RollsNumber);
             this.Controls.Add(this.Details);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.label9);
@@ -439,11 +447,10 @@
             this.Controls.Add(this.AddWindow);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CustomerID);
-            this.Controls.Add(this.GlassesStatus);
+            this.Controls.Add(this.Desciption);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Category);
+            this.Controls.Add(this.Type);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.RollsNum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Number);
@@ -455,7 +462,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Create";
+            this.Name = "WindowsOfferPrice";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "انشاء عرض سعر شبابيك";
@@ -480,10 +487,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Number;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox RollsNum;
-        private System.Windows.Forms.ListBox Category;
+        private System.Windows.Forms.ListBox Type;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox GlassesStatus;
+        private System.Windows.Forms.ListBox Desciption;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox CustomerID;
@@ -499,5 +505,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Details;
+        private System.Windows.Forms.ListBox RollsNumber;
     }
 }

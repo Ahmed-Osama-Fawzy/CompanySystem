@@ -20,11 +20,8 @@ namespace Workshop_System.App_Class.Discounts_Classes
         public int RollsNumber { get; set; }
         public float Height { get; set; }
         public float Width { get; set; }
-        public DataBase DB = new DataBase("Discounts","MainTable");
-        public WAluminumClass Al = new WAluminumClass();
-        public WAccessoriesClass Ac = new WAccessoriesClass();
-        public WGlassClass Gl = new WGlassClass();
         public WindowsClass() { }
+        private DataBase DB = new DataBase("Discounts","MainTable");
         public int ReturnID()
         {
             DataTable dt = DB.Select("all");
@@ -61,13 +58,15 @@ namespace Workshop_System.App_Class.Discounts_Classes
         }
         public bool Remove()
         {
+            WAluminumClass Al = new WAluminumClass();
+            WAccessoriesClass Ac = new WAccessoriesClass();
+            WGlassClass Gl = new WGlassClass();
             Al.DiscountID = Ac.DiscountID = Gl.DiscountID = ID;
-            if(Gl.Remove() && Ac.Remove() && Al.Remove())
-            {
-                bool Deleted = DB.Delete("ID", $"{ID}", "true");
-                return Deleted;
-            }
-            return false;
+            Gl.Remove();
+            Ac.Remove();
+            Al.Remove();
+            bool Deleted = DB.Delete("ID", $"{ID}", "true");
+            return Deleted;
         }
         public DataTable ShowAll()
         {

@@ -258,6 +258,7 @@
             this.RightToLeftLayout = true;
             this.Text = "العملاء";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).EndInit();
             this.ResumeLayout(false);

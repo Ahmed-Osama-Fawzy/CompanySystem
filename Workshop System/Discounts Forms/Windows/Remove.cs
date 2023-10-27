@@ -27,7 +27,7 @@ namespace Workshop_System.Discounts_Forms.Windows
         private void Delete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("هل انت متاكد من حذف التخصيم بالكامل","رسالة تاكيدية",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if(result == DialogResult.OK)
+            if(result == DialogResult.Yes)
             {
                 string id = ID.Text;
                 if (!string.IsNullOrEmpty(id))

@@ -113,5 +113,10 @@ namespace Workshop_System
         {
 
         }
+
+        private void Customers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

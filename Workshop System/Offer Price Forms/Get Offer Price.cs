@@ -60,7 +60,7 @@ namespace Workshop_System.Offer_Price_Forms
             {
                 if (Section == "شبابيك")
                 {
-                    Create NewForm = new Create(id);
+                    WindowsOfferPrice NewForm = new WindowsOfferPrice(id);
                     NewForm.ShowDialog();
                 }
                 else if (Section == "ابواب")
@@ -96,6 +96,11 @@ namespace Workshop_System.Offer_Price_Forms
             {
                 MessageBox.Show("من فضلك ادخل جميع المدخلات, للانتقال الي الخطوت التالية");
             }
+        }
+
+        private void Get_Offer_Price_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

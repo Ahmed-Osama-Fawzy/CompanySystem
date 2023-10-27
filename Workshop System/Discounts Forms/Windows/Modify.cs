@@ -24,10 +24,10 @@ namespace Workshop_System.Discounts_Forms.Windows
             InitializeComponent();
             ID.Text = S;
         }
-        public int DiscountID;
-        private WAluminumClass AlumWindows = new WAluminumClass();
-        private WAccessoriesClass AccessWindows = new WAccessoriesClass();
-        private WGlassClass GlassWindows = new WGlassClass();
+        int DiscountID;
+        WAluminumClass AlumWindows = new WAluminumClass();
+        WAccessoriesClass AccessWindows = new WAccessoriesClass();
+        WGlassClass GlassWindows = new WGlassClass();
         private void AddDiscount_Click(object sender, EventArgs e)
         {
             string SID = ID.Text;
@@ -71,8 +71,8 @@ namespace Workshop_System.Discounts_Forms.Windows
                 DataTable xxdt = GlassWindows.ReturnChooses();
                 if (dt != null)
                 {
-                    GlassType.DisplayMember = "Color";
-                    GlassType.ValueMember = "Color";
+                    GlassType.DisplayMember = "Name";
+                    GlassType.ValueMember = "Name";
                     GlassType.DataSource = xxdt;
                     GlassType.Enabled = true;
                 }
@@ -154,8 +154,10 @@ namespace Workshop_System.Discounts_Forms.Windows
                 if(!string.IsNullOrEmpty(SAccessorieNumber)
                 || !string.IsNullOrEmpty(SAccessorieColor))
                 {
-                    AccessWindows.Amount = float.Parse(SAccessorieNumber);
-                    AccessWindows.Color = SAccessorieColor;
+                    if (!string.IsNullOrEmpty(SAccessorieNumber))
+                        AccessWindows.Amount = float.Parse(SAccessorieNumber);
+                    if (!string.IsNullOrEmpty(SAccessorieColor))
+                        AccessWindows.Color = SAccessorieColor;
                     if (AccessWindows.Update())
                     {
                         MessageBox.Show("تم تحديث البيانات بنجاح");
@@ -185,8 +187,9 @@ namespace Workshop_System.Discounts_Forms.Windows
             if (!string.IsNullOrEmpty(SGlassType))
             {
                 GlassWindows.Name = SGlassType.Substring(0,SGlassType.IndexOf(','));
+                MessageBox.Show(GlassWindows.Name);
                 if(!string.IsNullOrEmpty(SHeight)
-                | !string.IsNullOrEmpty(SWidth))
+                || !string.IsNullOrEmpty(SWidth))
                 {
                     if (!string.IsNullOrEmpty(SHeight))
                         GlassWindows.Height = float.Parse(SHeight);
@@ -234,6 +237,11 @@ namespace Workshop_System.Discounts_Forms.Windows
             GlassType.SelectedItem = null;
             GlassHeight.Text = string.Empty;
             GlassWidth.Text = string.Empty;
+        }
+
+        private void Modify_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

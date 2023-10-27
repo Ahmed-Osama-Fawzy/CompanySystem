@@ -16,9 +16,10 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
         public float Amount { get; set; }
         public string Color { get; set; }
         public float Price { get; set; }
-        public WindowsClass windowsClass = new WindowsClass();
+        public WAccessoriesClass() { }
         public DataBase DB = new DataBase("Materials", "Accessories");
         public DataBase XDB = new DataBase("Discounts", "Accessories");
+        public WindowsClass windowsClass = new WindowsClass();
         public bool ReturnAccessorieID()
         {
             DataTable dt = DB.MulitpeSelect("ID,Price"
@@ -81,9 +82,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                    ,"Name",Name,"false"
                    ,"Amount",$"{Amount}","true");
                 if (Up)
-                    Updated += "f";
-                else 
                     Updated += "t";
+                else
+                    Updated += "f";
             }
             if (!string.IsNullOrEmpty(Color))
             {
@@ -92,9 +93,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                    , "Name", Name, "false"
                    , "Color", Color , "false");
                 if (Up)
-                    Updated += "f";
-                else
                     Updated += "t";
+                else
+                    Updated += "f";
             }
             if (Updated.Contains("f"))
                 return false;

@@ -40,6 +40,7 @@
             this.Discounts.Name = "Discounts";
             this.Discounts.Size = new System.Drawing.Size(1352, 729);
             this.Discounts.TabIndex = 0;
+            this.Discounts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Discounts_CellContentClick);
             // 
             // ShowDiscounts
             // 
@@ -53,6 +54,7 @@
             this.RightToLeftLayout = true;
             this.Text = " عرض جميع التخصيمات";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ShowDiscounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Discounts)).EndInit();
             this.ResumeLayout(false);
 

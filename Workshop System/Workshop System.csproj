@@ -326,11 +326,11 @@
     <Compile Include="Offer Price Forms\Get Offer Price.Designer.cs">
       <DependentUpon>Get Offer Price.cs</DependentUpon>
     </Compile>
-    <Compile Include="Offer Price Forms\Windows\Create.cs">
+    <Compile Include="Offer Price Forms\Windows\WindowsOfferPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Offer Price Forms\Windows\Create.Designer.cs">
-      <DependentUpon>Create.cs</DependentUpon>
+    <Compile Include="Offer Price Forms\Windows\WindowsOfferPrice.Designer.cs">
+      <DependentUpon>WindowsOfferPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -463,8 +463,8 @@
     <EmbeddedResource Include="Offer Price Forms\Get Offer Price.resx">
       <DependentUpon>Get Offer Price.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Offer Price Forms\Windows\Create.resx">
-      <DependentUpon>Create.cs</DependentUpon>
+    <EmbeddedResource Include="Offer Price Forms\Windows\WindowsOfferPrice.resx">
+      <DependentUpon>WindowsOfferPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

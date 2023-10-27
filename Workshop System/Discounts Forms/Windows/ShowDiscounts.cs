@@ -18,8 +18,7 @@ namespace Workshop_System.Discounts_Forms.Windows
         {
             InitializeComponent();
             WindowsClass windowsClass = new WindowsClass();
-            DataTable dt = new DataTable();
-            dt = windowsClass.ShowAll();
+            DataTable dt = windowsClass.ShowAll();
             dt.Columns["ID"].ColumnName = "الرقم التعريفي";
             dt.Columns["Category"].ColumnName = "القسم";
             dt.Columns["Section"].ColumnName = "الفرع";
@@ -29,6 +28,16 @@ namespace Workshop_System.Discounts_Forms.Windows
             dt.Columns["Width"].ColumnName = "العرض";
             dt.Columns["RollsNumber"].ColumnName = "عدد الدرفات";
             Discounts.DataSource = dt;
+        }
+
+        private void ShowDiscounts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Discounts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

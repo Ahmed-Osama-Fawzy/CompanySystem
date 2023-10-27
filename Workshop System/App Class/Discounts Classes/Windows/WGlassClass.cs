@@ -4,12 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Workshop_System.App_Class.Discounts_Classes.Windows
 {
     internal class WGlassClass
     {
-        public WGlassClass() { }
         public int DiscountID { get; set; }
         public int GlassID { get; set; }
         public string Name { get; set; }
@@ -18,9 +18,10 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
         public float Width { get; set; }
         public int Number { get; set; }
         public float Price { get; set; }
-        public WindowsClass windowsClass = new WindowsClass();
+        public WGlassClass() { }
         public DataBase DB = new DataBase("Materials", "Glasses");
         public DataBase XDB = new DataBase("Discounts", "Glasses");
+        public WindowsClass windowsClass = new WindowsClass();
         public DataTable ReturnNames()
         {
             DataTable dt = DB.Select("Color", "Kind");
@@ -95,7 +96,7 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     DataRow dr = dt.Rows[i];
-                    dr["Color"] += $",{dr["Kind"]}";
+                    dr["Name"] += $",{dr["Kind"]}";
 
                 }
                 return dt;
@@ -112,9 +113,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                    , "Name", Name, "false"
                    , "Height", $"{Height}", "true");
                 if (Up)
-                    Updated += "f";
-                else
                     Updated += "t";
+                else
+                    Updated += "f";
             }
             if (Width > 0)
             {
@@ -123,9 +124,9 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
                    , "Name", Name, "false"
                    , "Width", $"{Width}", "true");
                 if (Up)
-                    Updated += "f";
-                else
                     Updated += "t";
+                else
+                    Updated += "f";
             }
             if (Updated.Contains("f"))
                 return false;
