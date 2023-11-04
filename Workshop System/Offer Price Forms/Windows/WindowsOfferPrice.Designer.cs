@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WindowsOfferPrice));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Section = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,22 +46,26 @@
             this.Desciption = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.CustomerID = new System.Windows.Forms.TextBox();
+            this.OfferID = new System.Windows.Forms.TextBox();
             this.AddWindow = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
-            this.SelectedCustomers = new System.Windows.Forms.DataGridView();
+            this.SelectedRows = new System.Windows.Forms.DataGridView();
             this.Show = new System.Windows.Forms.Button();
-            this.Edit = new System.Windows.Forms.Button();
+            this.EditOrder = new System.Windows.Forms.Button();
             this.Print = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
             this.Remove = new System.Windows.Forms.Button();
             this.SelectedID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
             this.Details = new System.Windows.Forms.Button();
             this.RollsNumber = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.AlPrice = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.TextBox();
+            this.Editing = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedRows)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,7 +76,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1354, 733);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Section
             // 
@@ -85,7 +88,6 @@
             this.Section.Name = "Section";
             this.Section.Size = new System.Drawing.Size(268, 29);
             this.Section.TabIndex = 24;
-            this.Section.SelectedIndexChanged += new System.EventHandler(this.Sections_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -182,7 +184,6 @@
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(261, 29);
             this.Type.TabIndex = 37;
-            this.Type.SelectedIndexChanged += new System.EventHandler(this.Desciption_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -228,18 +229,18 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(13, 18);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 33);
+            this.label8.Size = new System.Drawing.Size(282, 33);
             this.label8.TabIndex = 41;
-            this.label8.Text = "رقم العميل التعريفي";
+            this.label8.Text = "رقم عرض السعر التعريفي";
             // 
-            // CustomerID
+            // OfferID
             // 
-            this.CustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerID.Location = new System.Drawing.Point(245, 21);
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.ReadOnly = true;
-            this.CustomerID.Size = new System.Drawing.Size(285, 31);
-            this.CustomerID.TabIndex = 40;
+            this.OfferID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfferID.Location = new System.Drawing.Point(328, 21);
+            this.OfferID.Name = "OfferID";
+            this.OfferID.ReadOnly = true;
+            this.OfferID.Size = new System.Drawing.Size(285, 31);
+            this.OfferID.TabIndex = 40;
             // 
             // AddWindow
             // 
@@ -271,29 +272,30 @@
             this.Clear.UseVisualStyleBackColor = false;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // SelectedCustomers
+            // SelectedRows
             // 
-            this.SelectedCustomers.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.SelectedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SelectedCustomers.GridColor = System.Drawing.SystemColors.Window;
-            this.SelectedCustomers.Location = new System.Drawing.Point(19, 351);
-            this.SelectedCustomers.Name = "SelectedCustomers";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.SelectedCustomers.Size = new System.Drawing.Size(1313, 296);
-            this.SelectedCustomers.TabIndex = 45;
+            this.SelectedRows.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.SelectedRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SelectedRows.GridColor = System.Drawing.SystemColors.Window;
+            this.SelectedRows.Location = new System.Drawing.Point(19, 351);
+            this.SelectedRows.Name = "SelectedRows";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedRows.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedRows.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.SelectedRows.Size = new System.Drawing.Size(1313, 296);
+            this.SelectedRows.TabIndex = 45;
+            this.SelectedRows.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectedRows_RowHeaderMouseClick);
             // 
             // Show
             // 
@@ -309,19 +311,20 @@
             this.Show.Text = "عرض";
             this.Show.UseVisualStyleBackColor = false;
             // 
-            // Edit
+            // EditOrder
             // 
-            this.Edit.AutoSize = true;
-            this.Edit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Edit.Location = new System.Drawing.Point(675, 658);
-            this.Edit.Name = "Edit";
-            this.Edit.Padding = new System.Windows.Forms.Padding(7);
-            this.Edit.Size = new System.Drawing.Size(195, 61);
-            this.Edit.TabIndex = 47;
-            this.Edit.Text = "تعديل";
-            this.Edit.UseVisualStyleBackColor = false;
+            this.EditOrder.AutoSize = true;
+            this.EditOrder.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.EditOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EditOrder.Location = new System.Drawing.Point(675, 658);
+            this.EditOrder.Name = "EditOrder";
+            this.EditOrder.Padding = new System.Windows.Forms.Padding(7);
+            this.EditOrder.Size = new System.Drawing.Size(195, 61);
+            this.EditOrder.TabIndex = 47;
+            this.EditOrder.Text = "تعديل";
+            this.EditOrder.UseVisualStyleBackColor = false;
+            this.EditOrder.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Print
             // 
@@ -337,20 +340,6 @@
             this.Print.Text = "طباعة";
             this.Print.UseVisualStyleBackColor = false;
             // 
-            // Exit
-            // 
-            this.Exit.AutoSize = true;
-            this.Exit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Exit.Location = new System.Drawing.Point(1081, 658);
-            this.Exit.Name = "Exit";
-            this.Exit.Padding = new System.Windows.Forms.Padding(7);
-            this.Exit.Size = new System.Drawing.Size(195, 61);
-            this.Exit.TabIndex = 49;
-            this.Exit.Text = "خروج";
-            this.Exit.UseVisualStyleBackColor = false;
-            // 
             // Remove
             // 
             this.Remove.AutoSize = true;
@@ -364,6 +353,7 @@
             this.Remove.TabIndex = 50;
             this.Remove.Text = "حذف";
             this.Remove.UseVisualStyleBackColor = false;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // SelectedID
             // 
@@ -399,6 +389,7 @@
             this.Save.TabIndex = 53;
             this.Save.Text = "حفظ";
             this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Details
             // 
@@ -427,26 +418,86 @@
             this.RollsNumber.Size = new System.Drawing.Size(268, 29);
             this.RollsNumber.TabIndex = 59;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(441, 201);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(313, 33);
+            this.label10.TabIndex = 61;
+            this.label10.Text = "سعر الالوميتال الالوان الدولية";
+            // 
+            // AlPrice
+            // 
+            this.AlPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlPrice.Location = new System.Drawing.Point(760, 204);
+            this.AlPrice.Name = "AlPrice";
+            this.AlPrice.Size = new System.Drawing.Size(151, 31);
+            this.AlPrice.TabIndex = 60;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(1089, 676);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 29);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "الاجمالي";
+            // 
+            // Total
+            // 
+            this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(1180, 676);
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Size = new System.Drawing.Size(152, 31);
+            this.Total.TabIndex = 62;
+            // 
+            // Editing
+            // 
+            this.Editing.AutoSize = true;
+            this.Editing.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Editing.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Editing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Editing.Location = new System.Drawing.Point(257, 263);
+            this.Editing.Name = "Editing";
+            this.Editing.Padding = new System.Windows.Forms.Padding(7);
+            this.Editing.Size = new System.Drawing.Size(195, 61);
+            this.Editing.TabIndex = 64;
+            this.Editing.Text = "تعديل";
+            this.Editing.UseVisualStyleBackColor = false;
+            this.Editing.Click += new System.EventHandler(this.Editing_Click);
+            // 
             // WindowsOfferPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.Editing);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.AlPrice);
             this.Controls.Add(this.RollsNumber);
             this.Controls.Add(this.Details);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.SelectedID);
             this.Controls.Add(this.Remove);
-            this.Controls.Add(this.Exit);
             this.Controls.Add(this.Print);
-            this.Controls.Add(this.Edit);
+            this.Controls.Add(this.EditOrder);
             this.Controls.Add(this.Show);
-            this.Controls.Add(this.SelectedCustomers);
+            this.Controls.Add(this.SelectedRows);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.AddWindow);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.CustomerID);
+            this.Controls.Add(this.OfferID);
             this.Controls.Add(this.Desciption);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Type);
@@ -467,9 +518,8 @@
             this.RightToLeftLayout = true;
             this.Text = "انشاء عرض سعر شبابيك";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Create_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedRows)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,19 +542,23 @@
         private System.Windows.Forms.ListBox Desciption;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox CustomerID;
+        private System.Windows.Forms.TextBox OfferID;
         private System.Windows.Forms.Button AddWindow;
         private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.DataGridView SelectedCustomers;
+        private System.Windows.Forms.DataGridView SelectedRows;
         private System.Windows.Forms.Button Show;
-        private System.Windows.Forms.Button Edit;
+        private System.Windows.Forms.Button EditOrder;
         private System.Windows.Forms.Button Print;
-        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.TextBox SelectedID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Details;
         private System.Windows.Forms.ListBox RollsNumber;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox AlPrice;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox Total;
+        private System.Windows.Forms.Button Editing;
     }
 }

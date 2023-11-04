@@ -310,3 +310,40 @@ alter column NetPrice float not null
 alter table Discounts.Glasses
 add Kind nvarchar(25) not null
 
+
+create schema OfferPrices
+
+create table OfferPrices.MainTable(
+	ID int identity(1,1),
+	UserID int not null,
+	CustomerID int not null,
+	CreatingDate Date not null,
+	ExpiredDate Date not null,
+	Category nvarchar(20) not null,
+	ItemsNumber int not null,
+	TotalPrice float not null,
+	primary Key(ID),
+	foreign key(CustomerID) references Persons.Customers (ID)
+)
+
+create table OfferPrices.Windows(
+	OfferID int not null,
+	ItemDescription nvarchar(150) not null,
+	Height float not null,
+	Width float not null,
+	Area float not null,
+	Number int not null,
+	PFOne float not null,
+	TPrice float not null,
+	foreign key (OfferID) references OfferPrices.MainTable(ID)
+)
+
+delete from OfferPrices.MainTable
+select * from OfferPrices.MainTable
+
+delete from OfferPrices.Windows
+select * from OfferPrices.Windows
+
+alter table OfferPrices.Windows
+add RowNumber int not null
+

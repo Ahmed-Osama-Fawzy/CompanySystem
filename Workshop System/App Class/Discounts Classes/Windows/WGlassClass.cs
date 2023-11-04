@@ -143,5 +143,12 @@ namespace Workshop_System.App_Class.Discounts_Classes.Windows
             DataTable dt = XDB.SelectOne("DiscountID",$"{DiscountID}","true");
             return dt;
         }
+        public DataTable ReturnData()
+        {
+            DataTable dt = XDB.SelectOne("DiscountID", $"{DiscountID}", "true");
+            if (dt.Rows.Count > 0)
+                return dt;
+            else return null;
+        }
     }
 }

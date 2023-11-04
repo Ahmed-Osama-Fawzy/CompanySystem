@@ -48,7 +48,6 @@ namespace Workshop_System.App_Class
                 }
                 Keys = Keys.Remove(Keys.Length - 1);
                 Values = Values.Remove(Values.Length - 1);
-                MessageBox.Show($"{Keys} {Values}");
                 string Query = $"INSERT INTO {this.Table}({Keys}) VALUES ({Values})";
                 SqlCommand cmd = new SqlCommand(Query, conn);
                 conn.Open();
@@ -120,7 +119,7 @@ namespace Workshop_System.App_Class
             }
             return Updated;
         }
-        //
+        // Update Update Values Using 2 Condtions , Starts The Params With The 2 Condtions 
         public bool XUpdate(params string[] Inputs)
         {
             SqlConnection conn = new SqlConnection(connection);
@@ -196,7 +195,7 @@ namespace Workshop_System.App_Class
             }
             return Updated;
         }
-        //
+        // Update All Column of the table where this condtion
         public bool UpdateAll(string Key , string Value ,string Numrical )
         {
             SqlConnection conn = new SqlConnection(connection);
@@ -342,6 +341,33 @@ namespace Workshop_System.App_Class
             }
             return Deleted;
         }
+        public bool CustomDelete(string S)
+        {
+            SqlConnection conn = new SqlConnection(connection);
+            bool Deleted = false;
+            try
+            {
+                string Query = S;
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                int Rows = cmd.ExecuteNonQuery();
+                if (Rows > 0)
+                {
+                    Deleted = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The Error IS: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return Deleted;
+        }
+
         // Paramters as (all or Custom Columns)
         public DataTable Select(params string[] Inputs)
         {

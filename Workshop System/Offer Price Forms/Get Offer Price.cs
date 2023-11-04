@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Workshop_System.App_Class;
+using Workshop_System.App_Class.Offer_Prices;
 using Workshop_System.Customers_Options;
 using Workshop_System.Offer_Price_Forms.Windows;
 
@@ -54,14 +55,33 @@ namespace Workshop_System.Offer_Price_Forms
 
         private void NextStep_Click(object sender, EventArgs e)
         {
-            string id = CustomerID.Text;
+            string customerid = CustomerID.Text;
             string Section = Sections.Text.ToString();
-            if(!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(Section)) 
+            if(!string.IsNullOrEmpty(customerid) && !string.IsNullOrEmpty(Section)) 
             {
+                OfferPrice offerprice = new OfferPrice();
+                offerprice.UserID = 1;
+                offerprice.CustomerID = Convert.ToInt32(customerid);
                 if (Section == "شبابيك")
                 {
-                    WindowsOfferPrice NewForm = new WindowsOfferPrice(id);
-                    NewForm.ShowDialog();
+                    offerprice.Category = "شبابيك";
+                    if (offerprice.Insert())
+                    {
+                        int OfferID = offerprice.ReturnID();
+                        if(OfferID > 0)
+                        {
+                            WindowsOfferPrice NewForm = new WindowsOfferPrice(OfferID);
+                            NewForm.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("يوجد خطا ما");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("عفوا حدث خطا ما");
+                    }
                 }
                 else if (Section == "ابواب")
                 {

@@ -58,6 +58,8 @@
     <Compile Include="App Class\DataBase.cs" />
     <Compile Include="App Class\Materials Classes\GlassesClass.cs" />
     <Compile Include="App Class\loginClass.cs" />
+    <Compile Include="App Class\Offer Prices\OfferPrice.cs" />
+    <Compile Include="App Class\Offer Prices\Windows\OfferPriceWindows.cs" />
     <Compile Include="CompanypSystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

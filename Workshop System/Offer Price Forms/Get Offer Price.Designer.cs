@@ -119,6 +119,7 @@
             this.CustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerID.Location = new System.Drawing.Point(238, 255);
             this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
             this.CustomerID.Size = new System.Drawing.Size(285, 31);
             this.CustomerID.TabIndex = 18;
             // 

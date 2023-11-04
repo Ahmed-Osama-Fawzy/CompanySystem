@@ -83,5 +83,17 @@ namespace Workshop_System.App_Class.Discounts_Classes
             DataTable dt = DB.SelectLike(s, "Section");
             return dt;
         }
+        public void ReturnData()
+        {
+            DataTable dt = DB.SelectOne("ID",$"{ID}","true");
+            if(dt != null)
+            {
+                DataRow dr = dt.Rows[0];
+                Category = Convert.ToString(dr["Category"]);
+                Section = Convert.ToString(dr["Section"]);
+                Description = Convert.ToString(dr["Description"]);
+                Type = Convert.ToString(dr["Type"]);
+            }
+        }
     }
 }
