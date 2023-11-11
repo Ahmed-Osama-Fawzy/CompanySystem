@@ -73,7 +73,7 @@ namespace Workshop_System.Discounts_Forms.Windows
                 dt.Columns["GlassID"].ColumnName = "رقم الزجاج التعريفي";
                 GlassesDiscounts.DataSource = dt;
                 dt = windowsClass.Show();
-                if(dt != null)
+                if(dt.Rows.Count > 0)
                 {
                     DataRow dr = dt.Rows[0];
                     Category.Text = Convert.ToString(dr["Category"]);

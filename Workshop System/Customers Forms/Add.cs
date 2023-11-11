@@ -17,17 +17,6 @@ namespace Workshop_System.Customers_Options
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Insert_Click(object sender, EventArgs e)
         {
             string XFName = FName.Text.ToString();
@@ -36,39 +25,53 @@ namespace Workshop_System.Customers_Options
             string XMobile = Mobile.Text.ToString();
             string XEmail = Email.Text.ToString();
             string XWhatsapp = Whatsapp.Text.ToString();
-            if (string.IsNullOrEmpty(XFName) || string.IsNullOrEmpty(XLName) || string.IsNullOrEmpty(XMobile) ||string.IsNullOrEmpty(XAddress))
+            if (!string.IsNullOrEmpty(XFName) && !string.IsNullOrEmpty(XLName) && !string.IsNullOrEmpty(XMobile) && !string.IsNullOrEmpty(XAddress))
             {
-                MessageBox.Show("من فضلك ادخل جميع المدخلات");
-            }
-            else
-            {
-                if (string.IsNullOrEmpty(XEmail))
-                {
-                    XEmail = "NULL";
-                    if (string.IsNullOrEmpty(XWhatsapp))
-                    {
-                        XWhatsapp = "NULL";
-                    }
-                }
+                if (string.IsNullOrEmpty(XEmail)){ XEmail = "NULL";
+                    if (string.IsNullOrEmpty(XWhatsapp)){XWhatsapp = "NULL";}}
                 CustomerClass customer = new CustomerClass(XFName, XLName, XAddress, XMobile, XWhatsapp, XEmail, 0, 0, 0, 0);
-                if (customer.Insert())
+                if(XMobile.Length == 11)
                 {
-                    MessageBox.Show("تم اضافة العميل بنجاح");
-                    FName.Text = "";
-                    LName.Text = "";
-                    Address.Text = "";
-                    Email.Text = "";
-                    Mobile.Text = "";
-                    Whatsapp.Text = "";
+                    if (XWhatsapp.Length == 11 || XWhatsapp.Length == 3)
+                    {
+                        if (XEmail.Contains("@") && XEmail.Contains(".com") || XEmail.Equals("NULL"))
+                        {
+                            if (customer.Insert())
+                            {
+                                MessageBox.Show("تم اضافة العميل بنجاح");
+                                FName.Text = "";
+                                LName.Text = "";
+                                Address.Text = "";
+                                Email.Text = "";
+                                Mobile.Text = "";
+                                Whatsapp.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("لم يتم اضافة البيانات بنجاح");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("عفوا يجب ادخال بريد الكتروني صالح");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("عفوا يجب ادخال رقم هاتف  صالح مصري");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("لم يتم اضافة البيانات بنجاح");
+                    MessageBox.Show("عفوا يجب ادخال رقم هاتف صالح مصري");
                 }
+            }
+            else
+            { 
+                MessageBox.Show("من فضلك ادخل جميع المدخلات");
             }
             
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             FName.Text = "";

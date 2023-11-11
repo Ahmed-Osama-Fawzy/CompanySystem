@@ -49,6 +49,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.PromoCodes = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +74,7 @@
             this.Customers.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Customers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Customers.Location = new System.Drawing.Point(22, 179);
+            this.Customers.Location = new System.Drawing.Point(1047, 218);
             this.Customers.Name = "Customers";
             this.Customers.Padding = new System.Windows.Forms.Padding(7);
             this.Customers.Size = new System.Drawing.Size(279, 61);
@@ -84,7 +89,7 @@
             this.Materials.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Materials.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Materials.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Materials.Location = new System.Drawing.Point(1047, 179);
+            this.Materials.Location = new System.Drawing.Point(1047, 84);
             this.Materials.Name = "Materials";
             this.Materials.Padding = new System.Windows.Forms.Padding(7);
             this.Materials.Size = new System.Drawing.Size(279, 61);
@@ -99,10 +104,10 @@
             this.GetOfferPrice.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.GetOfferPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetOfferPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GetOfferPrice.Location = new System.Drawing.Point(22, 84);
+            this.GetOfferPrice.Location = new System.Drawing.Point(389, 84);
             this.GetOfferPrice.Name = "GetOfferPrice";
             this.GetOfferPrice.Padding = new System.Windows.Forms.Padding(7);
-            this.GetOfferPrice.Size = new System.Drawing.Size(279, 61);
+            this.GetOfferPrice.Size = new System.Drawing.Size(181, 61);
             this.GetOfferPrice.TabIndex = 3;
             this.GetOfferPrice.Text = " عرض سعر";
             this.GetOfferPrice.UseVisualStyleBackColor = false;
@@ -114,10 +119,10 @@
             this.GetIndextion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.GetIndextion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetIndextion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GetIndextion.Location = new System.Drawing.Point(346, 84);
+            this.GetIndextion.Location = new System.Drawing.Point(612, 84);
             this.GetIndextion.Name = "GetIndextion";
             this.GetIndextion.Padding = new System.Windows.Forms.Padding(7);
-            this.GetIndextion.Size = new System.Drawing.Size(279, 61);
+            this.GetIndextion.Size = new System.Drawing.Size(144, 61);
             this.GetIndextion.TabIndex = 4;
             this.GetIndextion.Text = " مقايسة";
             this.GetIndextion.UseVisualStyleBackColor = false;
@@ -128,7 +133,7 @@
             this.CWorks.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CWorks.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CWorks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CWorks.Location = new System.Drawing.Point(1047, 84);
+            this.CWorks.Location = new System.Drawing.Point(1047, 553);
             this.CWorks.Name = "CWorks";
             this.CWorks.Padding = new System.Windows.Forms.Padding(7);
             this.CWorks.Size = new System.Drawing.Size(279, 61);
@@ -142,7 +147,7 @@
             this.Supliers.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Supliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Supliers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Supliers.Location = new System.Drawing.Point(22, 281);
+            this.Supliers.Location = new System.Drawing.Point(71, 84);
             this.Supliers.Name = "Supliers";
             this.Supliers.Padding = new System.Windows.Forms.Padding(7);
             this.Supliers.Size = new System.Drawing.Size(279, 61);
@@ -156,7 +161,7 @@
             this.Emploess.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Emploess.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emploess.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Emploess.Location = new System.Drawing.Point(22, 385);
+            this.Emploess.Location = new System.Drawing.Point(71, 218);
             this.Emploess.Name = "Emploess";
             this.Emploess.Padding = new System.Windows.Forms.Padding(7);
             this.Emploess.Size = new System.Drawing.Size(279, 61);
@@ -170,7 +175,7 @@
             this.Cars.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cars.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cars.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Cars.Location = new System.Drawing.Point(1047, 385);
+            this.Cars.Location = new System.Drawing.Point(71, 151);
             this.Cars.Name = "Cars";
             this.Cars.Padding = new System.Windows.Forms.Padding(7);
             this.Cars.Size = new System.Drawing.Size(279, 61);
@@ -184,11 +189,12 @@
             this.Sections.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Sections.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sections.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Sections.Location = new System.Drawing.Point(1047, 480);
+            this.Sections.Location = new System.Drawing.Point(1047, 620);
             this.Sections.Name = "Sections";
             this.Sections.Padding = new System.Windows.Forms.Padding(7);
             this.Sections.Size = new System.Drawing.Size(279, 61);
             this.Sections.TabIndex = 9;
+            this.Sections.Text = "المهام";
             this.Sections.UseVisualStyleBackColor = false;
             // 
             // Contract
@@ -197,7 +203,7 @@
             this.Contract.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Contract.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contract.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Contract.Location = new System.Drawing.Point(1047, 647);
+            this.Contract.Location = new System.Drawing.Point(1047, 285);
             this.Contract.Name = "Contract";
             this.Contract.Padding = new System.Windows.Forms.Padding(7);
             this.Contract.Size = new System.Drawing.Size(279, 61);
@@ -211,7 +217,7 @@
             this.Treasury.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Treasury.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Treasury.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Treasury.Location = new System.Drawing.Point(22, 647);
+            this.Treasury.Location = new System.Drawing.Point(71, 285);
             this.Treasury.Name = "Treasury";
             this.Treasury.Padding = new System.Windows.Forms.Padding(7);
             this.Treasury.Size = new System.Drawing.Size(279, 61);
@@ -226,7 +232,7 @@
             this.Commitments.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Commitments.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Commitments.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Commitments.Location = new System.Drawing.Point(1047, 281);
+            this.Commitments.Location = new System.Drawing.Point(71, 419);
             this.Commitments.Name = "Commitments";
             this.Commitments.Padding = new System.Windows.Forms.Padding(7);
             this.Commitments.Size = new System.Drawing.Size(279, 61);
@@ -240,7 +246,7 @@
             this.History.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.History.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.History.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.History.Location = new System.Drawing.Point(22, 561);
+            this.History.Location = new System.Drawing.Point(71, 352);
             this.History.Name = "History";
             this.History.Padding = new System.Windows.Forms.Padding(7);
             this.History.Size = new System.Drawing.Size(279, 61);
@@ -254,10 +260,10 @@
             this.AddNewWork.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.AddNewWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewWork.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddNewWork.Location = new System.Drawing.Point(724, 84);
+            this.AddNewWork.Location = new System.Drawing.Point(822, 84);
             this.AddNewWork.Name = "AddNewWork";
             this.AddNewWork.Padding = new System.Windows.Forms.Padding(7);
-            this.AddNewWork.Size = new System.Drawing.Size(279, 61);
+            this.AddNewWork.Size = new System.Drawing.Size(161, 61);
             this.AddNewWork.TabIndex = 14;
             this.AddNewWork.Text = " عمل جديد";
             this.AddNewWork.UseVisualStyleBackColor = false;
@@ -305,7 +311,7 @@
             this.PromoCodes.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PromoCodes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PromoCodes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PromoCodes.Location = new System.Drawing.Point(22, 480);
+            this.PromoCodes.Location = new System.Drawing.Point(1047, 419);
             this.PromoCodes.Name = "PromoCodes";
             this.PromoCodes.Padding = new System.Windows.Forms.Padding(7);
             this.PromoCodes.Size = new System.Drawing.Size(279, 61);
@@ -319,7 +325,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1047, 561);
+            this.button2.Location = new System.Drawing.Point(1047, 151);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(7);
             this.button2.Size = new System.Drawing.Size(279, 61);
@@ -327,6 +333,76 @@
             this.button2.Text = "التخصيمات";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(1047, 352);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(7);
+            this.button1.Size = new System.Drawing.Size(279, 61);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "عروض السعر";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(1047, 486);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(7);
+            this.button3.Size = new System.Drawing.Size(279, 61);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "المقايسات";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.AutoSize = true;
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(71, 486);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(7);
+            this.button4.Size = new System.Drawing.Size(279, 61);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "المستخدمين";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(71, 553);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(7);
+            this.button5.Size = new System.Drawing.Size(279, 61);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "الوظائف";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AutoSize = true;
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.Location = new System.Drawing.Point(71, 620);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(7);
+            this.button6.Size = new System.Drawing.Size(279, 61);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "التقارير";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // Home
             // 
@@ -336,6 +412,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.PromoCodes);
             this.Controls.Add(this.label2);
@@ -391,5 +472,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button PromoCodes;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

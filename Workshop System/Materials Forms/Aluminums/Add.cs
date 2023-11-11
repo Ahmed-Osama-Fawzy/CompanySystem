@@ -82,19 +82,23 @@ namespace Workshop_System.Materials_Forms.Aluminum
             a.Title = AName.Text;
             a.Description = Description.Text;
             if (!string.IsNullOrEmpty(LowWeight.Text))
-               a.Low = Convert.ToDouble(LowWeight.Text);
+                if (Convert.ToDouble(LowWeight.Text) > 0) a.Low = Convert.ToDouble(LowWeight.Text);
+                else MessageBox.Show("عفوا يجب ادخال قيمة وزن خفيف صالحة");
             else
                 a.Low = 0.0;
             if (!string.IsNullOrEmpty(AvgWeight.Text))
-                a.Avg = Convert.ToDouble(AvgWeight.Text);
+                if (Convert.ToDouble(AvgWeight.Text) > 0) a.Avg = Convert.ToDouble(AvgWeight.Text);
+                else MessageBox.Show("عفوا يجب ادخال قيمة وزن متوسط صالحة");
             else
                 a.Avg = 0.0;
             if (!string.IsNullOrEmpty(HighWeight.Text))
-                a.High = Convert.ToDouble(HighWeight.Text);
+                if (Convert.ToDouble(HighWeight.Text) > 0) a.High = Convert.ToDouble(HighWeight.Text);
+                else MessageBox.Show("عفوا يجب ادخال قيمة وزن ثقيل صالحة");
             else
                 a.High = 0.0;
             if (!string.IsNullOrEmpty(Length.Text))
-                a.Length = Convert.ToDouble(Length.Text);
+                if (Convert.ToDouble(Length.Text) > 0) a.Length = Convert.ToDouble(Length.Text);
+                else MessageBox.Show("عفوا يجب ادخال قيمة طول صالحة");
             else
                 a.Length = 0.0;
             if(!string.IsNullOrEmpty(a.Number)&&!string.IsNullOrEmpty(a.Category)&&!string.IsNullOrEmpty(a.Section)&&!string.IsNullOrEmpty(a.Type)&&!string.IsNullOrEmpty(a.Title)&&!string.IsNullOrEmpty(a.Description)&& a.Low > 0.0 && a.Avg > 0.0 && a.High > 0.0 && a.Length > 0.0 ) 

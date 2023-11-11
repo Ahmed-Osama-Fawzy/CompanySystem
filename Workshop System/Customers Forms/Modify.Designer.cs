@@ -71,7 +71,6 @@
             this.label8.Size = new System.Drawing.Size(242, 39);
             this.label8.TabIndex = 43;
             this.label8.Text = "تعديل بيانات عميل";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Clear
             // 
@@ -95,7 +94,6 @@
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(395, 31);
             this.Email.TabIndex = 41;
-            this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             // 
             // label7
             // 
@@ -107,7 +105,6 @@
             this.label7.Size = new System.Drawing.Size(141, 25);
             this.label7.TabIndex = 40;
             this.label7.Text = "البريد الالكتروني";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Whatsapp
             // 
@@ -116,7 +113,6 @@
             this.Whatsapp.Name = "Whatsapp";
             this.Whatsapp.Size = new System.Drawing.Size(395, 31);
             this.Whatsapp.TabIndex = 39;
-            this.Whatsapp.TextChanged += new System.EventHandler(this.Whatsapp_TextChanged);
             // 
             // label6
             // 
@@ -128,7 +124,6 @@
             this.label6.Size = new System.Drawing.Size(104, 25);
             this.label6.TabIndex = 38;
             this.label6.Text = "رقم الواتس ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Address
             // 
@@ -137,7 +132,6 @@
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(395, 31);
             this.Address.TabIndex = 37;
-            this.Address.TextChanged += new System.EventHandler(this.Address_TextChanged);
             // 
             // label5
             // 
@@ -149,7 +143,6 @@
             this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 36;
             this.label5.Text = "العنوان";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Mobile
             // 
@@ -158,7 +151,6 @@
             this.Mobile.Name = "Mobile";
             this.Mobile.Size = new System.Drawing.Size(395, 31);
             this.Mobile.TabIndex = 35;
-            this.Mobile.TextChanged += new System.EventHandler(this.Mobile_TextChanged);
             // 
             // label4
             // 
@@ -170,7 +162,6 @@
             this.label4.Size = new System.Drawing.Size(96, 25);
             this.label4.TabIndex = 34;
             this.label4.Text = "رقم الهاتف";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // LName
             // 
@@ -179,7 +170,6 @@
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(395, 31);
             this.LName.TabIndex = 33;
-            this.LName.TextChanged += new System.EventHandler(this.LName_TextChanged);
             // 
             // label3
             // 
@@ -191,7 +181,6 @@
             this.label3.Size = new System.Drawing.Size(106, 25);
             this.label3.TabIndex = 32;
             this.label3.Text = "الاسم الاخير";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FName
             // 
@@ -200,7 +189,6 @@
             this.FName.Name = "FName";
             this.FName.Size = new System.Drawing.Size(395, 31);
             this.FName.TabIndex = 31;
-            this.FName.TextChanged += new System.EventHandler(this.FName_TextChanged);
             // 
             // label2
             // 
@@ -212,7 +200,6 @@
             this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 30;
             this.label2.Text = "الاسم الاول";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ID
             // 
@@ -221,7 +208,6 @@
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(395, 31);
             this.ID.TabIndex = 29;
-            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // Edit
             // 
@@ -248,7 +234,6 @@
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 27;
             this.label1.Text = "الرقم الكودي";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -258,7 +243,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Modify
             // 

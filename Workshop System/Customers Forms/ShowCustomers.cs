@@ -32,10 +32,5 @@ namespace Workshop_System.Customers_Options
             dt.Columns["Email"].ColumnName = "البريد الالكتروني";
             AllCustomers.DataSource = dt;
         }
-
-        private void AllCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

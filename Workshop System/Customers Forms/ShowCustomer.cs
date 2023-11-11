@@ -17,13 +17,11 @@ namespace Workshop_System.Customers_Options
         {
             InitializeComponent();
         }
-
         public ShowCustomer(string S)
         {
             InitializeComponent();
             ID.Text = S;
         }
-
         private void Show_Click(object sender, EventArgs e)
         {
             string Sid = ID.Text.ToString();
@@ -57,7 +55,6 @@ namespace Workshop_System.Customers_Options
                 MessageBox.Show("من فضلك ادخل الرقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Clear();

@@ -18,41 +18,31 @@ namespace Workshop_System
         {
             InitializeComponent();
         }
-        private void Search_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void AddCustomer_Click(object sender, EventArgs e)
         {
             Add NewForm = new Add();
             NewForm.ShowDialog();
         }
-
         private void ModifyCustomer_Click(object sender, EventArgs e)
         {
             Modify NewForm = new Modify();
             NewForm.ShowDialog();
         }
-
         private void RemoveCustomer_Click(object sender, EventArgs e)
         {
             Remove NewForm = new Remove();
             NewForm.ShowDialog();
         }
-
         private void ShowCustomer_Click(object sender, EventArgs e)
         {
             ShowCustomer NewForm = new ShowCustomer();
             NewForm.ShowDialog();
         }
-
         private void ShowCustomers_Click(object sender, EventArgs e)
         {
             ShowCustomers NewForm = new ShowCustomers();
             NewForm.ShowDialog();
         }
-
         private void SearchInput_TextChanged(object sender, EventArgs e)
         {
             CustomerClass customer = new CustomerClass();
@@ -73,50 +63,26 @@ namespace Workshop_System
                 SelectedCustomers.DataSource = dt;
             }
         }
-
         private void SelectedCustomers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int index = e.RowIndex;
             string SelectedId = SelectedCustomers.Rows[index].Cells[0].Value.ToString();
             SelectedID.Text = SelectedId;
         }
-
         private void CustomShow_Click(object sender, EventArgs e)
         {
             ShowCustomer NewForm = new ShowCustomer(SelectedID.Text);
             NewForm.ShowDialog();
         }
-
-        private void SelectedCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void CustomRemove_Click(object sender, EventArgs e)
         {
             Remove NewForm = new Remove(SelectedID.Text);
             NewForm.ShowDialog();
         }
-
         private void CustomEdit_Click(object sender, EventArgs e)
         {
             Modify NewForm = new Modify(SelectedID.Text);
             NewForm.ShowDialog();
-        }
-
-        private void SelectedID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Customers_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

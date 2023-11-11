@@ -17,7 +17,6 @@ namespace Workshop_System.Customers_Options
         {
             InitializeComponent();
         }
-
         public Remove(string S)
         {
             InitializeComponent();
@@ -27,7 +26,6 @@ namespace Workshop_System.Customers_Options
         {
             ID.Text = string.Empty;
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             string Sid = ID.Text;
@@ -36,12 +34,13 @@ namespace Workshop_System.Customers_Options
                 int id = Convert.ToInt32(Sid);
                 CustomerClass customer = new CustomerClass(id);
                 ID.Text = string.Empty;
-                DialogResult Result = MessageBox.Show("هل انت متاكد من حذف العميل نهائيا من قواعد البانات ", "تاكيد العملية", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult Result = MessageBox.Show("هل انت متاكد من حذف العميل نهائيا من قواعد البانات ", "رسالة تاكيدية", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     if (customer.Remove())
                     {
                         MessageBox.Show(" تم حذف البيانات بنجاح");
+                        ID.Text = string.Empty;
                     }
                     else
                     {

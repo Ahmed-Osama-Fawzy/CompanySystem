@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SelectedCustomers = new System.Windows.Forms.DataGridView();
             this.CustomRemove = new System.Windows.Forms.Button();
@@ -56,32 +57,45 @@
             this.pictureBox1.Size = new System.Drawing.Size(1354, 733);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SelectedCustomers
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SelectedCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.SelectedCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectedCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.SelectedCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.SelectedCustomers.BackgroundColor = System.Drawing.SystemColors.Window;
             this.SelectedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SelectedCustomers.GridColor = System.Drawing.SystemColors.Window;
-            this.SelectedCustomers.Location = new System.Drawing.Point(12, 482);
+            this.SelectedCustomers.Location = new System.Drawing.Point(21, 366);
             this.SelectedCustomers.Name = "SelectedCustomers";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.SelectedCustomers.Size = new System.Drawing.Size(1150, 237);
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SelectedCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedCustomers.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.SelectedCustomers.Size = new System.Drawing.Size(1135, 353);
             this.SelectedCustomers.TabIndex = 1;
-            this.SelectedCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCustomers_CellContentClick);
             this.SelectedCustomers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectedCustomers_RowHeaderMouseClick);
             // 
             // CustomRemove
@@ -90,7 +104,7 @@
             this.CustomRemove.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CustomRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomRemove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomRemove.Location = new System.Drawing.Point(1184, 591);
+            this.CustomRemove.Location = new System.Drawing.Point(1177, 543);
             this.CustomRemove.Name = "CustomRemove";
             this.CustomRemove.Padding = new System.Windows.Forms.Padding(7);
             this.CustomRemove.Size = new System.Drawing.Size(137, 61);
@@ -105,7 +119,7 @@
             this.CustomEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CustomEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomEdit.Location = new System.Drawing.Point(1184, 658);
+            this.CustomEdit.Location = new System.Drawing.Point(1177, 637);
             this.CustomEdit.Name = "CustomEdit";
             this.CustomEdit.Padding = new System.Windows.Forms.Padding(7);
             this.CustomEdit.Size = new System.Drawing.Size(137, 61);
@@ -120,7 +134,7 @@
             this.CustomShow.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CustomShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomShow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomShow.Location = new System.Drawing.Point(1184, 524);
+            this.CustomShow.Location = new System.Drawing.Point(1177, 448);
             this.CustomShow.Name = "CustomShow";
             this.CustomShow.Padding = new System.Windows.Forms.Padding(7);
             this.CustomShow.Size = new System.Drawing.Size(137, 61);
@@ -132,7 +146,7 @@
             // SearchInput
             // 
             this.SearchInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchInput.Location = new System.Drawing.Point(238, 423);
+            this.SearchInput.Location = new System.Drawing.Point(247, 307);
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.Size = new System.Drawing.Size(395, 31);
             this.SearchInput.TabIndex = 6;
@@ -159,7 +173,7 @@
             this.ShowCustomers.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ShowCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowCustomers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ShowCustomers.Location = new System.Drawing.Point(42, 219);
+            this.ShowCustomers.Location = new System.Drawing.Point(42, 193);
             this.ShowCustomers.Name = "ShowCustomers";
             this.ShowCustomers.Padding = new System.Windows.Forms.Padding(7);
             this.ShowCustomers.Size = new System.Drawing.Size(201, 61);
@@ -174,7 +188,7 @@
             this.RemoveCustomer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.RemoveCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RemoveCustomer.Location = new System.Drawing.Point(1156, 219);
+            this.RemoveCustomer.Location = new System.Drawing.Point(1156, 193);
             this.RemoveCustomer.Name = "RemoveCustomer";
             this.RemoveCustomer.Padding = new System.Windows.Forms.Padding(7);
             this.RemoveCustomer.Size = new System.Drawing.Size(165, 61);
@@ -216,9 +230,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(36, 420);
+            this.label5.Location = new System.Drawing.Point(45, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 33);
             this.label5.TabIndex = 13;
@@ -227,12 +242,11 @@
             // SelectedID
             // 
             this.SelectedID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectedID.Location = new System.Drawing.Point(1184, 482);
+            this.SelectedID.Location = new System.Drawing.Point(1177, 381);
             this.SelectedID.Name = "SelectedID";
             this.SelectedID.ReadOnly = true;
             this.SelectedID.Size = new System.Drawing.Size(137, 31);
             this.SelectedID.TabIndex = 14;
-            this.SelectedID.TextChanged += new System.EventHandler(this.SelectedID_TextChanged);
             // 
             // Customers
             // 
@@ -258,7 +272,6 @@
             this.RightToLeftLayout = true;
             this.Text = "العملاء";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedCustomers)).EndInit();
             this.ResumeLayout(false);
