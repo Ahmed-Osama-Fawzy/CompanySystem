@@ -103,16 +103,18 @@ namespace Workshop_System.Materials_Forms.Accessories
                 ))
             {
                 accessoriesClass.Name = SName;
-                accessoriesClass.Size = float.Parse(SSize);
+                if (float.Parse(SSize) > 0) accessoriesClass.Size = float.Parse(SSize);
+                else MessageBox.Show("عفوا يجب ادخال قيمة مقاس صالح");
                 accessoriesClass.Category = SCategory;
-                accessoriesClass.Price = float.Parse(SPrice);
+                if(float.Parse(SPrice) > 0) accessoriesClass.Price = float.Parse(SPrice);
+                else MessageBox.Show("عفوا يجب ادخال قيمة سعر صالح");
                 accessoriesClass.Color = SColor;
                 accessoriesClass.Section = SSection;
                 accessoriesClass.Description = SStatus;
                 accessoriesClass.Type = SType;
                 if (accessoriesClass.Insert())
                 {
-                    MessageBox.Show("تم جفظ البيانات بنجاح ");
+                    MessageBox.Show("تم حفظ البيانات بنجاح ");
                     AName.Text = string.Empty;
                     Size.Text = string.Empty;
                     Category.Text = string.Empty;

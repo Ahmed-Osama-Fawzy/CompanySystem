@@ -133,13 +133,17 @@ namespace Workshop_System.Materials_Forms.Aluminum
                     if (!string.IsNullOrEmpty(XDescription))
                         aluminmu.Description = XDescription;
                     if (!string.IsNullOrEmpty(Low))
-                        aluminmu.Low = Convert.ToDouble(Low);
+                        if (Convert.ToDouble(Low) > 0) aluminmu.Low = Convert.ToDouble(Low);
+                        else MessageBox.Show("عفوا يجب ادخال قيمة وزن خفيف صالحة");
                     if (!string.IsNullOrEmpty(Avg))
-                        aluminmu.Avg = Convert.ToDouble(Avg);
+                        if(Convert.ToDouble(Avg)> 0) aluminmu.Avg = Convert.ToDouble(Avg);
+                        else MessageBox.Show("عفوا يجب ادخال قيمة وزن متوسط صالحة");
                     if (!string.IsNullOrEmpty(High))
-                        aluminmu.High = Convert.ToDouble(High);
+                        if(Convert.ToDouble(High) > 0) aluminmu.High = Convert.ToDouble(High);
+                        else MessageBox.Show("عفوا يجب ادخال قيمة وزن ثقيل صالحة");
                     if (!string.IsNullOrEmpty(Len))
-                        aluminmu.Length = Convert.ToDouble(Len);
+                        if(Convert.ToDouble(Len) > 0) aluminmu.Length = Convert.ToDouble(Len);
+                        else MessageBox.Show("عفوا يجب ادخال قيمة طول صالحة");
                     bool Updated = aluminmu.Update();
                     if (Updated)
                     {
@@ -175,7 +179,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             NewForm.ShowDialog();
             Update();
         }
-
         private void Clear_Click_1(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
