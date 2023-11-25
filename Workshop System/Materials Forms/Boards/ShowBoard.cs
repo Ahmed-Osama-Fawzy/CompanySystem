@@ -27,7 +27,6 @@ namespace Workshop_System.Prices_Options.Addtions
         {
 
         }
-
         private void Show_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
