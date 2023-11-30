@@ -294,7 +294,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox2.TabIndex = 118;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -362,7 +361,6 @@
             this.RightToLeftLayout = true;
             this.Text = " عرض بيانات قطعة";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ShowAccessiore_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

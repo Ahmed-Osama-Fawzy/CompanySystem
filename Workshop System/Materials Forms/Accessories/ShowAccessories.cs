@@ -30,16 +30,5 @@ namespace Workshop_System.Materials_Forms.Accessories
             dt.Columns["Description"].ColumnName = "الوصف";
             AllAccessories.DataSource = dt;
         }
-
-
-        private void AllShapes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ShowAccessories_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

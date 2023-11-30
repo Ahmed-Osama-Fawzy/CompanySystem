@@ -353,7 +353,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1359, 731);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Add
             // 
@@ -393,7 +392,6 @@
             this.RightToLeftLayout = true;
             this.Text = "اضافة قطاع جديد";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

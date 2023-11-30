@@ -22,7 +22,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             InitializeComponent();
             ID.Text = i.ToString();
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             AluminumClass aluminmuClass = new AluminumClass();
@@ -53,15 +52,9 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 MessageBox.Show("يجب ادخال رالقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

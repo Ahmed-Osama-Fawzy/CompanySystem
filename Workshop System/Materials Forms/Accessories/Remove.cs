@@ -22,7 +22,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             InitializeComponent();
             ID.Text = i;
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -53,15 +52,9 @@ namespace Workshop_System.Materials_Forms.Accessories
                 MessageBox.Show("يجب ادخال الرقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

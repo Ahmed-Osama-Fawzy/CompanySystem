@@ -61,7 +61,6 @@ namespace Workshop_System.Prices_Options.Glasses
                 MessageBox.Show("يجب ادخال الرقم الكودي صحيح");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
@@ -71,11 +70,6 @@ namespace Workshop_System.Prices_Options.Glasses
             NetPrice.Text = string.Empty;
             Default.Text = string.Empty;
             Deep.Text = string.Empty;
-        }
-
-        private void ID_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -56,7 +56,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1354, 733);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SelectedShapes
             // 
@@ -256,7 +255,6 @@
             this.RightToLeftLayout = true;
             this.Text = "قطاعات الالوميتال";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Aluminum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedShapes)).EndInit();
             this.ResumeLayout(false);

@@ -22,7 +22,6 @@ namespace Workshop_System.Prices_Options.Addtions
             InitializeComponent();
             ID.Text = S;
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -48,11 +47,6 @@ namespace Workshop_System.Prices_Options.Addtions
             {
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي اولا");
             }
-        }
-
-        private void Remove_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

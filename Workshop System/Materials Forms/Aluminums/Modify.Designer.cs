@@ -379,7 +379,6 @@
             this.RightToLeftLayout = true;
             this.Text = " تعديل بينات قطاع";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Modify_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

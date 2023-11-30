@@ -31,15 +31,5 @@ namespace Workshop_System.Materials_Forms.Aluminum
             dt.Columns["Length"].ColumnName = "الطول";
             AllShapes.DataSource = dt;
         }
-
-        private void AllShapes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Show_Shapes_Load(object sender, EventArgs e)
-        {
-             
-        }
     }
 }

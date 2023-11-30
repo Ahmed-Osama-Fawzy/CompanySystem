@@ -21,10 +21,9 @@ namespace Workshop_System.Prices_Options.Addtions
             InitializeComponent();
             Update();
         }
-
         public void Update()
         {
-            DataBase DB = new DataBase("Materials", "Type");
+            DataBase DB = new DataBase("Materials", "Types");
             BName.DisplayMember = "Value";
             BName.ValueMember = "Value";
             if (DB.GetData("") != null)
@@ -43,11 +42,6 @@ namespace Workshop_System.Prices_Options.Addtions
             else
                 Type.Enabled = false;
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Insert_Click(object sender, EventArgs e)
         {
             string SName = BName.Text;
@@ -91,7 +85,6 @@ namespace Workshop_System.Prices_Options.Addtions
                 MessageBox.Show("عفوا يجب ادخال جميع البيانات اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             BName.Text = string.Empty;
@@ -103,22 +96,11 @@ namespace Workshop_System.Prices_Options.Addtions
             FPrice.Text = string.Empty;
             MPrice.Text = string.Empty;
         }
-
-        private void Add_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
             Update();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

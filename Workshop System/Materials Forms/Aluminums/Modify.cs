@@ -26,7 +26,7 @@ namespace Workshop_System.Materials_Forms.Aluminum
         }
         public void Update()
         {
-            DataBase DB = new DataBase("Materials", "Type");
+            DataBase DB = new DataBase("Materials", "Types");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
             if (DB.GetData("قسم العمل") != null)
@@ -72,31 +72,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             else
                 Length.Enabled = false;
         }
-        private void Edit_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Modify_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Details_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Edit_Click_1(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -172,7 +147,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي اولا ");
             }
         }
-
         private void Details_Click_1(object sender, EventArgs e)
         {
             Details NewForm = new Details();

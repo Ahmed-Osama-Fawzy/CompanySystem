@@ -40,7 +40,6 @@
             this.AllAccessories.Name = "AllAccessories";
             this.AllAccessories.Size = new System.Drawing.Size(1356, 730);
             this.AllAccessories.TabIndex = 4;
-            this.AllAccessories.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllShapes_CellContentClick);
             // 
             // ShowAccessories
             // 
@@ -54,7 +53,6 @@
             this.RightToLeftLayout = true;
             this.Text = "عرض جميع بيانات القطع";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ShowAccessories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AllAccessories)).EndInit();
             this.ResumeLayout(false);
 

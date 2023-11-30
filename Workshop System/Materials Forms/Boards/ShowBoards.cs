@@ -30,10 +30,5 @@ namespace Workshop_System.Prices_Options.Addtions
             AllBoards.DataSource = dt;
 
         }
-
-        private void AllGlasses_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

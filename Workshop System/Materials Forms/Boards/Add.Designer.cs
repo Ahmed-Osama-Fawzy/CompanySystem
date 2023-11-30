@@ -121,7 +121,6 @@
             this.label2.Size = new System.Drawing.Size(52, 25);
             this.label2.TabIndex = 52;
             this.label2.Text = "الاسم";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ID
             // 
@@ -166,7 +165,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Height
             // 
@@ -336,7 +334,6 @@
             this.RightToLeftLayout = true;
             this.Text = "اضافة لوح جديد";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Add_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

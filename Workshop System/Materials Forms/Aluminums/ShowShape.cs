@@ -22,17 +22,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             InitializeComponent();
             ID.Text = i.ToString();
         }
-
-        private void Notes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LowW_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Show_Click(object sender, EventArgs e)
         {
             AluminumClass aluminmu = new AluminumClass();
@@ -66,7 +55,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
                 MessageBox.Show("من فضلك ادخل الرقم الكودي");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty; 
@@ -80,11 +68,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             AvgW.Text = string.Empty;
             HighW.Text = string.Empty;
             Length.Text = string.Empty;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

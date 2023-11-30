@@ -22,7 +22,6 @@ namespace Workshop_System.Prices_Options.Glasses
             InitializeComponent();
             ID.Text = I.ToString();
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(ID.Text)) 
@@ -44,15 +43,9 @@ namespace Workshop_System.Prices_Options.Glasses
                 MessageBox.Show("يجب ادخال الرقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

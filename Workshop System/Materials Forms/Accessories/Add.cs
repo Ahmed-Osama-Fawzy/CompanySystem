@@ -18,10 +18,9 @@ namespace Workshop_System.Materials_Forms.Accessories
             InitializeComponent();
             Update();
         }
-
         public void Update()
         {
-            DataBase DB = new DataBase("Materials", "Type");
+            DataBase DB = new DataBase("Materials", "Types");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
             if (DB.GetData("قسم العمل") != null)
@@ -67,12 +66,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             else
                 Type.Enabled = false;
         }
-
-        private void Insert_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void add_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'companypSystemDataSet1.Types' table. You can move, or remove it, as needed.
@@ -87,7 +80,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             Description.Text = string.Empty;
             Type.Text = string.Empty;
         }
-
         private void Insert_Click_1(object sender, EventArgs e)
         {
             AccessoriesClass accessoriesClass = new AccessoriesClass();
@@ -134,17 +126,6 @@ namespace Workshop_System.Materials_Forms.Accessories
                 MessageBox.Show("عفوا يجب ادخال جميع البيانات");
             }
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();
@@ -152,12 +133,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             Update();
 
         }
-
-        private void Category_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             AName.Text = string.Empty;

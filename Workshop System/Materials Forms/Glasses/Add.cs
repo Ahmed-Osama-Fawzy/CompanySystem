@@ -18,7 +18,6 @@ namespace Workshop_System.Prices_Options.Glasses
         {
             InitializeComponent();
         }
-
         private void Insert_Click(object sender, EventArgs e)
         {
             string XColor = Color.Text;
@@ -95,7 +94,6 @@ namespace Workshop_System.Prices_Options.Glasses
                 MessageBox.Show("عفوا يجب ادخال البيانات كاملة");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             Color.Text = string.Empty;

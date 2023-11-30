@@ -66,7 +66,6 @@
             this.Deep.ReadOnly = true;
             this.Deep.Size = new System.Drawing.Size(395, 31);
             this.Deep.TabIndex = 127;
-            this.Deep.TextChanged += new System.EventHandler(this.Deep_TextChanged);
             // 
             // label7
             // 
@@ -172,7 +171,6 @@
             this.BName.ReadOnly = true;
             this.BName.Size = new System.Drawing.Size(395, 31);
             this.BName.TabIndex = 117;
-            this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
             // 
             // label2
             // 
@@ -271,7 +269,6 @@
             this.FPrice.ReadOnly = true;
             this.FPrice.Size = new System.Drawing.Size(395, 31);
             this.FPrice.TabIndex = 129;
-            this.FPrice.TextChanged += new System.EventHandler(this.FPrice_TextChanged);
             // 
             // label9
             // 
@@ -292,7 +289,6 @@
             this.MPrice.ReadOnly = true;
             this.MPrice.Size = new System.Drawing.Size(395, 31);
             this.MPrice.TabIndex = 131;
-            this.MPrice.TextChanged += new System.EventHandler(this.MPrice_TextChanged);
             // 
             // label10
             // 
@@ -313,7 +309,6 @@
             this.LastEditDate.ReadOnly = true;
             this.LastEditDate.Size = new System.Drawing.Size(395, 31);
             this.LastEditDate.TabIndex = 133;
-            this.LastEditDate.TextChanged += new System.EventHandler(this.LastEditDate_TextChanged);
             // 
             // label11
             // 
@@ -362,7 +357,6 @@
             this.RightToLeftLayout = true;
             this.Text = "عرض بيانات لوح";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ShowBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

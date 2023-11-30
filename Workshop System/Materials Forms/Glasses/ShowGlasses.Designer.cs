@@ -55,7 +55,6 @@
             this.AllGlasses.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.AllGlasses.Size = new System.Drawing.Size(1356, 730);
             this.AllGlasses.TabIndex = 3;
-            this.AllGlasses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllGlasses_CellContentClick);
             // 
             // ShowGlasses
             // 

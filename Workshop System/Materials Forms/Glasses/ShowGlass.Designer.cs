@@ -190,7 +190,6 @@
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(395, 31);
             this.ID.TabIndex = 94;
-            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // Show
             // 

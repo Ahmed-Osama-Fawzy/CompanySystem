@@ -21,7 +21,7 @@ namespace Workshop_System.Prices_Options.Addtions
         }
         public void Update()
         {
-            DataBase DB = new DataBase("Materials", "Type");
+            DataBase DB = new DataBase("Materials", "Types");
             BName.DisplayMember = "Value";
             BName.ValueMember = "Value";
             if (DB.GetData("") != null)
@@ -40,13 +40,11 @@ namespace Workshop_System.Prices_Options.Addtions
             else
                 Type.Enabled = false;
         }
-
         public Modify(string S)
         {
             InitializeComponent();
             ID.Text = S;
         }
-
         private void Insert_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -109,7 +107,6 @@ namespace Workshop_System.Prices_Options.Addtions
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
@@ -122,22 +119,11 @@ namespace Workshop_System.Prices_Options.Addtions
             FPrice.Text = string.Empty;
             MPrice.Text = string.Empty;
         }
-
-        private void Modify_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
             Update();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

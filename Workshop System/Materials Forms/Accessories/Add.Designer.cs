@@ -113,7 +113,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ID
             // 
@@ -165,7 +164,6 @@
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(395, 29);
             this.Category.TabIndex = 44;
-            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -262,7 +260,6 @@
             this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 56;
             this.label7.Text = "الوصف";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 

@@ -55,7 +55,6 @@
             this.AllBoards.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.AllBoards.Size = new System.Drawing.Size(1356, 730);
             this.AllBoards.TabIndex = 4;
-            this.AllBoards.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllGlasses_CellContentClick);
             // 
             // ShowBoards
             // 

@@ -23,7 +23,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             InitializeComponent();
             ID.Text = i;
         }
-
         private void Show_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -53,12 +52,6 @@ namespace Workshop_System.Materials_Forms.Accessories
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي");
             }
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
@@ -70,11 +63,6 @@ namespace Workshop_System.Materials_Forms.Accessories
             Type.Text = string.Empty;
             Description.Text = string.Empty;
             Section.Text = string.Empty;
-
-        }
-
-        private void ShowAccessiore_Load(object sender, EventArgs e)
-        {
 
         }
     }

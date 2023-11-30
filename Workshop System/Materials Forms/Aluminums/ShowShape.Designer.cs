@@ -132,7 +132,6 @@
             this.LowW.ReadOnly = true;
             this.LowW.Size = new System.Drawing.Size(395, 31);
             this.LowW.TabIndex = 110;
-            this.LowW.TextChanged += new System.EventHandler(this.LowW_TextChanged);
             // 
             // label9
             // 
@@ -154,7 +153,6 @@
             this.Description.ReadOnly = true;
             this.Description.Size = new System.Drawing.Size(395, 31);
             this.Description.TabIndex = 108;
-            this.Description.TextChanged += new System.EventHandler(this.Notes_TextChanged);
             // 
             // label7
             // 
@@ -340,7 +338,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox2.TabIndex = 91;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

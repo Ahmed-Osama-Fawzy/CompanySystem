@@ -65,7 +65,6 @@
             this.label10.Size = new System.Drawing.Size(52, 25);
             this.label10.TabIndex = 122;
             this.label10.Text = "النوع";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // Type
             // 
@@ -78,7 +77,6 @@
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(395, 29);
             this.Type.TabIndex = 123;
-            this.Type.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -90,7 +88,6 @@
             this.label11.Size = new System.Drawing.Size(52, 25);
             this.label11.TabIndex = 121;
             this.label11.Text = "اللون";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Description
             // 
@@ -103,7 +100,6 @@
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(395, 29);
             this.Description.TabIndex = 120;
-            this.Description.SelectedIndexChanged += new System.EventHandler(this.Description_SelectedIndexChanged);
             // 
             // Section
             // 
@@ -116,7 +112,6 @@
             this.Section.Name = "Section";
             this.Section.Size = new System.Drawing.Size(395, 29);
             this.Section.TabIndex = 119;
-            this.Section.SelectedIndexChanged += new System.EventHandler(this.Section_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -128,7 +123,6 @@
             this.label12.Size = new System.Drawing.Size(71, 25);
             this.label12.TabIndex = 118;
             this.label12.Text = "الوصف";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -140,7 +134,6 @@
             this.label13.Size = new System.Drawing.Size(54, 25);
             this.label13.TabIndex = 117;
             this.label13.Text = "الفرع";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // AName
             // 
@@ -149,7 +142,6 @@
             this.AName.Name = "AName";
             this.AName.Size = new System.Drawing.Size(395, 31);
             this.AName.TabIndex = 116;
-            this.AName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label14
             // 
@@ -161,7 +153,6 @@
             this.label14.Size = new System.Drawing.Size(54, 25);
             this.label14.TabIndex = 115;
             this.label14.Text = "الكنية";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // Color
             // 
@@ -174,7 +165,6 @@
             this.Color.Name = "Color";
             this.Color.Size = new System.Drawing.Size(395, 29);
             this.Color.TabIndex = 114;
-            this.Color.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // Category
             // 
@@ -187,7 +177,6 @@
             this.Category.Name = "Category";
             this.Category.Size = new System.Drawing.Size(395, 29);
             this.Category.TabIndex = 113;
-            this.Category.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -199,7 +188,6 @@
             this.label15.Size = new System.Drawing.Size(239, 39);
             this.label15.TabIndex = 112;
             this.label15.Text = "تعديل بيانات قطعة";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // Price
             // 
@@ -208,7 +196,6 @@
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(395, 31);
             this.Price.TabIndex = 111;
-            this.Price.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label16
             // 
@@ -220,7 +207,6 @@
             this.label16.Size = new System.Drawing.Size(58, 25);
             this.label16.TabIndex = 110;
             this.label16.Text = "السعر";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -232,7 +218,6 @@
             this.label17.Size = new System.Drawing.Size(53, 25);
             this.label17.TabIndex = 109;
             this.label17.Text = "القسم";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // Size
             // 
@@ -241,7 +226,6 @@
             this.Size.Name = "Size";
             this.Size.Size = new System.Drawing.Size(395, 31);
             this.Size.TabIndex = 108;
-            this.Size.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label18
             // 
@@ -253,7 +237,6 @@
             this.label18.Size = new System.Drawing.Size(64, 25);
             this.label18.TabIndex = 107;
             this.label18.Text = "المقاس";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // ID
             // 
@@ -262,7 +245,6 @@
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(395, 31);
             this.ID.TabIndex = 106;
-            this.ID.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label19
             // 
@@ -274,7 +256,6 @@
             this.label19.Size = new System.Drawing.Size(110, 25);
             this.label19.TabIndex = 105;
             this.label19.Text = "الرقم الكودي";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // pictureBox2
             // 
@@ -284,7 +265,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(1380, 731);
             this.pictureBox2.TabIndex = 104;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Clear
             // 
@@ -365,7 +345,6 @@
             this.RightToLeftLayout = true;
             this.Text = " تعديل بيانات قطعة";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Modify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

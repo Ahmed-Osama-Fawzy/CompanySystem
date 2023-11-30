@@ -14,13 +14,6 @@ namespace Workshop_System
         {
             InitializeComponent();
         }
-
-        
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Glasses_Click(object sender, EventArgs e)
         {
             Glasses NewForm = new Glasses();
@@ -31,19 +24,16 @@ namespace Workshop_System
             Boards NewForm = new Boards();
             NewForm.ShowDialog();
         }
-
         private void Aluminum_Click(object sender, EventArgs e)
         {
             Aluminum NewForm = new Aluminum();
             NewForm.ShowDialog();
         }
-
         private void Accessories_Click(object sender, EventArgs e)
         {
             Accessories NewForm = new Accessories();
             NewForm.ShowDialog();
         }
-
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();

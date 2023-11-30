@@ -41,7 +41,6 @@
             this.AllShapes.Name = "AllShapes";
             this.AllShapes.Size = new System.Drawing.Size(1356, 730);
             this.AllShapes.TabIndex = 3;
-            this.AllShapes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllShapes_CellContentClick);
             // 
             // Show_Shapes
             // 
@@ -55,7 +54,6 @@
             this.RightToLeftLayout = true;
             this.Text = "عرض جميع بيانات القطاعات";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Show_Shapes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AllShapes)).EndInit();
             this.ResumeLayout(false);
 

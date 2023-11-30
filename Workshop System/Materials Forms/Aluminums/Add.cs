@@ -26,7 +26,7 @@ namespace Workshop_System.Materials_Forms.Aluminum
         }
         public void Update()
         {
-            DataBase DB = new DataBase("Materials", "Type");
+            DataBase DB = new DataBase("Materials", "Types");
             Category.DisplayMember = "Value";
             Category.ValueMember = "Value";
             if (DB.GetData("قسم العمل") != null)
@@ -142,24 +142,11 @@ namespace Workshop_System.Materials_Forms.Aluminum
             HighWeight.Text = string.Empty;
             Length.Text = string.Empty;
         }
-        private void Add_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Details_Click(object sender, EventArgs e)
         {
             Details NewForm = new Details();
             NewForm.ShowDialog();
             Update();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

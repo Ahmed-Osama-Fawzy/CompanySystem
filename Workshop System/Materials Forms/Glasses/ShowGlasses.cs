@@ -25,10 +25,5 @@ namespace Workshop_System.Prices_Options.Glasses
             dt.Columns["NetPrice"].ColumnName = "فرق السعر";
             AllGlasses.DataSource = dt;
         }
-
-        private void AllGlasses_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

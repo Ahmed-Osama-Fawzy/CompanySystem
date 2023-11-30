@@ -22,11 +22,6 @@ namespace Workshop_System.Prices_Options.Addtions
             InitializeComponent();
             ID.Text = S;
         }
-
-        private void ShowBoard_Load(object sender, EventArgs e)
-        {
-
-        }
         private void Show_Click(object sender, EventArgs e)
         {
             string id = ID.Text;
@@ -58,32 +53,6 @@ namespace Workshop_System.Prices_Options.Addtions
                 MessageBox.Show("عفوا يجب ادخال الرقم الكودي اولا");
             }
         }
-
-        private void Deep_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LastEditDate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             BName.Text = string.Empty;

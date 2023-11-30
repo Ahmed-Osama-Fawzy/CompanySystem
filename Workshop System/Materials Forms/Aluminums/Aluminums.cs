@@ -42,7 +42,6 @@ namespace Workshop_System.Materials_Forms.Aluminum
             Show_Shapes NewForm = new Show_Shapes();
             NewForm.ShowDialog();
         }
-
         private void SearchInput_TextChanged(object sender, EventArgs e)
         {
             string String = SearchInput.Text;
@@ -61,39 +60,25 @@ namespace Workshop_System.Materials_Forms.Aluminum
             dt.Columns["Length"].ColumnName = "الطول";
             SelectedShapes.DataSource = dt;
         }
-
         private void SelectedShapes_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int index = e.RowIndex;
             SelectedID.Text = Convert.ToString(SelectedShapes.Rows[index].Cells[0].Value);
         }
-
         private void CustomShow_Click(object sender, EventArgs e)
         {
             ShowShape NewForm = new ShowShape(Convert.ToInt32(SelectedID.Text));
             NewForm.ShowDialog();
         }
-
         private void CustomRemove_Click(object sender, EventArgs e)
         {
             Remove NewForm = new Remove(Convert.ToInt32(SelectedID.Text));
             NewForm.ShowDialog();
         }
-
         private void CustomEdit_Click(object sender, EventArgs e)
         {
             Modify NewForm = new Modify(Convert.ToInt32(SelectedID.Text));
             NewForm.ShowDialog();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Aluminum_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

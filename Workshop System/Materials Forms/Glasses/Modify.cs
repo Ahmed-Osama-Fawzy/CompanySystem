@@ -22,8 +22,6 @@ namespace Workshop_System.Prices_Options.Glasses
             InitializeComponent();
             ID.Text = I.ToString();
         }
-
-
         private void Edit_Click(object sender, EventArgs e)
         {
             string SID = ID.Text;
@@ -92,7 +90,6 @@ namespace Workshop_System.Prices_Options.Glasses
                 MessageBox.Show("من فضلك ادخل الرقم الكودي اولا");
             }
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             ID.Text = string.Empty;
@@ -101,11 +98,6 @@ namespace Workshop_System.Prices_Options.Glasses
             Default.Checked = false;
             Kind.Text = string.Empty;
             Deep.Text = string.Empty;
-        }
-
-        private void ID_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
