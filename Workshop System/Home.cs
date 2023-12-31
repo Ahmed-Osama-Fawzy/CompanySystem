@@ -77,5 +77,10 @@ namespace Workshop_System
             Discounts NewFrom = new Discounts();
             NewFrom.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
