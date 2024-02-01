@@ -51,6 +51,7 @@
     <Compile Include="App Class\Discounts Classes\Windows\WAccessoriesClass.cs" />
     <Compile Include="App Class\Discounts Classes\Windows\WGlassClass.cs" />
     <Compile Include="App Class\Discounts Classes\Windows\WindowsClass.cs" />
+    <Compile Include="App Class\MainData.cs" />
     <Compile Include="App Class\Materials Classes\AccessoriesClass.cs" />
     <Compile Include="App Class\Materials Classes\AluminumClass.cs" />
     <Compile Include="App Class\Materials Classes\BoardClass.cs" />

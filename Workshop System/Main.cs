@@ -13,10 +13,12 @@ namespace Workshop_System
 {
     public partial class Main : Form
     {
+        private MainData maindata = new MainData();
         public Main()
         {
             InitializeComponent();
             Password.UseSystemPasswordChar = true;
+            Title.Text = maindata.EnglishName;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

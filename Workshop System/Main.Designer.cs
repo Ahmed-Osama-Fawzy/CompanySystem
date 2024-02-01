@@ -36,7 +36,7 @@
             this.ForgetPassword = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BranchID = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
@@ -121,16 +121,16 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "رقم الفرع";
             // 
-            // label4
+            // Title
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(762, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(547, 39);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "ELESRAA FOR ALUMINUIM PRODUCTS";
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Title.Location = new System.Drawing.Point(762, 65);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(547, 39);
+            this.Title.TabIndex = 11;
+            this.Title.Text = "ELESRAA FOR ALUMINUIM PRODUCTS";
             // 
             // label5
             // 
@@ -169,7 +169,7 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.BranchID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ForgetPassword);
@@ -197,7 +197,7 @@
         private System.Windows.Forms.LinkLabel ForgetPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox BranchID;
         private System.Windows.Forms.TextBox Password;
